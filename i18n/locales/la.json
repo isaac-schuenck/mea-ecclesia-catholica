@@ -1,0 +1,79 @@
+{
+  "menu": {
+    "inicio": "Initium",
+    "livros": "Libri",
+    "artigos": "Res Religiosae",
+    "homilias": "Homiliae",
+    "santo_dia": "Sanctus Diei"
+  },
+  "header": {
+    "busca": "Quid quaeris?",
+    "idioma_atual": "Lingua Praesens"
+  },
+  "footer": {
+    "sobre_projeto": "De Proposito",
+    "contato": "Contactus",
+    "aviso": "* Homiliae ex YouTube directe inseruntur. Omnia iura, visiones et laudes ad canalem officialem Patris Mário Sartori diriguntur.",
+    "direitos": "© 2026 MEA ECCLESIA CATHOLICA. OMNIA IURA RESERVATA.",
+    "desenvolvido": "Evolutum cum",
+    "fe_codigo": "Fides et Codex",
+    "por": "a"
+  },
+  "home": {
+    "explore_title": "Fidem Explorare",
+    "map_title": "Paroecias Invenire",
+    "map_desc": "Naviga per tabulam ut paroecias, monasteria et sanctuaria prope te invenias.",
+    "faq_btn": "Adhuc dubia habes? Vade ad FAQ",
+    "sobre": {
+      "badge": "Quis post M.E.C est?",
+      "title": "De \"nobis\" (vel solum me ipso)",
+      "desc": "Ut verum dicam, \"De Nobis\" in tabula principali tantum est ut situs speciem portae corporativae habeat. Re vera, nulla magna turma hic post scaenas est.",
+      "btn": "Lege historiam totam, vide imagines et indicem"
+    },
+    "carousel": {
+      "slide1_sub": "Mea Ecclesia Catholica",
+      "slide1_title": "Qui Sumus?",
+      "slide1_desc": "Parvum spatium dicatum ad iuvandos homines ut Ecclesiam, eius doctrinam et historiam intellegant et ament.",
+      "slide1_btn": "De Nobis",
+      "slide2_sub": "Patristica et Magisterium",
+      "slide2_title": "Thesauri Traditionis",
+      "slide2_desc": "Intellege Catechismum, scripta Patrum Ecclesiae et veritates aeternas per duo millennia custoditas.",
+      "slide2_btn": "Studia Profundere",
+      "slide3_sub": "Liturgia",
+      "slide3_title": "Sancta Missa",
+      "slide3_desc": "Vide hic quid accidat in Sancto Sacrificio Altaris et intellege responsa liturgica.",
+      "slide3_btn": "Vide hic",
+      "slide4_sub": "Exempla Fidei",
+      "slide4_title": "Sanctus Diei",
+      "slide4_desc": "Inveni historias virorum et mulierum qui pro Christo animas suas dederunt et inveni inspirationem pro itinere tuo cotidiano.",
+      "slide4_btn": "Vide quem",
+      "slide5_sub": "Formatio",
+      "slide5_title": "Homilia Cotidiana",
+      "slide5_desc": "Profunda fidem tuam cum homilia cotidiana, a Patre Mario Sartori commentata.",
+      "slide5_btn": "Spectare"
+    },
+    "topics": {
+      "trindade": "Trinitas",
+      "sacramentos": "Sacramenta",
+      "missa": "Missa",
+      "milagres": "Miracula Eucharistica",
+      "escritura": "Scriptura Sacra",
+      "sucessao": "Successio Apostolica",
+      "tradicao": "Traditio et Magisterium",
+      "papado": "Papatio",
+      "orientais": "Ecclesiae Orientales",
+      "concilios": "Concilia et Ritus",
+      "historia": "Historia",
+      "patristica": "Patristica",
+      "escolastica": "Scholastica",
+      "ciencia": "Scientia",
+      "apologetica": "Apologetica",
+      "dogmas": "Dogmata Mariana",
+      "intercessao": "Intercessio et Mediatio",
+      "imagens": "Imagines et Idolatria",
+      "catecismo": "Catechismus",
+      "oracoes": "Orationes",
+      "rosario": "Rosarium"
+    }
+  }
+}

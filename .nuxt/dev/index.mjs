@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, getCookie, setCookie, sanitizeStatusCode, removeResponseHeader, getRouterParam, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatusText } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import crypto$1 from 'node:crypto';
@@ -8,7 +8,7 @@ import { escapeHtml } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/n
 import viteNodeEntry_mjs from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs';
 import { viteNodeFetch } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/vite-builder/dist/vite-node.mjs';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, decodePath, withLeadingSlash, withoutTrailingSlash, encodePath, joinRelativeURL } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/ufo/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, joinRelativeURL, parsePath, withLeadingSlash, withoutTrailingSlash, withTrailingSlash, decodePath, encodePath } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/vue/server-renderer/index.mjs';
 import destr, { destr as destr$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/hookable/dist/index.mjs';
@@ -20,7 +20,7 @@ import fsDriver from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_mo
 import lruCache from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unstorage/drivers/lru-cache.mjs';
 import { digest, hash as hash$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/defu/dist/defu.mjs';
+import defu, { defuFn, createDefu } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/defu/dist/defu.mjs';
 import { snakeCase } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/scule/dist/index.mjs';
 import { getContext } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unctx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/radix3/dist/index.mjs';
@@ -29,6 +29,7 @@ import consola, { consola as consola$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-
 import { ErrorParser } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/youch-core/build/index.js';
 import { Youch } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/youch/build/index.js';
 import { SourceMapConsumer } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/source-map/source-map.js';
+import { createRouterMatcher } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { stringify, uneval } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/devalue/index.js';
 import { captureRawStackTrace, parseRawStackTrace } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/errx/dist/index.js';
@@ -88,19 +89,19 @@ const _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_4
   },
 );
 
-const storage = createStorage({});
+const storage$1 = createStorage({});
 
-storage.mount('/assets', assets$1);
+storage$1.mount('/assets', assets$1);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/server","watchOptions":{"ignored":[null]}}));
-storage.mount('cache:nuxt:payload', _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache/nuxt/payload"}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.data/kv"}));
+storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic","watchOptions":{"ignored":[null]}}));
+storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/server","watchOptions":{"ignored":[null]}}));
+storage$1.mount('cache:nuxt:payload', _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache/nuxt/payload"}));
+storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt"}));
+storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache"}));
+storage$1.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.data/kv"}));
 
 function useStorage(base = "") {
-  return base ? prefixStorage(storage, base) : storage;
+  return base ? prefixStorage(storage$1, base) : storage$1;
 }
 
 const Hasher = /* @__PURE__ */ (() => {
@@ -692,7 +693,68 @@ const _inlineRuntimeConfig = {
       }
     }
   },
-  "public": {}
+  "public": {
+    "i18n": {
+      "baseUrl": "",
+      "defaultLocale": "en",
+      "rootRedirect": "",
+      "redirectStatusCode": 302,
+      "skipSettingLocaleOnNavigate": false,
+      "locales": [
+        {
+          "code": "pt",
+          "name": "Português",
+          "language": ""
+        },
+        {
+          "code": "la",
+          "name": "Latim",
+          "language": ""
+        },
+        {
+          "code": "en",
+          "name": "Inglês",
+          "language": ""
+        }
+      ],
+      "detectBrowserLanguage": {
+        "alwaysRedirect": false,
+        "cookieCrossOrigin": false,
+        "cookieDomain": "",
+        "cookieKey": "i18n_redirected",
+        "cookieSecure": false,
+        "fallbackLocale": "",
+        "redirectOn": "root",
+        "useCookie": true
+      },
+      "experimental": {
+        "localeDetector": "",
+        "typedPages": true,
+        "typedOptionsAndMessages": false,
+        "alternateLinkCanonicalQueries": true,
+        "devCache": false,
+        "cacheLifetime": "",
+        "stripMessagesPayload": false,
+        "preload": false,
+        "strictSeo": false,
+        "nitroContextDetection": true,
+        "httpCacheDuration": 10,
+        "compactRoutes": false,
+        "prerenderMessages": false
+      },
+      "domainLocales": {
+        "pt": {
+          "domain": ""
+        },
+        "la": {
+          "domain": ""
+        },
+        "en": {
+          "domain": ""
+        }
+      }
+    }
+  }
 };
 const envOptions = {
   prefix: "NITRO_",
@@ -2098,7 +2160,664 @@ const _DsNfOwli9IhXIsfkWqsxcAswPpPLpf4WmGGPNVau_Y = (function(nitro) {
   });
 });
 
-const rootDir = "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic";
+/*!
+  * shared v11.4.2
+  * (c) 2026 kazuya kawaguchi
+  * Released under the MIT License.
+  */
+const _create = Object.create;
+const create = (obj = null) => _create(obj);
+/* eslint-enable */
+/**
+ * Useful Utilities By Evan you
+ * Modified by kazuya kawaguchi
+ * MIT License
+ * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/index.ts
+ * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/codeframe.ts
+ */
+const isArray = Array.isArray;
+const isFunction = (val) => typeof val === 'function';
+const isString = (val) => typeof val === 'string';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const isObject = (val) => val !== null && typeof val === 'object';
+const objectToString = Object.prototype.toString;
+const toTypeString = (value) => objectToString.call(value);
+
+const isNotObjectOrIsArray = (val) => !isObject(val) || isArray(val);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function deepCopy(src, des) {
+    // src and des should both be objects, and none of them can be a array
+    if (isNotObjectOrIsArray(src) || isNotObjectOrIsArray(des)) {
+        throw new Error('Invalid value');
+    }
+    const stack = [{ src, des }];
+    while (stack.length) {
+        const { src, des } = stack.pop();
+        // using `Object.keys` which skips prototype properties
+        Object.keys(src).forEach(key => {
+            if (key === '__proto__') {
+                return;
+            }
+            // if src[key] is an object/array, set des[key]
+            // to empty object/array to prevent setting by reference
+            if (isObject(src[key]) && !isObject(des[key])) {
+                des[key] = Array.isArray(src[key]) ? [] : create();
+            }
+            if (isNotObjectOrIsArray(des[key]) || isNotObjectOrIsArray(src[key])) {
+                // replace with src[key] when:
+                // src[key] or des[key] is not an object, or
+                // src[key] or des[key] is an array
+                des[key] = src[key];
+            }
+            else {
+                // src[key] and des[key] are both objects, merge them
+                stack.push({ src: src[key], des: des[key] });
+            }
+        });
+    }
+}
+
+const __nuxtMock = { runWithContext: async (fn) => await fn() };
+const merger = createDefu((obj, key, value) => {
+  if (key === "messages" || key === "datetimeFormats" || key === "numberFormats") {
+    obj[key] ??= create(null);
+    deepCopy(value, obj[key]);
+    return true;
+  }
+});
+async function loadVueI18nOptions(vueI18nConfigs) {
+  const nuxtApp = __nuxtMock;
+  let vueI18nOptions = { messages: create(null) };
+  for (const configFile of vueI18nConfigs) {
+    const resolver = await configFile().then((x) => isModule(x) ? x.default : x);
+    const resolved = isFunction(resolver) ? await nuxtApp.runWithContext(() => resolver()) : resolver;
+    vueI18nOptions = merger(create(null), resolved, vueI18nOptions);
+  }
+  vueI18nOptions.fallbackLocale ??= false;
+  return vueI18nOptions;
+}
+const isModule = (val) => toTypeString(val) === "[object Module]";
+async function getLocaleMessages(locale, loader) {
+  const nuxtApp = __nuxtMock;
+  try {
+    const getter = await nuxtApp.runWithContext(loader.load).then((x) => isModule(x) ? x.default : x);
+    return isFunction(getter) ? await nuxtApp.runWithContext(() => getter(locale)) : getter;
+  } catch (e) {
+    throw new Error(`Failed loading locale (${locale}): ` + e.message);
+  }
+}
+async function getLocaleMessagesMerged(locale, loaders = []) {
+  const nuxtApp = __nuxtMock;
+  const messages = await Promise.all(
+    loaders.map((loader) => nuxtApp.runWithContext(() => getLocaleMessages(locale, loader)))
+  );
+  const merged = {};
+  for (const message of messages) {
+    deepCopy(message, merged);
+  }
+  return merged;
+}
+
+var menu$2 = {
+	inicio: "Início",
+	livros: "Livros",
+	artigos: "Artigos Religiosos",
+	homilias: "Homilias",
+	santo_dia: "Santo do Dia"
+};
+var header$2 = {
+	busca: "O que você está buscando?",
+	idioma_atual: "Idioma Atual"
+};
+var footer$2 = {
+	sobre_projeto: "Sobre o Projeto",
+	contato: "Contato",
+	aviso: "* As homilias são incorporadas diretamente do YouTube. Todos os direitos, visualizações e créditos são direcionados ao canal oficial do Pe. Mário Sartori.",
+	direitos: "© 2026 MEA ECCLESIA CATHOLICA. TODOS OS DIREITOS RESERVADOS.",
+	desenvolvido: "Desenvolvido com",
+	fe_codigo: "Fé & Código",
+	por: "por"
+};
+var home$2 = {
+	explore_title: "Explore a Fé",
+	map_title: "Encontre Paróquias",
+	map_desc: "Navegue pelo mapa para encontrar paróquias, mosteiros e santuários próximos a você.",
+	faq_btn: "Ainda tem dúvidas? Acesse o FAQ",
+	sobre: {
+		badge: "Quem está por trás do M.E.C?",
+		title: "Sobre \"nós\" (ou só eu mesmo)",
+		desc: "Para ser sincero, o \"Sobre Nós\" no menu principal é só para deixar o site com cara de portal corporativo. Na verdade, não existe uma grande equipe aqui nos bastidores.",
+		btn: "Ler história completa, ver fotos e playlist"
+	},
+	carousel: {
+		slide1_sub: "Mea Ecclesia Catholica",
+		slide1_title: "Quem Somos?",
+		slide1_desc: "Um pequeno espaço dedicado a ajudar as pessoas a compreenderem e amarem a Igreja, sua doutrina e sua história.",
+		slide1_btn: "Sobre nós",
+		slide2_sub: "Patrística e Magistério",
+		slide2_title: "Os Tesouros da Tradição",
+		slide2_desc: "Entenda o Catecismo, os escritos dos Padres da Igreja e as verdades eternas guardadas por mais de dois milênios.",
+		slide2_btn: "Aprofundar Estudos",
+		slide3_sub: "Liturgia",
+		slide3_title: "A Santa Missa",
+		slide3_desc: "Veja aqui o que acontece no Santo Sacrifício do Altar e compreenda as respostas litúrgicas.",
+		slide3_btn: "Ver aqui",
+		slide4_sub: "Exemplos de Fé",
+		slide4_title: "O Santo do Dia",
+		slide4_desc: "Descubra a história de homens e mulheres que doaram suas vidas por Cristo e encontre inspiração para a sua caminhada diária.",
+		slide4_btn: "Veja qual",
+		slide5_sub: "Formação",
+		slide5_title: "Homilia Diária",
+		slide5_desc: "Aprofunde sua fé com a homilia diária, comentada pelo Pe. Mario Sartori.",
+		slide5_btn: "Assistir"
+	},
+	topics: {
+		trindade: "Trindade",
+		sacramentos: "Sacramentos",
+		missa: "Missa",
+		milagres: "Milagres Eucarísticos",
+		escritura: "Escritura",
+		sucessao: "Sucessão Apostólica",
+		tradicao: "Tradição e Magistério",
+		papado: "O Papado",
+		orientais: "Igrejas Orientais",
+		concilios: "Concílios e Ritos",
+		historia: "História",
+		patristica: "Patrística",
+		escolastica: "Escolástica",
+		ciencia: "Ciência",
+		apologetica: "Apologética",
+		dogmas: "Dogmas Marianos",
+		intercessao: "Intercessão e Mediação",
+		imagens: "Imagens e Idolatria",
+		catecismo: "Catecismo",
+		oracoes: "Orações",
+		rosario: "Rosário"
+	}
+};
+const locale_pt_46json_d769759e = {
+	menu: menu$2,
+	header: header$2,
+	footer: footer$2,
+	home: home$2
+};
+
+var menu$1 = {
+	inicio: "Initium",
+	livros: "Libri",
+	artigos: "Res Religiosae",
+	homilias: "Homiliae",
+	santo_dia: "Sanctus Diei"
+};
+var header$1 = {
+	busca: "Quid quaeris?",
+	idioma_atual: "Lingua Praesens"
+};
+var footer$1 = {
+	sobre_projeto: "De Proposito",
+	contato: "Contactus",
+	aviso: "* Homiliae ex YouTube directe inseruntur. Omnia iura, visiones et laudes ad canalem officialem Patris Mário Sartori diriguntur.",
+	direitos: "© 2026 MEA ECCLESIA CATHOLICA. OMNIA IURA RESERVATA.",
+	desenvolvido: "Evolutum cum",
+	fe_codigo: "Fides et Codex",
+	por: "a"
+};
+var home$1 = {
+	explore_title: "Fidem Explorare",
+	map_title: "Paroecias Invenire",
+	map_desc: "Naviga per tabulam ut paroecias, monasteria et sanctuaria prope te invenias.",
+	faq_btn: "Adhuc dubia habes? Vade ad FAQ",
+	sobre: {
+		badge: "Quis post M.E.C est?",
+		title: "De \"nobis\" (vel solum me ipso)",
+		desc: "Ut verum dicam, \"De Nobis\" in tabula principali tantum est ut situs speciem portae corporativae habeat. Re vera, nulla magna turma hic post scaenas est.",
+		btn: "Lege historiam totam, vide imagines et indicem"
+	},
+	carousel: {
+		slide1_sub: "Mea Ecclesia Catholica",
+		slide1_title: "Qui Sumus?",
+		slide1_desc: "Parvum spatium dicatum ad iuvandos homines ut Ecclesiam, eius doctrinam et historiam intellegant et ament.",
+		slide1_btn: "De Nobis",
+		slide2_sub: "Patristica et Magisterium",
+		slide2_title: "Thesauri Traditionis",
+		slide2_desc: "Intellege Catechismum, scripta Patrum Ecclesiae et veritates aeternas per duo millennia custoditas.",
+		slide2_btn: "Studia Profundere",
+		slide3_sub: "Liturgia",
+		slide3_title: "Sancta Missa",
+		slide3_desc: "Vide hic quid accidat in Sancto Sacrificio Altaris et intellege responsa liturgica.",
+		slide3_btn: "Vide hic",
+		slide4_sub: "Exempla Fidei",
+		slide4_title: "Sanctus Diei",
+		slide4_desc: "Inveni historias virorum et mulierum qui pro Christo animas suas dederunt et inveni inspirationem pro itinere tuo cotidiano.",
+		slide4_btn: "Vide quem",
+		slide5_sub: "Formatio",
+		slide5_title: "Homilia Cotidiana",
+		slide5_desc: "Profunda fidem tuam cum homilia cotidiana, a Patre Mario Sartori commentata.",
+		slide5_btn: "Spectare"
+	},
+	topics: {
+		trindade: "Trinitas",
+		sacramentos: "Sacramenta",
+		missa: "Missa",
+		milagres: "Miracula Eucharistica",
+		escritura: "Scriptura Sacra",
+		sucessao: "Successio Apostolica",
+		tradicao: "Traditio et Magisterium",
+		papado: "Papatio",
+		orientais: "Ecclesiae Orientales",
+		concilios: "Concilia et Ritus",
+		historia: "Historia",
+		patristica: "Patristica",
+		escolastica: "Scholastica",
+		ciencia: "Scientia",
+		apologetica: "Apologetica",
+		dogmas: "Dogmata Mariana",
+		intercessao: "Intercessio et Mediatio",
+		imagens: "Imagines et Idolatria",
+		catecismo: "Catechismus",
+		oracoes: "Orationes",
+		rosario: "Rosarium"
+	}
+};
+const locale_la_46json_50dfc134 = {
+	menu: menu$1,
+	header: header$1,
+	footer: footer$1,
+	home: home$1
+};
+
+var menu = {
+	inicio: "Home",
+	livros: "Books",
+	artigos: "Religious Articles",
+	homilias: "Homilies",
+	santo_dia: "Saint of the Day"
+};
+var header = {
+	busca: "What are you looking for?",
+	idioma_atual: "Current Language"
+};
+var footer = {
+	sobre_projeto: "About the Project",
+	contato: "Contact",
+	aviso: "* The homilies are embedded directly from YouTube. All rights, views, and credits are directed to the official channel of Fr. Mário Sartori.",
+	direitos: "© 2026 MEA ECCLESIA CATHOLICA. ALL RIGHTS RESERVED.",
+	desenvolvido: "Developed with",
+	fe_codigo: "Faith & Code",
+	por: "by"
+};
+var home = {
+	explore_title: "Explore the Faith",
+	map_title: "Find Parishes",
+	map_desc: "Navigate the map to find parishes, monasteries, and shrines near you.",
+	faq_btn: "Still have questions? Go to FAQ",
+	sobre: {
+		badge: "Who is behind M.E.C?",
+		title: "About \"us\" (or just myself)",
+		desc: "To be honest, the \"About Us\" in the main menu is just to give the site a corporate portal look. In reality, there is no big team behind the scenes here.",
+		btn: "Read full story, see photos and playlist"
+	},
+	carousel: {
+		slide1_sub: "Mea Ecclesia Catholica",
+		slide1_title: "Who Are We?",
+		slide1_desc: "A small space dedicated to helping people understand and love the Church, its doctrine, and its history.",
+		slide1_btn: "About us",
+		slide2_sub: "Patristics and Magisterium",
+		slide2_title: "Treasures of Tradition",
+		slide2_desc: "Understand the Catechism, the writings of the Church Fathers, and the eternal truths guarded for over two millennia.",
+		slide2_btn: "Deepen Studies",
+		slide3_sub: "Liturgy",
+		slide3_title: "The Holy Mass",
+		slide3_desc: "See here what happens in the Holy Sacrifice of the Altar and understand the liturgical responses.",
+		slide3_btn: "See here",
+		slide4_sub: "Examples of Faith",
+		slide4_title: "Saint of the Day",
+		slide4_desc: "Discover the stories of men and women who gave their lives for Christ and find inspiration for your daily journey.",
+		slide4_btn: "See which",
+		slide5_sub: "Formation",
+		slide5_title: "Daily Homily",
+		slide5_desc: "Deepen your faith with the daily homily, commented by Fr. Mario Sartori.",
+		slide5_btn: "Watch"
+	},
+	topics: {
+		trindade: "Trinity",
+		sacramentos: "Sacraments",
+		missa: "Holy Mass",
+		milagres: "Eucharistic Miracles",
+		escritura: "Sacred Scripture",
+		sucessao: "Apostolic Succession",
+		tradicao: "Tradition & Magisterium",
+		papado: "The Papacy",
+		orientais: "Eastern Churches",
+		concilios: "Councils and Rites",
+		historia: "History",
+		patristica: "Patristics",
+		escolastica: "Scholasticism",
+		ciencia: "Science",
+		apologetica: "Apologetics",
+		dogmas: "Marian Dogmas",
+		intercessao: "Intercession & Mediation",
+		imagens: "Images and Idolatry",
+		catecismo: "Catechism",
+		oracoes: "Prayers",
+		rosario: "Rosary"
+	}
+};
+const locale_en_46json_c5e9ec7b = {
+	menu: menu,
+	header: header,
+	footer: footer,
+	home: home
+};
+
+// @ts-nocheck
+const localeCodes =  [
+  "pt",
+  "la",
+  "en"
+];
+const localeLoaders = {
+  pt: [
+    {
+      key: "locale_pt_46json_d769759e",
+      load: () => Promise.resolve(locale_pt_46json_d769759e),
+      cache: true
+    }
+  ],
+  la: [
+    {
+      key: "locale_la_46json_50dfc134",
+      load: () => Promise.resolve(locale_la_46json_50dfc134),
+      cache: true
+    }
+  ],
+  en: [
+    {
+      key: "locale_en_46json_c5e9ec7b",
+      load: () => Promise.resolve(locale_en_46json_c5e9ec7b),
+      cache: true
+    }
+  ]
+};
+const vueI18nConfigs = [];
+const normalizedLocales = [
+  {
+    code: "pt",
+    name: "Português",
+    language: undefined
+  },
+  {
+    code: "la",
+    name: "Latim",
+    language: undefined
+  },
+  {
+    code: "en",
+    name: "Inglês",
+    language: undefined
+  }
+];
+
+const setupVueI18nOptions = async (defaultLocale) => {
+  const options = await loadVueI18nOptions(vueI18nConfigs);
+  options.locale = defaultLocale || options.locale || "en-US";
+  options.defaultLocale = defaultLocale;
+  options.fallbackLocale ??= false;
+  options.messages ??= {};
+  for (const locale of localeCodes) {
+    options.messages[locale] ??= {};
+  }
+  return options;
+};
+
+function defineNitroPlugin(def) {
+  return def;
+}
+
+function defineRenderHandler(render) {
+  const runtimeConfig = useRuntimeConfig();
+  return eventHandler(async (event) => {
+    const nitroApp = useNitroApp();
+    const ctx = { event, render, response: void 0 };
+    await nitroApp.hooks.callHook("render:before", ctx);
+    if (!ctx.response) {
+      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
+        setResponseHeader(event, "Content-Type", "image/x-icon");
+        return send(
+          event,
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        );
+      }
+      ctx.response = await ctx.render(event);
+      if (!ctx.response) {
+        const _currentStatus = getResponseStatus(event);
+        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+        return send(
+          event,
+          "No response returned from render handler: " + event.path
+        );
+      }
+    }
+    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
+    if (ctx.response.headers) {
+      setResponseHeaders(event, ctx.response.headers);
+    }
+    if (ctx.response.statusCode || ctx.response.statusMessage) {
+      setResponseStatus(
+        event,
+        ctx.response.statusCode,
+        ctx.response.statusMessage
+      );
+    }
+    return ctx.response.body;
+  });
+}
+
+const scheduledTasks = false;
+
+const tasks = {
+  
+};
+
+const __runningTasks__ = {};
+async function runTask(name, {
+  payload = {},
+  context = {}
+} = {}) {
+  if (__runningTasks__[name]) {
+    return __runningTasks__[name];
+  }
+  if (!(name in tasks)) {
+    throw createError({
+      message: `Task \`${name}\` is not available!`,
+      statusCode: 404
+    });
+  }
+  if (!tasks[name].resolve) {
+    throw createError({
+      message: `Task \`${name}\` is not implemented!`,
+      statusCode: 501
+    });
+  }
+  const handler = await tasks[name].resolve();
+  const taskEvent = { name, payload, context };
+  __runningTasks__[name] = handler.run(taskEvent);
+  try {
+    const res = await __runningTasks__[name];
+    return res;
+  } finally {
+    delete __runningTasks__[name];
+  }
+}
+
+function buildAssetsDir() {
+	
+	return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+	
+	const app = useRuntimeConfig().app;
+	const publicBase = app.cdnURL || app.baseURL;
+	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
+}
+
+function parseAcceptLanguage(value) {
+  return value.split(",").map((tag) => tag.split(";")[0]).filter(
+    (tag) => !(tag === "*" || tag === "")
+  );
+}
+function createPathIndexLanguageParser(index = 0) {
+  return (path) => {
+    const rawPath = typeof path === "string" ? path : path.pathname;
+    const normalizedPath = rawPath.split("?")[0];
+    const parts = normalizedPath.split("/");
+    if (parts[0] === "") {
+      parts.shift();
+    }
+    return parts.length > index ? parts[index] || "" : "";
+  };
+}
+
+function useRuntimeI18n(nuxtApp, event) {
+  {
+    return useRuntimeConfig(event).public.i18n;
+  }
+}
+function useI18nDetection(nuxtApp) {
+  const detectBrowserLanguage = useRuntimeI18n().detectBrowserLanguage;
+  const detect = detectBrowserLanguage || {};
+  return {
+    ...detect,
+    enabled: !!detectBrowserLanguage,
+    cookieKey: detect.cookieKey || "i18n_redirected"
+  };
+}
+function resolveRootRedirect(config) {
+  if (!config) {
+    return void 0;
+  }
+  return {
+    path: "/" + (isString(config) ? config : config.path).replace(/^\//, ""),
+    code: !isString(config) && config.statusCode || 302
+  };
+}
+function toArray(value) {
+  return Array.isArray(value) ? value : [value];
+}
+
+function createLocaleConfigs(fallbackLocale) {
+  const localeConfigs = {};
+  for (const locale of localeCodes) {
+    const fallbacks = getFallbackLocaleCodes(fallbackLocale, [locale]);
+    const cacheable = isLocaleWithFallbacksCacheable(locale, fallbacks);
+    localeConfigs[locale] = { fallbacks, cacheable };
+  }
+  return localeConfigs;
+}
+function getFallbackLocaleCodes(fallback, locales) {
+  if (fallback === false) {
+    return [];
+  }
+  if (isArray(fallback)) {
+    return fallback;
+  }
+  let fallbackLocales = [];
+  if (isString(fallback)) {
+    if (locales.every((locale) => locale !== fallback)) {
+      fallbackLocales.push(fallback);
+    }
+    return fallbackLocales;
+  }
+  const targets = [...locales, "default"];
+  for (const locale of targets) {
+    if (locale in fallback == false) {
+      continue;
+    }
+    fallbackLocales = [...fallbackLocales, ...fallback[locale].filter(Boolean)];
+  }
+  return fallbackLocales;
+}
+function isLocaleCacheable(locale) {
+  return localeLoaders[locale] != null && localeLoaders[locale].every((loader) => loader.cache !== false);
+}
+function isLocaleWithFallbacksCacheable(locale, fallbackLocales) {
+  return isLocaleCacheable(locale) && fallbackLocales.every((fallbackLocale) => isLocaleCacheable(fallbackLocale));
+}
+function getDefaultLocaleForDomain(host) {
+  return normalizedLocales.find((l) => !!l.defaultForDomains?.includes(host))?.code;
+}
+const isSupportedLocale = (locale) => localeCodes.includes(locale || "");
+
+function useI18nContext(event) {
+  if (event.context.nuxtI18n == null) {
+    throw new Error("Nuxt I18n server context has not been set up yet.");
+  }
+  return event.context.nuxtI18n;
+}
+function tryUseI18nContext(event) {
+  return event.context.nuxtI18n;
+}
+const getHost = (event) => getRequestURL(event, { xForwardedHost: true }).host;
+async function initializeI18nContext(event) {
+  const runtimeI18n = useRuntimeI18n(void 0, event);
+  const defaultLocale = runtimeI18n.defaultLocale || "";
+  const options = await setupVueI18nOptions(getDefaultLocaleForDomain(getHost(event)) || defaultLocale);
+  const localeConfigs = createLocaleConfigs(options.fallbackLocale);
+  const ctx = createI18nContext();
+  ctx.vueI18nOptions = options;
+  ctx.localeConfigs = localeConfigs;
+  event.context.nuxtI18n = ctx;
+  return ctx;
+}
+function createI18nContext() {
+  return {
+    messages: {},
+    slp: {},
+    localeConfigs: {},
+    trackMap: {},
+    vueI18nOptions: void 0,
+    trackKey(key, locale) {
+      this.trackMap[locale] ??= /* @__PURE__ */ new Set();
+      this.trackMap[locale].add(key);
+    }
+  };
+}
+
+function matchBrowserLocale(locales, browserLocales) {
+  const matchedLocales = [];
+  for (const [index, browserCode] of browserLocales.entries()) {
+    const matchedLocale = locales.find((l) => l.language?.toLowerCase() === browserCode.toLowerCase());
+    if (matchedLocale) {
+      matchedLocales.push({ code: matchedLocale.code, score: 1 - index / browserLocales.length });
+      break;
+    }
+  }
+  for (const [index, browserCode] of browserLocales.entries()) {
+    const languageCode = browserCode.split("-")[0].toLowerCase();
+    const matchedLocale = locales.find((l) => l.language?.split("-")[0].toLowerCase() === languageCode);
+    if (matchedLocale) {
+      matchedLocales.push({ code: matchedLocale.code, score: 0.999 - index / browserLocales.length });
+      break;
+    }
+  }
+  return matchedLocales;
+}
+function compareBrowserLocale(a, b) {
+  if (a.score === b.score) {
+    return b.code.length - a.code.length;
+  }
+  return b.score - a.score;
+}
+function findBrowserLocale(locales, browserLocales) {
+  const matchedLocales = matchBrowserLocale(
+    locales.map((l) => ({ code: l.code, language: l.language || l.code })),
+    browserLocales
+  );
+  return matchedLocales.sort(compareBrowserLocale).at(0)?.code ?? "";
+}
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -2111,6 +2830,245 @@ const appTeleportTag = "div";
 const appTeleportAttrs = {"id":"teleports"};
 
 const appId = "nuxt-app";
+
+const separator = "___";
+const pathLanguageParser = createPathIndexLanguageParser(0);
+const getLocaleFromRoutePath = (path) => pathLanguageParser(path);
+const getLocaleFromRouteName = (name) => name.split(separator).at(1) ?? "";
+function normalizeInput(input) {
+  return typeof input !== "object" ? String(input) : String(input?.name || input?.path || "");
+}
+function getLocaleFromRoute(route) {
+  const input = normalizeInput(route);
+  if (input[0] === "/") {
+    return getLocaleFromRoutePath(input);
+  }
+  const fromName = getLocaleFromRouteName(input);
+  if (fromName) {
+    return fromName;
+  }
+  if (typeof route === "object" && route?.path) {
+    return getLocaleFromRoutePath(String(route.path));
+  }
+  return "";
+}
+
+function matchDomainLocale(locales, host, pathLocale) {
+  const normalizeDomain = (domain = "") => domain.replace(/https?:\/\//, "");
+  const matches = locales.filter(
+    (locale) => normalizeDomain(locale.domain) === host || toArray(locale.domains).includes(host)
+  );
+  if (matches.length <= 1) {
+    return matches[0]?.code;
+  }
+  return (
+    // match by current path locale
+    matches.find((l) => l.code === pathLocale)?.code || matches.find((l) => l.defaultForDomains?.includes(host) ?? l.domainDefault)?.code
+  );
+}
+
+const getCookieLocale = (event, cookieName) => (getCookie(event, cookieName)) || void 0;
+const getRouteLocale = (event, route) => getLocaleFromRoute(route);
+const getHeaderLocale = (event) => findBrowserLocale(normalizedLocales, parseAcceptLanguage(getRequestHeader(event, "accept-language") || ""));
+const getHostLocale = (event, path, domainLocales) => {
+  const host = getRequestURL(event, { xForwardedHost: true }).host;
+  const locales = normalizedLocales.map((l) => ({
+    ...l,
+    domain: domainLocales[l.code]?.domain ?? l.domain
+  }));
+  return matchDomainLocale(locales, host, getLocaleFromRoutePath(path));
+};
+const useDetectors = (event, config, nuxtApp) => {
+  if (!event) {
+    throw new Error("H3Event is required for server-side locale detection");
+  }
+  const runtimeI18n = useRuntimeI18n();
+  return {
+    cookie: () => getCookieLocale(event, config.cookieKey),
+    header: () => getHeaderLocale(event) ,
+    navigator: () => void 0,
+    host: (path) => getHostLocale(event, path, runtimeI18n.domainLocales),
+    route: (path) => getRouteLocale(event, path)
+  };
+};
+
+// Generated by @nuxtjs/i18n
+const pathToI18nConfig = {};
+const i18nPathToPath = {};
+const disabledI18nPathToPath = {};
+
+const formatTrailingSlash = withoutTrailingSlash;
+const matcher = createRouterMatcher([], {});
+for (const path of Object.keys(i18nPathToPath)) {
+  matcher.addRoute({ path, component: () => "", meta: {} });
+}
+const disabledI18nMatcher = createRouterMatcher([], {});
+for (const path of Object.keys(disabledI18nPathToPath)) {
+  disabledI18nMatcher.addRoute({ path, component: () => "", meta: {} });
+}
+const getI18nPathToI18nPath = (path, locale) => {
+  if (!path || !locale) {
+    return;
+  }
+  const plainPath = i18nPathToPath[path];
+  const i18nConfig = pathToI18nConfig[plainPath];
+  if (i18nConfig && i18nConfig[locale]) {
+    return i18nConfig[locale] === true ? plainPath : i18nConfig[locale];
+  }
+};
+function isExistingNuxtRoute(path) {
+  if (path === "") {
+    return;
+  }
+  if (path.endsWith("/__nuxt_error")) {
+    return;
+  }
+  const disabledI18nResolvedMatch = disabledI18nMatcher.resolve({ path }, { path: "/", name: "", matched: [], params: {}, meta: {} });
+  if (disabledI18nResolvedMatch.matched.length > 0) {
+    return;
+  }
+  const resolvedMatch = matcher.resolve({ path }, { path: "/", name: "", matched: [], params: {}, meta: {} });
+  return resolvedMatch.matched.length > 0 ? resolvedMatch : void 0;
+}
+function matchLocalized(path, locale, defaultLocale) {
+  if (path === "") {
+    return;
+  }
+  const parsed = parsePath(path);
+  const resolvedMatch = matcher.resolve(
+    { path: parsed.pathname || "/" },
+    { path: "/", name: "", matched: [], params: {}, meta: {} }
+  );
+  if (resolvedMatch.matched.length > 0) {
+    const alternate = getI18nPathToI18nPath(resolvedMatch.matched[0].path, locale);
+    const match = matcher.resolve(
+      { params: resolvedMatch.params },
+      { path: alternate || "/", name: "", matched: [], params: {}, meta: {} }
+    );
+    return formatTrailingSlash(withLeadingSlash(joinURL("", match.path)), true);
+  }
+}
+
+function* detect(detectors, detection, path) {
+  if (detection.enabled) {
+    yield { locale: detectors.cookie(), source: "cookie" };
+    yield { locale: detectors.header(), source: "header" };
+  }
+  yield { locale: detection.fallbackLocale, source: "fallback" };
+}
+function createRedirectResponse(event, dest, code) {
+  event.node.res.setHeader("location", dest);
+  event.node.res.statusCode = sanitizeStatusCode(code, event.node.res.statusCode);
+  return {
+    headers: event.node.res.getHeaders(),
+    statusCode: event.node.res.statusCode,
+    body: `<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=${dest.replace(/"/g, "%22")}"></head></html>`
+  };
+}
+const _DAG2ZS1svT5sjRGrGYPztwUSwCY1L4tyChuhFd2Emc = defineNitroPlugin(async (nitro) => {
+  const runtimeI18n = useRuntimeI18n();
+  const rootRedirect = resolveRootRedirect(runtimeI18n.rootRedirect);
+  runtimeI18n.defaultLocale || "";
+  try {
+    const cacheStorage = useStorage("cache");
+    const cachedKeys = await cacheStorage.getKeys("nitro:handlers:i18n");
+    await Promise.all(cachedKeys.map((key) => cacheStorage.removeItem(key)));
+  } catch {
+  }
+  const detection = useI18nDetection();
+  const cookieOptions = {
+    path: "/",
+    domain: detection.cookieDomain || void 0,
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: "lax",
+    secure: detection.cookieSecure
+  };
+  const createBaseUrlGetter = () => {
+    isFunction(runtimeI18n.baseUrl) ? "" : runtimeI18n.baseUrl || "";
+    if (isFunction(runtimeI18n.baseUrl)) {
+      console.warn("[nuxt-i18n] Configuring baseUrl as a function is deprecated and will be removed in v11.");
+      return () => "";
+    }
+    return (event, defaultLocale) => {
+      return "";
+    };
+  };
+  function resolveRedirectPath(event, path, pathLocale, defaultLocale, detector) {
+    let locale = "";
+    for (const detected of detect(detector, detection, event.path)) {
+      if (detected.locale && isSupportedLocale(detected.locale)) {
+        locale = detected.locale;
+        break;
+      }
+    }
+    locale ||= defaultLocale;
+    function getLocalizedMatch(locale2) {
+      const res = matchLocalized(path || "/", locale2);
+      if (res && res !== event.path) {
+        return res;
+      }
+    }
+    let resolvedPath = void 0;
+    let redirectCode = 302;
+    const requestURL = getRequestURL(event);
+    if (rootRedirect && requestURL.pathname === "/") {
+      locale = detection.enabled && locale || defaultLocale;
+      resolvedPath = isSupportedLocale(detector.route(rootRedirect.path)) && rootRedirect.path || matchLocalized(rootRedirect.path, locale);
+      redirectCode = rootRedirect.code;
+    } else if (runtimeI18n.redirectStatusCode) {
+      redirectCode = runtimeI18n.redirectStatusCode;
+    }
+    switch (detection.redirectOn) {
+      case "root":
+        if (requestURL.pathname !== "/") {
+          break;
+        }
+      // fallthrough (root has no prefix)
+      case "no prefix":
+        if (pathLocale) {
+          break;
+        }
+      // fallthrough to resolve
+      case "all":
+        resolvedPath ??= getLocalizedMatch(locale);
+        break;
+    }
+    if (requestURL.pathname === "/" && "no_prefix" === "prefix") ;
+    return { path: resolvedPath, code: redirectCode, locale };
+  }
+  const baseUrlGetter = createBaseUrlGetter();
+  nitro.hooks.hook("request", async (event) => {
+    await initializeI18nContext(event);
+  });
+  nitro.hooks.hook("render:before", async (context) => {
+    const { event } = context;
+    const ctx = useI18nContext(event);
+    const url = getRequestURL(event);
+    const detector = useDetectors(event, detection);
+    const localeSegment = detector.route(event.path);
+    const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
+    const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
+    if (!url.pathname.includes("/_i18n") && !isExistingNuxtRoute(path)) {
+      return;
+    }
+    const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);
+    if (resolved.path && resolved.path !== url.pathname) {
+      ctx.detectLocale = resolved.locale;
+      detection.useCookie && setCookie(event, detection.cookieKey, resolved.locale, cookieOptions);
+      context.response = createRedirectResponse(
+        event,
+        joinURL(baseUrlGetter(event, ctx.vueI18nOptions.defaultLocale), resolved.path + url.search),
+        resolved.code
+      );
+      return;
+    }
+  });
+  nitro.hooks.hook("render:html", (htmlContext, { event }) => {
+    tryUseI18nContext(event);
+  });
+});
+
+const rootDir = "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic";
 
 const devReducers = {
 	VNode: (data) => isVNode(data) ? {
@@ -2201,6 +3159,7 @@ function onConsoleLog(callback) {
 
 const plugins = [
   _DsNfOwli9IhXIsfkWqsxcAswPpPLpf4WmGGPNVau_Y,
+_DAG2ZS1svT5sjRGrGYPztwUSwCY1L4tyChuhFd2Emc,
 _u5mj2lFS3x_4IZPUn2RgHjd3AgkyEAFQo0vA1VR8Pk,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
@@ -2294,6 +3253,123 @@ const _AOMOvw = eventHandler((event) => {
   return readAsset(id);
 });
 
+const storage = prefixStorage(useStorage(), "i18n");
+function cachedFunctionI18n(fn, opts) {
+  opts = { maxAge: 1, ...opts };
+  const pending = {};
+  async function get(key, resolver) {
+    const isPending = pending[key];
+    if (!isPending) {
+      pending[key] = Promise.resolve(resolver());
+    }
+    try {
+      return await pending[key];
+    } finally {
+      delete pending[key];
+    }
+  }
+  return async (...args) => {
+    const key = [opts.name, opts.getKey(...args)].join(":").replace(/:\/$/, ":index");
+    const maxAge = opts.maxAge ?? 1;
+    const isCacheable = !opts.shouldBypassCache(...args) && maxAge >= 0;
+    const cache = isCacheable && await storage.getItemRaw(key);
+    if (!cache || cache.ttl < Date.now()) {
+      pending[key] = Promise.resolve(fn(...args));
+      const value = await get(key, () => fn(...args));
+      if (isCacheable) {
+        await storage.setItemRaw(key, { ttl: Date.now() + maxAge * 1e3, value, mtime: Date.now() });
+      }
+      return value;
+    }
+    return cache.value;
+  };
+}
+
+const _getMessages = async (locale) => {
+  return { [locale]: await getLocaleMessagesMerged(locale, localeLoaders[locale]) };
+};
+cachedFunctionI18n(_getMessages, {
+  name: "messages",
+  maxAge: -1 ,
+  getKey: (locale) => locale,
+  shouldBypassCache: (locale) => !isLocaleCacheable(locale)
+});
+const getMessages = _getMessages ;
+const _getMergedMessages = async (locale, fallbackLocales) => {
+  const merged = {};
+  try {
+    if (fallbackLocales.length > 0) {
+      const messages = await Promise.all(fallbackLocales.map(getMessages));
+      for (const message2 of messages) {
+        deepCopy(message2, merged);
+      }
+    }
+    const message = await getMessages(locale);
+    deepCopy(message, merged);
+    return merged;
+  } catch (e) {
+    throw new Error("Failed to merge messages: " + e.message);
+  }
+};
+const getMergedMessages = cachedFunctionI18n(_getMergedMessages, {
+  name: "merged-single",
+  maxAge: -1 ,
+  getKey: (locale, fallbackLocales) => `${locale}-[${[...new Set(fallbackLocales)].sort().join("-")}]`,
+  shouldBypassCache: (locale, fallbackLocales) => !isLocaleWithFallbacksCacheable(locale, fallbackLocales)
+});
+const _getAllMergedMessages = async (locales) => {
+  const merged = {};
+  try {
+    const messages = await Promise.all(locales.map(getMessages));
+    for (const message of messages) {
+      deepCopy(message, merged);
+    }
+    return merged;
+  } catch (e) {
+    throw new Error("Failed to merge messages: " + e.message);
+  }
+};
+cachedFunctionI18n(_getAllMergedMessages, {
+  name: "merged-all",
+  maxAge: -1 ,
+  getKey: (locales) => locales.join("-"),
+  shouldBypassCache: (locales) => !locales.every((locale) => isLocaleCacheable(locale))
+});
+
+const _messagesHandler = defineEventHandler(async (event) => {
+  const locale = getRouterParam(event, "locale");
+  if (!locale) {
+    throw createError({ status: 400, message: "Locale not specified." });
+  }
+  const ctx = useI18nContext(event);
+  if (ctx.localeConfigs && locale in ctx.localeConfigs === false) {
+    throw createError({ status: 404, message: `Locale '${locale}' not found.` });
+  }
+  const messages = await getMergedMessages(locale, ctx.localeConfigs?.[locale]?.fallbacks ?? []);
+  deepCopy(messages, ctx.messages);
+  return ctx.messages;
+});
+const _cachedMessageLoader = defineCachedFunction(_messagesHandler, {
+  name: "i18n:messages-internal",
+  maxAge: -1 ,
+  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-"),
+  async shouldBypassCache(event) {
+    const locale = getRouterParam(event, "locale");
+    if (locale == null) {
+      return false;
+    }
+    const ctx = tryUseI18nContext(event) || await initializeI18nContext(event);
+    return !ctx.localeConfigs?.[locale]?.cacheable;
+  }
+});
+defineCachedEventHandler(_cachedMessageLoader, {
+  name: "i18n:messages",
+  maxAge: -1 ,
+  swr: false,
+  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-")
+});
+const _lh730q = _messagesHandler ;
+
 const VueResolver = (_, value) => {
   return isRef(value) ? toValue(value) : value;
 };
@@ -2377,20 +3453,6 @@ function setSSRError(ssrContext, error) {
 	ssrContext.error = true;
 	ssrContext.payload = { error };
 	ssrContext.url = error.url;
-}
-
-function buildAssetsDir() {
-	
-	return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-	
-	const app = useRuntimeConfig().app;
-	const publicBase = app.cdnURL || app.baseURL;
-	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
 // @ts-expect-error private property consumed by vite-generated url helpers
@@ -2741,6 +3803,7 @@ const _lazy_rT6dy_ = () => Promise.resolve().then(function () { return renderer;
 const handlers = [
   { route: '', handler: _AOMOvw, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_rT6dy_, lazy: true, middleware: false, method: undefined },
+  { route: '/_i18n/:hash/:locale/messages.json', handler: _lh730q, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_rT6dy_, lazy: true, middleware: false, method: undefined }
 ];
@@ -2885,82 +3948,6 @@ function useNitroApp() {
   return nitroApp$1;
 }
 runNitroPlugins(nitroApp$1);
-
-function defineRenderHandler(render) {
-  const runtimeConfig = useRuntimeConfig();
-  return eventHandler(async (event) => {
-    const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
-    await nitroApp.hooks.callHook("render:before", ctx);
-    if (!ctx.response) {
-      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
-        setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send(
-          event,
-          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        );
-      }
-      ctx.response = await ctx.render(event);
-      if (!ctx.response) {
-        const _currentStatus = getResponseStatus(event);
-        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send(
-          event,
-          "No response returned from render handler: " + event.path
-        );
-      }
-    }
-    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
-    if (ctx.response.headers) {
-      setResponseHeaders(event, ctx.response.headers);
-    }
-    if (ctx.response.statusCode || ctx.response.statusMessage) {
-      setResponseStatus(
-        event,
-        ctx.response.statusCode,
-        ctx.response.statusMessage
-      );
-    }
-    return ctx.response.body;
-  });
-}
-
-const scheduledTasks = false;
-
-const tasks = {
-  
-};
-
-const __runningTasks__ = {};
-async function runTask(name, {
-  payload = {},
-  context = {}
-} = {}) {
-  if (__runningTasks__[name]) {
-    return __runningTasks__[name];
-  }
-  if (!(name in tasks)) {
-    throw createError({
-      message: `Task \`${name}\` is not available!`,
-      statusCode: 404
-    });
-  }
-  if (!tasks[name].resolve) {
-    throw createError({
-      message: `Task \`${name}\` is not implemented!`,
-      statusCode: 501
-    });
-  }
-  const handler = await tasks[name].resolve();
-  const taskEvent = { name, payload, context };
-  __runningTasks__[name] = handler.run(taskEvent);
-  try {
-    const res = await __runningTasks__[name];
-    return res;
-  } finally {
-    delete __runningTasks__[name];
-  }
-}
 
 if (!globalThis.crypto) {
   globalThis.crypto = crypto$1.webcrypto;

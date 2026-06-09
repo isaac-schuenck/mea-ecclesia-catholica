@@ -1,0 +1,79 @@
+{
+  "menu": {
+    "inicio": "Início",
+    "livros": "Livros",
+    "artigos": "Artigos Religiosos",
+    "homilias": "Homilias",
+    "santo_dia": "Santo do Dia"
+  },
+  "header": {
+    "busca": "O que você está buscando?",
+    "idioma_atual": "Idioma Atual"
+  },
+  "footer": {
+    "sobre_projeto": "Sobre o Projeto",
+    "contato": "Contato",
+    "aviso": "* As homilias são incorporadas diretamente do YouTube. Todos os direitos, visualizações e créditos são direcionados ao canal oficial do Pe. Mário Sartori.",
+    "direitos": "© 2026 MEA ECCLESIA CATHOLICA. TODOS OS DIREITOS RESERVADOS.",
+    "desenvolvido": "Desenvolvido com",
+    "fe_codigo": "Fé & Código",
+    "por": "por"
+  },
+  "home": {
+    "explore_title": "Explore a Fé",
+    "map_title": "Encontre Paróquias",
+    "map_desc": "Navegue pelo mapa para encontrar paróquias, mosteiros e santuários próximos a você.",
+    "faq_btn": "Ainda tem dúvidas? Acesse o FAQ",
+    "sobre": {
+      "badge": "Quem está por trás do M.E.C?",
+      "title": "Sobre \"nós\" (ou só eu mesmo)",
+      "desc": "Para ser sincero, o \"Sobre Nós\" no menu principal é só para deixar o site com cara de portal corporativo. Na verdade, não existe uma grande equipe aqui nos bastidores.",
+      "btn": "Ler história completa, ver fotos e playlist"    
+    },
+    "carousel": {
+      "slide1_sub": "Mea Ecclesia Catholica",
+      "slide1_title": "Quem Somos?",
+      "slide1_desc": "Um pequeno espaço dedicado a ajudar as pessoas a compreenderem e amarem a Igreja, sua doutrina e sua história.",
+      "slide1_btn": "Sobre nós",
+      "slide2_sub": "Patrística e Magistério",
+      "slide2_title": "Os Tesouros da Tradição",
+      "slide2_desc": "Entenda o Catecismo, os escritos dos Padres da Igreja e as verdades eternas guardadas por mais de dois milênios.",
+      "slide2_btn": "Aprofundar Estudos",
+      "slide3_sub": "Liturgia",
+      "slide3_title": "A Santa Missa",
+      "slide3_desc": "Veja aqui o que acontece no Santo Sacrifício do Altar e compreenda as respostas litúrgicas.",
+      "slide3_btn": "Ver aqui",
+      "slide4_sub": "Exemplos de Fé",
+      "slide4_title": "O Santo do Dia",
+      "slide4_desc": "Descubra a história de homens e mulheres que doaram suas vidas por Cristo e encontre inspiração para a sua caminhada diária.",
+      "slide4_btn": "Veja qual",
+      "slide5_sub": "Formação",
+      "slide5_title": "Homilia Diária",
+      "slide5_desc": "Aprofunde sua fé com a homilia diária, comentada pelo Pe. Mario Sartori.",
+      "slide5_btn": "Assistir"
+    },
+    "topics": {
+      "trindade": "Trindade",
+      "sacramentos": "Sacramentos",
+      "missa": "Missa",
+      "milagres": "Milagres Eucarísticos",
+      "escritura": "Escritura",
+      "sucessao": "Sucessão Apostólica",
+      "tradicao": "Tradição e Magistério",
+      "papado": "O Papado",
+      "orientais": "Igrejas Orientais",
+      "concilios": "Concílios e Ritos",
+      "historia": "História",
+      "patristica": "Patrística",
+      "escolastica": "Escolástica",
+      "ciencia": "Ciência",
+      "apologetica": "Apologética",
+      "dogmas": "Dogmas Marianos",
+      "intercessao": "Intercessão e Mediação",
+      "imagens": "Imagens e Idolatria",
+      "catecismo": "Catecismo",
+      "oracoes": "Orações",
+      "rosario": "Rosário"
+    }
+  }
+}

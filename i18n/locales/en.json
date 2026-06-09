@@ -1,0 +1,79 @@
+{
+  "menu": {
+    "inicio": "Home",
+    "livros": "Books",
+    "artigos": "Religious Articles",
+    "homilias": "Homilies",
+    "santo_dia": "Saint of the Day"
+  },
+  "header": {
+    "busca": "What are you looking for?",
+    "idioma_atual": "Current Language"
+  },
+  "footer": {
+    "sobre_projeto": "About the Project",
+    "contato": "Contact",
+    "aviso": "* The homilies are embedded directly from YouTube. All rights, views, and credits are directed to the official channel of Fr. Mário Sartori.",
+    "direitos": "© 2026 MEA ECCLESIA CATHOLICA. ALL RIGHTS RESERVED.",
+    "desenvolvido": "Developed with",
+    "fe_codigo": "Faith & Code",
+    "por": "by"
+  },
+  "home": {
+    "explore_title": "Explore the Faith",
+    "map_title": "Find Parishes",
+    "map_desc": "Navigate the map to find parishes, monasteries, and shrines near you.",
+    "faq_btn": "Still have questions? Go to FAQ",
+    "sobre": {
+      "badge": "Who is behind M.E.C?",
+      "title": "About \"us\" (or just myself)",
+      "desc": "To be honest, the \"About Us\" in the main menu is just to give the site a corporate portal look. In reality, there is no big team behind the scenes here.",
+      "btn": "Read full story, see photos and playlist"
+    },
+    "carousel": {
+      "slide1_sub": "Mea Ecclesia Catholica",
+      "slide1_title": "Who Are We?",
+      "slide1_desc": "A small space dedicated to helping people understand and love the Church, its doctrine, and its history.",
+      "slide1_btn": "About us",
+      "slide2_sub": "Patristics and Magisterium",
+      "slide2_title": "Treasures of Tradition",
+      "slide2_desc": "Understand the Catechism, the writings of the Church Fathers, and the eternal truths guarded for over two millennia.",
+      "slide2_btn": "Deepen Studies",
+      "slide3_sub": "Liturgy",
+      "slide3_title": "The Holy Mass",
+      "slide3_desc": "See here what happens in the Holy Sacrifice of the Altar and understand the liturgical responses.",
+      "slide3_btn": "See here",
+      "slide4_sub": "Examples of Faith",
+      "slide4_title": "Saint of the Day",
+      "slide4_desc": "Discover the stories of men and women who gave their lives for Christ and find inspiration for your daily journey.",
+      "slide4_btn": "See which",
+      "slide5_sub": "Formation",
+      "slide5_title": "Daily Homily",
+      "slide5_desc": "Deepen your faith with the daily homily, commented by Fr. Mario Sartori.",
+      "slide5_btn": "Watch"
+    },
+    "topics": {
+      "trindade": "Trinity",
+      "sacramentos": "Sacraments",
+      "missa": "Holy Mass",
+      "milagres": "Eucharistic Miracles",
+      "escritura": "Sacred Scripture",
+      "sucessao": "Apostolic Succession",
+      "tradicao": "Tradition & Magisterium",
+      "papado": "The Papacy",
+      "orientais": "Eastern Churches",
+      "concilios": "Councils and Rites",
+      "historia": "History",
+      "patristica": "Patristics",
+      "escolastica": "Scholasticism",
+      "ciencia": "Science",
+      "apologetica": "Apologetics",
+      "dogmas": "Marian Dogmas",
+      "intercessao": "Intercession & Mediation",
+      "imagens": "Images and Idolatry",
+      "catecismo": "Catechism",
+      "oracoes": "Prayers",
+      "rosario": "Rosary"
+    }
+  }
+}

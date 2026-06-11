@@ -211,7 +211,13 @@
     </section>
 
     <!--  ===========  Sobre nós  ===========  -->
-    <section class="max-w-5xl mx-auto px-6 mb-24">
+
+    <section class="max-w-7xl mx-auto py-12 px-6 mb-20">
+      <h3
+        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
+      >
+        {{ $t("home.sobre_nos") }}
+      </h3>
       <div
         class="bg-[#041122] rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-stretch border border-white/10"
       >
@@ -328,7 +334,7 @@ const slides = computed(() => [
     subtitle: t("home.carousel.slide4_sub"),
     description: t("home.carousel.slide4_desc"),
     buttonText: t("home.carousel.slide4_btn"),
-    link: "/santos",
+    link: "/santo-do-dia",
     image: "/santo.png",
     positionClass: "md:object-[center_40%]",
   },

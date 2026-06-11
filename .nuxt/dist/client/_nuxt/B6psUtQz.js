@@ -1,0 +1,1 @@
+import{_ as o,c as n,a as s,o as t}from"./CXJwVB9H.js";const a={};function r(c,e){return t(),n("div",null,[...e[0]||(e[0]=[s("h1",null,"Página dos Santos em construção...",-1)])])}const _=o(a,[["render",r]]);export{_ as default};

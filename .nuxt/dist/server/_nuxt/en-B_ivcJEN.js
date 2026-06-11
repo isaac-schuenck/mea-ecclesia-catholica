@@ -1,0 +1,140 @@
+const resource = {
+  "menu": {
+    "inicio": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Home" } },
+    "livros": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Books" } },
+    "artigos": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Religious Articles" } },
+    "homilias": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Homilies" } },
+    "santo_dia": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Saint of the Day" } }
+  },
+  "header": {
+    "busca": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "What are you looking for?" } },
+    "idioma_atual": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Current Language" } }
+  },
+  "footer": {
+    "sobre_projeto": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "About the Project" } },
+    "contato": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Contact" } },
+    "aviso": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "* The homilies are embedded directly from YouTube. All rights, views, and credits are directed to the official channel of Fr. Mário Sartori." } },
+    "direitos": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "© 2026 MEA ECCLESIA CATHOLICA. ALL RIGHTS RESERVED." } },
+    "desenvolvido": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Developed with" } },
+    "fe_codigo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Faith & Code" } },
+    "por": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "by" } }
+  },
+  "home": {
+    "explore_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Explore the Faith" } },
+    "map_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Find Parishes" } },
+    "map_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Navigate the map to find parishes, monasteries, and shrines near you." } },
+    "faq_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Still have questions? Go to FAQ" } },
+    "sobre_nos": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "About us" } },
+    "sobre": {
+      "badge": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Who is behind M.E.C?" } },
+      "title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": 'About "us" (or just myself)' } },
+      "desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": 'To be honest, the "About Us" in the main menu is just to give the site a corporate portal look. In reality, there is no big team behind the scenes here.' } },
+      "btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Read full story, see photos and playlist" } }
+    },
+    "carousel": {
+      "slide1_sub": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Mea Ecclesia Catholica" } },
+      "slide1_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Who Are We?" } },
+      "slide1_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "A small space dedicated to helping people understand and love the Church, its doctrine, and its history." } },
+      "slide1_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "About us" } },
+      "slide2_sub": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics and Magisterium" } },
+      "slide2_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Treasures of Tradition" } },
+      "slide2_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Understand the Catechism, the writings of the Church Fathers, and the eternal truths guarded for over two millennia." } },
+      "slide2_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Deepen Studies" } },
+      "slide3_sub": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Liturgy" } },
+      "slide3_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Holy Mass" } },
+      "slide3_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "See here what happens in the Holy Sacrifice of the Altar and understand the liturgical responses." } },
+      "slide3_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "See here" } },
+      "slide4_sub": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Examples of Faith" } },
+      "slide4_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Saint of the Day" } },
+      "slide4_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Discover the stories of men and women who gave their lives for Christ and find inspiration for your daily journey." } },
+      "slide4_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "See which" } },
+      "slide5_sub": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Formation" } },
+      "slide5_title": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Daily Homily" } },
+      "slide5_desc": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Deepen your faith with the daily homily, commented by Fr. Mario Sartori." } },
+      "slide5_btn": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Watch" } }
+    },
+    "topics": {
+      "trindade": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Trinity" } },
+      "sacramentos": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sacraments" } },
+      "missa": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Holy Mass" } },
+      "milagres": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Eucharistic Miracles" } },
+      "escritura": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sacred Scripture" } },
+      "sucessao": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Apostolic Succession" } },
+      "tradicao": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Tradition & Magisterium" } },
+      "papado": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Papacy" } },
+      "orientais": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Eastern Churches" } },
+      "concilios": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Councils and Rites" } },
+      "historia": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "History" } },
+      "patristica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics" } },
+      "escolastica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Scholasticism" } },
+      "ciencia": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Science" } },
+      "apologetica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Apologetics" } },
+      "dogmas": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Marian Dogmas" } },
+      "intercessao": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Intercession & Mediation" } },
+      "imagens": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Images and Idolatry" } },
+      "catecismo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Catechism" } },
+      "oracoes": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Prayers" } },
+      "rosario": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Rosary" } }
+    }
+  },
+  "livro": {
+    "titulo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Books" } },
+    "subtitulo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Here are the books I found while researching and studying. Feel free to recommend new readings." } },
+    "sagrada_escritura": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Sacred Scripture" } },
+    "patristica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics" } },
+    "tesouro_tradicao": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Holy Bible: Treasure of Tradition" } },
+    "biblia_sagrada": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Holy Bible" } },
+    "jerusalem": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Jerusalem Bible" } },
+    "ave_maria": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Ave Maria Bible" } },
+    "peregrino": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Pilgrim Bible" } },
+    "navarra": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Navarre Bible" } },
+    "sacra_vulgata": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Biblia Sacra Vulgata" } },
+    "minha_biblioteca_catolica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Minha Biblioteca Católica" } },
+    "paulus": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Paulus" } },
+    "editora_ave_maria": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Ave Maria" } },
+    "quadrante": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Quadrante" } },
+    "capa_alt": { "t": 0, "b": { "t": 2, "i": [{ "t": 3, "v": "Book cover for " }, { "t": 4, "k": "titulo" }] } },
+    "labels": {
+      "autor": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Author" } },
+      "duracao": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Length" } },
+      "dificuldade": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Difficulty" } }
+    },
+    "duracao": {
+      "curto": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Short" } },
+      "medio": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Medium" } },
+      "longo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Long" } },
+      "muito_longo": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Very Long" } }
+    },
+    "dificuldade": {
+      "facil": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Easy" } },
+      "facil_media": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Easy/Medium" } },
+      "media": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Medium" } },
+      "media_dificil": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Medium/Hard" } },
+      "dificil": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Hard" } },
+      "muito_dificil": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Very Hard" } }
+    },
+    "autores": {
+      "papa_bento_xvi": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Pope Benedict XVI" } },
+      "padres_apostolicos": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Apostolic Fathers" } },
+      "santo_agostinho": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Saint Augustine" } },
+      "eusebio_cesareia": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Eusebius of Caesarea" } },
+      "santo_irineu": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Saint Irenaeus of Lyon" } }
+    },
+    "patristica_livros": {
+      "padres_igreja": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The Fathers of the Church" } },
+      "patristica_paulus_1": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics Paulus, Volume 1" } },
+      "patristica_paulus_32": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics Paulus, Volume 32: Faith and Symbolism" } },
+      "livre_arbitrio": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "On Free Choice of the Will" } },
+      "enchiridion": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Enchiridion (Handbook on Faith)" } },
+      "historia_eclesiastica": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics Paulus, Volume 15: Ecclesiastical History" } },
+      "contra_heresias": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics Paulus, Volume 4: Against Heresies" } },
+      "cidade_de_deus": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "The City of God" } },
+      "doutrina_crista": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "On Christian Doctrine" } },
+      "trindade": { "t": 0, "b": { "t": 2, "i": [{ "t": 3 }], "s": "Patristics Paulus, Volume 7: The Trinity" } }
+    }
+  }
+};
+export {
+  resource as default
+};
+//# sourceMappingURL=en-B_ivcJEN.js.map

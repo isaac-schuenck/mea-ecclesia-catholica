@@ -6,7 +6,7 @@
       >
         <button
           @click="isMobileSearchOpen = !isMobileSearchOpen"
-          class="relative z-50 md:hidden p-2 text-[#D4AF37] hover:text-white transition-colors"
+          class="relative z-50 lg:hidden p-2 text-[#D4AF37] hover:text-white transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,27 +26,25 @@
 
         <NuxtLink
           to="/"
-          class="z-50 flex items-center gap-4 flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+          class="z-50 flex items-center gap-4 flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
         >
           <img
             src="/assets/logosfundo.png"
             alt="Logo MEC"
-            class="h-12 md:h-14 w-auto object-contain"
+            class="h-10 md:h-12 w-auto object-contain"
           />
           <span
-            class="text-[#D4AF37] font-serif font-bold text-2xl tracking-widest hidden lg:block"
+            class="text-[#D4AF37] font-serif font-bold text-xl md:text-2xl tracking-widest hidden xl:block"
             >MEC</span
           >
         </NuxtLink>
 
-        <div
-          class="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md lg:max-w-xl px-4 z-40"
-        >
+        <div class="hidden lg:block flex-1 max-w-sm xl:max-w-xl px-4 z-40">
           <div class="relative w-full group">
             <input
               type="text"
               :placeholder="$t('header.busca')"
-              class="w-full bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-full py-2.5 px-6 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
+              class="w-full bg-white/5 text-white placeholder-gray-400 border border-white/10 rounded-full py-2.5 px-6 focus:outline-none focus:border-[#D4AF37] transition-all"
             />
             <span
               class="absolute right-5 top-2.5 text-gray-400 group-focus-within:text-[#D4AF37] transition-colors"
@@ -70,11 +68,12 @@
         </div>
 
         <div
-          class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-200 z-50"
+          class="hidden lg:flex items-center space-x-4 xl:space-x-6 text-sm font-medium text-gray-200 z-50"
         >
-          <div class="relative group py-4">
+          <div class="relative py-4">
             <button
-              class="flex items-center space-x-2 bg-transparent border border-white/20 rounded px-3 py-1.5 text-white group-hover:border-[#D4AF37] transition-all"
+              @click="isLangOpen = !isLangOpen"
+              class="flex items-center space-x-2 bg-transparent border border-white/20 rounded px-3 py-1.5 text-white hover:border-[#D4AF37] transition-all"
             >
               <span class="text-base">{{ currentLangDisplay.flag }}</span>
               <span>{{ currentLangDisplay.code }}</span>
@@ -93,25 +92,36 @@
                 />
               </svg>
             </button>
+
             <div
-              class="absolute top-full right-0 mt-0 w-28 bg-[#0a1e3f] border border-white/10 rounded-lg shadow-2xl z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 overflow-hidden"
+              v-show="isLangOpen"
+              class="absolute top-full right-0 mt-2 w-28 bg-[#0a1e3f] border border-white/10 rounded-lg shadow-2xl z-[9999] overflow-hidden"
             >
               <button
-                @click="changeLang('pt')"
+                @click="
+                  changeLang('pt');
+                  isLangOpen = false;
+                "
                 class="w-full flex items-center space-x-3 px-4 py-3 hover:bg-white/10 transition"
               >
                 <span class="text-base">🇧🇷</span
                 ><span class="font-bold text-white">PT</span>
               </button>
               <button
-                @click="changeLang('la')"
+                @click="
+                  changeLang('la');
+                  isLangOpen = false;
+                "
                 class="w-full flex items-center space-x-3 px-4 py-3 hover:bg-white/10 transition"
               >
                 <span class="text-base">🇻🇦</span
                 ><span class="font-bold text-white">LA</span>
               </button>
               <button
-                @click="changeLang('en')"
+                @click="
+                  changeLang('en');
+                  isLangOpen = false;
+                "
                 class="w-full flex items-center space-x-3 px-4 py-3 hover:bg-white/10 transition"
               >
                 <span class="text-base">🇬🇧</span
@@ -119,14 +129,13 @@
               </button>
             </div>
           </div>
+
           <NuxtLink to="/livros" class="hover:text-[#D4AF37] transition">{{
             $t("menu.livros")
           }}</NuxtLink>
-          <NuxtLink
-            to="/artigos"
-            class="hover:text-[#D4AF37] transition hidden lg:block"
-            >{{ $t("menu.artigos") }}</NuxtLink
-          >
+          <NuxtLink to="/artigos" class="hover:text-[#D4AF37] transition">{{
+            $t("menu.artigos")
+          }}</NuxtLink>
           <NuxtLink to="/homilias" class="hover:text-[#D4AF37] transition">{{
             $t("menu.homilias")
           }}</NuxtLink>
@@ -139,7 +148,7 @@
 
         <button
           @click="isMobileMenuOpen = true"
-          class="relative z-50 md:hidden p-2 text-[#D4AF37] hover:text-white transition-colors"
+          class="relative z-50 lg:hidden p-2 text-[#D4AF37] hover:text-white transition-colors"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -156,19 +165,6 @@
             />
           </svg>
         </button>
-      </div>
-
-      <div
-        v-show="isMobileSearchOpen"
-        class="md:hidden absolute top-20 left-0 w-full bg-[#041122] border-t border-white/10 p-4 shadow-xl z-40"
-      >
-        <div class="relative w-full">
-          <input
-            type="text"
-            :placeholder="$t('header.busca')"
-            class="w-full bg-white/5 text-white placeholder-gray-400 border border-[#D4AF37]/50 rounded-full py-2.5 px-6 focus:outline-none focus:border-[#D4AF37] transition-all"
-          />
-        </div>
       </div>
     </header>
 
@@ -360,10 +356,11 @@
 
 <script setup>
 import { ref, computed } from "vue";
-const { setLocale, locale } = useI18n(); // Ferramentas de tradução
+const { setLocale, locale } = useI18n();
 
 const isMobileMenuOpen = ref(false);
 const isMobileSearchOpen = ref(false);
+const isLangOpen = ref(false); // <-- Resolvido aqui!
 
 // Descobre qual é a bandeira certa baseada na língua atual
 const currentLangDisplay = computed(() => {
@@ -373,9 +370,10 @@ const currentLangDisplay = computed(() => {
   return { code: "EN", flag: "🇬🇧" };
 });
 
-// Troca a língua de verdade
+// Troca a língua e fecha as caixinhas
 const changeLang = (newLocale) => {
   setLocale(newLocale);
   isMobileMenuOpen.value = false;
+  isLangOpen.value = false;
 };
 </script>

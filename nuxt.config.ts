@@ -7,6 +7,15 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
 
+  app: {
+    head: {
+      title: 'Mea Ecclesia Catholica',
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/logosfundo.png' } 
+      ]
+    }
+  },
+
   i18n: {
     locales: [
       { code: 'pt', file: 'pt.json', name: 'Português' },

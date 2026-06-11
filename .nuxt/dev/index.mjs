@@ -2283,6 +2283,7 @@ var home$2 = {
 	map_title: "Encontre Paróquias",
 	map_desc: "Navegue pelo mapa para encontrar paróquias, mosteiros e santuários próximos a você.",
 	faq_btn: "Ainda tem dúvidas? Acesse o FAQ",
+	sobre_nos: "Sobre Nós",
 	sobre: {
 		badge: "Quem está por trás do M.E.C?",
 		title: "Sobre \"nós\" (ou só eu mesmo)",
@@ -2335,17 +2336,176 @@ var home$2 = {
 		rosario: "Rosário"
 	}
 };
+var livro$2 = {
+	titulo: "Livros",
+	subtitulo: "Uma curadoria de obras fundamentais para o aprofundamento da fé católica. Desde edições recomendadas da Sagrada Escritura até os grandes tesouros da Patrística e da Doutrina, explore livros que moldaram a Tradição da Igreja ao longo dos séculos.",
+	sagrada_escritura: "Sagrada Escritura",
+	patristica: "Patrística",
+	historia: "História da Igreja",
+	doutrina_apologetica: "Doutrina e Apologética",
+	escolastica: "Filosofia e Escolástica",
+	formacao_humana: "Formação Humana e Virtudes",
+	espiritualidade_ascetica: "Vida Espiritual e Ascética",
+	biografias: "Biografias e Vida dos Santos",
+	tesouro_tradicao: "Bíblia Sagrada: Tesouro da Tradição",
+	biblia_sagrada: "Bíblia Sagrada",
+	jerusalem: "Bíblia de Jerusalém",
+	ave_maria: "Bíblia Ave Maria",
+	peregrino: "Bíblia do Peregrino",
+	navarra: "Bíblia de Navarra",
+	sacra_vulgata: "Bíblia Sacra Vulgata",
+	minha_biblioteca_catolica: "Minha Biblioteca Católica",
+	paulus: "Paulus",
+	editora_ave_maria: "Ave Maria",
+	quadrante: "Quadrante",
+	capa_alt: "Capa do livro {titulo}",
+	labels: {
+		autor: "Autor",
+		duracao: "Duração",
+		dificuldade: "Dificuldade"
+	},
+	duracao: {
+		muito_curto: "Muito Curto",
+		curto: "Curto",
+		medio: "Médio",
+		longo: "Longo",
+		muito_longo: "Muito Longo",
+		muito_longo1: "Muito Longo (4 Vol)",
+		muito_longo2: "Muito Longo (5 Vol)",
+		muito_longo3: "Muito Longo (10 Vol)",
+		muito_longo4: "Muito Longo (2 Vol)"
+	},
+	dificuldade: {
+		facil: "Fácil",
+		facil_media: "Fácil/Média",
+		media: "Média",
+		media_dificil: "Média/Difícil",
+		dificil: "Difícil",
+		muito_dificil: "Muito Difícil"
+	},
+	autores: {
+		papa_bento_xvi: "Papa Bento XVI",
+		padres_apostolicos: "Padres Apostólicos",
+		santo_agostinho: "Santo Agostinho",
+		eusebio_cesareia: "Eusébio de Cesareia",
+		santo_irineu: "Santo Irineu de Lyon",
+		thomas_woods: "Thomas E. Woods Jr.",
+		regine_pernoud: "Regine Pernoud",
+		thomas_madden: "Thomas Madden",
+		jonathan_riley_smith: "Jonathan Riley-Smith",
+		edward_peters: "Edward Peters",
+		henry_kamen: "Henry Kamen",
+		giacomo_martina: "Giacomo Martina",
+		daniel_rops: "Daniel-Rops",
+		sao_pio_x: "São Pio X",
+		scott_hahn: "Scott Hahn",
+		leo_trese: "Leo J. Trese",
+		jose_miguel: "Pe. José Miguel",
+		jimenez_yaniz: "Jiménez e Yániz",
+		julio_maria: "Pe. Júlio Maria",
+		leonel_franca: "Pe. Leonel Franca",
+		santo_afonso: "Santo Afonso de Ligório",
+		sao_joao_paulo_ii: "Promulgado por São João Paulo II",
+		chesterton: "G.K. Chesterton",
+		santo_tomas: "São Tomás de Aquino",
+		francisco_faus: "Francisco Faus",
+		rafael_llano: "Rafael LLano Cifuentes",
+		sao_francisco_sales: "São Francisco de Sales",
+		tomas_kempis: "Tomás de Kempis",
+		lorenzo_scupoli: "Lorenzo Scupoli",
+		jean_michel: "Pe. Jean Michel",
+		grignion_de_montfort: "Grignion de Montfort",
+		antonio_royo_marin: "Pe. Antonio Royo Marín",
+		garrigou_lagrange: "Garrigou-Lagrange",
+		santa_teresa: "Santa Teresa d'Ávila",
+		santo_atanasio: "Santo Atanásio",
+		santa_teresinha: "Santa Teresinha",
+		sao_john_henry_newman: "São John Henry Newman"
+	},
+	patristica_livros: {
+		padres_igreja: "Os Padres da Igreja",
+		patristica_paulus_1: "Patrística Paulus, Volume 1",
+		patristica_paulus_32: "Patrística Paulus, Volume 32: Fé e Símbolo",
+		sobre_o_livre_arbitrio: "Sobre o Livre-Arbítrio",
+		enchiridion: "Enchiridion (Manual da Fé)",
+		patristica_paulus_15: "Patrística Paulus, Volume 15: História Eclesiástica",
+		patristica_paulus_4: "Patrística Paulus, Volume 4: Contra as Heresias",
+		cidade_de_deus: "A Cidade de Deus",
+		doutrina_crista: "A Doutrina Cristã",
+		patristica_paulus_7: "Patrística Paulus, Volume 7: A Trindade"
+	},
+	historia_livros: {
+		civilizacao: "Como a Igreja Católica Construiu a Civilização Ocidental",
+		luz_sobre_idade_media: "Luz sobre a Idade Média",
+		as_cruzadas: "As Cruzadas",
+		as_cruzadas_historia: "As cruzadas: uma história",
+		inquisition: "Inquisition",
+		inquisicao_espanhola: "A Inquisição Espanhola",
+		historia_da_igreja: "História da Igreja",
+		historia_da_igreja_de_cristo: "História da Igreja de Cristo"
+	},
+	doutrina_apologetica_livros: {
+		youcat: "Youcat",
+		catecismo_maior_sao_pio_x: "Catecismo Maior de São Pio X",
+		todos_os_caminhos_levam_a_roma: "Todos os caminhos levam a Roma",
+		"a_fé_explicada": "A Fé Explicada",
+		introducao_ao_cristianismo: "Introdução ao Cristianismo",
+		o_amor_que_fez_o_sol_e_as_estrelas: "O amor que fez o sol e as estrelas",
+		sintese_da_fe_catolica: "Síntese da Fé Católica",
+		o_diabo_lutero_e_o_protestantismo: "O Diabo, Lutero e o Protestantismo",
+		sao_gabriel_maome_e_o_islamismo: "São Gabriel, Maomé e o Islamismo",
+		o_protestantismo_no_brasil: "O Protestantismo no Brasil",
+		historia_das_heresias: "História das Heresias",
+		catecismo_da_igreja_catolica: "Catecismo da Igreja Católica"
+	},
+	escolastica_livros: {
+		gk_tomas_aquino: "Santo Tomás de Aquino",
+		compendio_teologia: "Compêndio de Teologia",
+		suma_teologica: "Suma Teológica (Tratado de Deus)"
+	},
+	formacao_livros: {
+		a_paciencia: "A paciência",
+		"a_preguiça": "A Preguiça",
+		a_inveja: "A Inveja",
+		autodominio: "Autodomínio",
+		o_homem_bom: "O Homem Bom",
+		a_sabedoria_da_cruz: "A Sabedoria da Cruz",
+		o_otimismo: "O Otimismo",
+		fortaleza: "Fortaleza",
+		a_maturidade: "A Maturidade",
+		para_estar_com_deus: "Para estar com Deus"
+	},
+	espiritualidade_livros: {
+		filoteia: "Filoteia",
+		imitacao_de_cristo: "Imitação de Cristo",
+		o_combate_espiritual: "O Combate Espiritual",
+		tratado_do_desanimo: "Tratado do Desânimo",
+		tratado_da_verdadeira_devocao: "Tratado da Verdadeira Devoção a Santíssima Virgem Maria",
+		ser_ou_nao_ser_santo: "Ser ou não ser santo",
+		as_3_vias_e_as_3_conversoes: "As 3 vias e as 3 conversões",
+		castelo_interior: "Castelo Interior"
+	},
+	biografias_livros: {
+		confissoes: "Confissões",
+		vida_de_santo_antao: "Vida de Santo Antão",
+		vida_de_sao_francisco_de_assis: "São Francisco de Assis",
+		historia_alma: "História de uma Alma",
+		vida_de_santa_teresa_de_jesus: "Vida de Santa Teresa de Jesus",
+		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
+	}
+};
 const locale_pt_46json_d769759e = {
 	menu: menu$2,
 	header: header$2,
 	footer: footer$2,
-	home: home$2
+	home: home$2,
+	livro: livro$2
 };
 
 var menu$1 = {
-	inicio: "Initium",
+	inicio: "Principium",
 	livros: "Libri",
-	artigos: "Res Religiosae",
+	artigos: "Articuli Religiosi",
 	homilias: "Homiliae",
 	santo_dia: "Sanctus Diei"
 };
@@ -2354,45 +2514,46 @@ var header$1 = {
 	idioma_atual: "Lingua Praesens"
 };
 var footer$1 = {
-	sobre_projeto: "De Proposito",
-	contato: "Contactus",
-	aviso: "* Homiliae ex YouTube directe inseruntur. Omnia iura, visiones et laudes ad canalem officialem Patris Mário Sartori diriguntur.",
-	direitos: "© 2026 MEA ECCLESIA CATHOLICA. OMNIA IURA RESERVATA.",
-	desenvolvido: "Evolutum cum",
-	fe_codigo: "Fides et Codex",
+	sobre_projeto: "De Opere",
+	contato: "Communicatio",
+	aviso: "* Homiliae directe ex YouTube inseruntur. Omnia iura, visiones et laudes ad tramitem officialem Patris Marii Sartori diriguntur.",
+	direitos: "© MMXXVI MEA ECCLESIA CATHOLICA. OMNIA IURA RESERVATA.",
+	desenvolvido: "Elaboratum cum",
+	fe_codigo: "Fides & Codex",
 	por: "a"
 };
 var home$1 = {
-	explore_title: "Fidem Explorare",
-	map_title: "Paroecias Invenire",
-	map_desc: "Naviga per tabulam ut paroecias, monasteria et sanctuaria prope te invenias.",
-	faq_btn: "Adhuc dubia habes? Vade ad FAQ",
+	explore_title: "Explora Fidem",
+	map_title: "Inveni Paroecias",
+	map_desc: "Naviga per tabulam geographicam ut paroecias, monasteria et sanctuaria tibi propinqua invenias.",
+	faq_btn: "Adhuc habes dubia? Adi Quaestiones Frequentes (FAQ)",
+	sobre_nos: "De Nobis",
 	sobre: {
-		badge: "Quis post M.E.C est?",
-		title: "De \"nobis\" (vel solum me ipso)",
-		desc: "Ut verum dicam, \"De Nobis\" in tabula principali tantum est ut situs speciem portae corporativae habeat. Re vera, nulla magna turma hic post scaenas est.",
-		btn: "Lege historiam totam, vide imagines et indicem"
+		badge: "Quis est post M.E.C?",
+		title: "De \"nobis\" (vel solum de me ipso)",
+		desc: "Ut verum fatear, \"De Nobis\" in elencho principali solum est ut situs interretialis speciem portae corporativae habeat. Revera, non est magna turma hic in scaenis.",
+		btn: "Lege historiam integram, vide imagines et indicem cantuum"
 	},
 	carousel: {
 		slide1_sub: "Mea Ecclesia Catholica",
 		slide1_title: "Qui Sumus?",
-		slide1_desc: "Parvum spatium dicatum ad iuvandos homines ut Ecclesiam, eius doctrinam et historiam intellegant et ament.",
+		slide1_desc: "Parvum spatium dicatum ad adiuvandum homines ut Ecclesiam, eius doctrinam et eius historiam comprehendant et ament.",
 		slide1_btn: "De Nobis",
 		slide2_sub: "Patristica et Magisterium",
 		slide2_title: "Thesauri Traditionis",
-		slide2_desc: "Intellege Catechismum, scripta Patrum Ecclesiae et veritates aeternas per duo millennia custoditas.",
-		slide2_btn: "Studia Profundere",
+		slide2_desc: "Comprehende Catechismum, scripta Patrum Ecclesiae et veritates aeternas per plus quam duo millennia custoditas.",
+		slide2_btn: "Altius Investigare",
 		slide3_sub: "Liturgia",
 		slide3_title: "Sancta Missa",
-		slide3_desc: "Vide hic quid accidat in Sancto Sacrificio Altaris et intellege responsa liturgica.",
+		slide3_desc: "Vide hic quid in Sancto Sacrificio Altaris eveniat et comprehende responsa liturgica.",
 		slide3_btn: "Vide hic",
 		slide4_sub: "Exempla Fidei",
 		slide4_title: "Sanctus Diei",
-		slide4_desc: "Inveni historias virorum et mulierum qui pro Christo animas suas dederunt et inveni inspirationem pro itinere tuo cotidiano.",
-		slide4_btn: "Vide quem",
+		slide4_desc: "Inveni historiam virorum et mulierum qui pro Christo vitas suas tradiderunt, et inveni inspirationem pro itinere tuo quotidiano.",
+		slide4_btn: "Vide quis sit",
 		slide5_sub: "Formatio",
-		slide5_title: "Homilia Cotidiana",
-		slide5_desc: "Profunda fidem tuam cum homilia cotidiana, a Patre Mario Sartori commentata.",
+		slide5_title: "Homilia Quotidiana",
+		slide5_desc: "Profunda fidem tuam per homiliam quotidianam, a Patre Mario Sartori explicatam.",
 		slide5_btn: "Spectare"
 	},
 	topics: {
@@ -2400,10 +2561,10 @@ var home$1 = {
 		sacramentos: "Sacramenta",
 		missa: "Missa",
 		milagres: "Miracula Eucharistica",
-		escritura: "Scriptura Sacra",
+		escritura: "Scriptura",
 		sucessao: "Successio Apostolica",
 		tradicao: "Traditio et Magisterium",
-		papado: "Papatio",
+		papado: "Pontificatus",
 		orientais: "Ecclesiae Orientales",
 		concilios: "Concilia et Ritus",
 		historia: "Historia",
@@ -2419,11 +2580,170 @@ var home$1 = {
 		rosario: "Rosarium"
 	}
 };
+var livro$1 = {
+	titulo: "Libri",
+	subtitulo: "Cura operum praecipuorum ad fidem catholicam profundandam. Ab editionibus commendatis Sacrae Scripturae usque ad thesauros magnos Patristicae et Doctrinae, explora libros qui Traditionem Ecclesiae per saecula formaverunt.",
+	sagrada_escritura: "Sacra Scriptura",
+	patristica: "Patristica",
+	historia: "Historia Ecclesiae",
+	doutrina_apologetica: "Doctrina et Apologetica",
+	escolastica: "Philosophia et Scholastica",
+	formacao_humana: "Formatio Humana et Virtutes",
+	espiritualidade_ascetica: "Vita Spiritualis et Ascetica",
+	biografias: "Biographiae et Vitae Sanctorum",
+	tesouro_tradicao: "Biblia Sacra: Thesaurus Traditionis",
+	biblia_sagrada: "Biblia Sacra",
+	jerusalem: "Biblia Hierosolymitana",
+	ave_maria: "Biblia Ave Maria",
+	peregrino: "Biblia Peregrini",
+	navarra: "Biblia Navarrensis",
+	sacra_vulgata: "Biblia Sacra Vulgata",
+	minha_biblioteca_catolica: "Bibliotheca Catholica Mea",
+	paulus: "Paulus",
+	editora_ave_maria: "Ave Maria",
+	quadrante: "Quadrante",
+	capa_alt: "Involucrum libri {titulo}",
+	labels: {
+		autor: "Auctor",
+		duracao: "Duratio",
+		dificuldade: "Difficultas"
+	},
+	duracao: {
+		muito_curto: "Valde Brevis",
+		curto: "Brevis",
+		medio: "Medius",
+		longo: "Longus",
+		muito_longo: "Valde Longus",
+		muito_longo1: "Valde Longus (IV Volumina)",
+		muito_longo2: "Valde Longus (V Volumina)",
+		muito_longo3: "Valde Longus (X Volumina)",
+		muito_longo4: "Valde Longus (II Volumina)"
+	},
+	dificuldade: {
+		facil: "Facilis",
+		facil_media: "Facilis/Media",
+		media: "Media",
+		media_dificil: "Media/Difficilis",
+		dificil: "Difficilis",
+		muito_dificil: "Valde Difficilis"
+	},
+	autores: {
+		papa_bento_xvi: "Papa Benedictus XVI",
+		padres_apostolicos: "Patres Apostolici",
+		santo_agostinho: "Sanctus Augustinus",
+		eusebio_cesareia: "Eusebius Caesariensis",
+		santo_irineu: "Sanctus Irenaeus Lugdunensis",
+		thomas_woods: "Thomas E. Woods Jr.",
+		regine_pernoud: "Regine Pernoud",
+		thomas_madden: "Thomas Madden",
+		jonathan_riley_smith: "Jonathan Riley-Smith",
+		edward_peters: "Edward Peters",
+		henry_kamen: "Henry Kamen",
+		giacomo_martina: "Giacomo Martina",
+		daniel_rops: "Daniel-Rops",
+		sao_pio_x: "Sanctus Pius X",
+		scott_hahn: "Scott Hahn",
+		leo_trese: "Leo J. Trese",
+		jose_miguel: "Pater José Miguel",
+		jimenez_yaniz: "Jiménez et Yániz",
+		julio_maria: "Pater Júlio Maria",
+		leonel_franca: "Pater Leonel Franca",
+		santo_afonso: "Sanctus Alphonsus a Ligorio",
+		sao_joao_paulo_ii: "A Sancto Ioanne Paulo II Promulgatum",
+		chesterton: "G.K. Chesterton",
+		santo_tomas: "Sanctus Thomas Aquinas",
+		francisco_faus: "Francisco Faus",
+		rafael_llano: "Rafael LLano Cifuentes",
+		sao_francisco_sales: "Sanctus Franciscus Salesius",
+		tomas_kempis: "Thomas a Kempis",
+		lorenzo_scupoli: "Lorenzo Scupoli",
+		jean_michel: "Pater Jean Michel",
+		grignion_de_montfort: "Grignion de Montfort",
+		antonio_royo_marin: "Pater Antonio Royo Marín",
+		garrigou_lagrange: "Garrigou-Lagrange",
+		santa_teresa: "Sancta Teresia Abulensis",
+		santo_atanasio: "Sanctus Athanasius",
+		santa_teresinha: "Sancta Teresia a Iesu Infante",
+		sao_john_henry_newman: "Sanctus Ioannes Henricus Newman"
+	},
+	patristica_livros: {
+		padres_igreja: "Patres Ecclesiae",
+		patristica_paulus_1: "Patristica Paulus, Volumen I",
+		patristica_paulus_32: "Patristica Paulus, Volumen XXXII: Fides et Symbolus",
+		sobre_o_livre_arbitrio: "De Libero Arbitrio",
+		enchiridion: "Enchiridion (Manuale Fidei)",
+		patristica_paulus_15: "Patristica Paulus, Volumen XV: Historia Ecclesiastica",
+		patristica_paulus_4: "Patristica Paulus, Volumen IV: Adversus Haereses",
+		cidade_de_deus: "De Civitate Dei",
+		doutrina_crista: "De Doctrina Christiana",
+		patristica_paulus_7: "Patristica Paulus, Volumen VII: De Trinitate"
+	},
+	historia_livros: {
+		civilizacao: "Quomodo Ecclesia Catholica Civilisationem Occidentalem Aedificaverit",
+		luz_sobre_idade_media: "Lux super Medium Aevum",
+		as_cruzadas: "Expeditiones Sacrae",
+		as_cruzadas_historia: "Expeditiones Sacrae: Historia",
+		inquisition: "Inquisitio",
+		inquisicao_espanhola: "Inquisitio Hispanica",
+		historia_da_igreja: "Historia Ecclesiae",
+		historia_da_igreja_de_cristo: "Historia Ecclesiae Christi"
+	},
+	doutrina_apologetica_livros: {
+		youcat: "Youcat",
+		catecismo_maior_sao_pio_x: "Catechismus Maior Sancti Pii X",
+		todos_os_caminhos_levam_a_roma: "Omnes Viae Romam Ducunt",
+		"a_fé_explicada": "Fides Explicata",
+		introducao_ao_cristianismo: "Introductio in Christianismum",
+		o_amor_que_fez_o_sol_e_as_estrelas: "Amor qui Solem et Stellas Fecit",
+		sintese_da_fe_catolica: "Synthesis Fidei Catholicae",
+		o_diabo_lutero_e_o_protestantismo: "Diabolus, Lutherus et Protestantismus",
+		sao_gabriel_maome_e_o_islamismo: "Sanctus Gabriel, Mahometus et Islamismus",
+		o_protestantismo_no_brasil: "Protestantismus in Brasilia",
+		historia_das_heresias: "Historia Haeresium",
+		catecismo_da_igreja_catolica: "Catechismus Catholicae Ecclesiae"
+	},
+	escolastica_livros: {
+		gk_tomas_aquino: "Sanctus Thomas Aquinas",
+		compendio_teologia: "Compendium Theologiae",
+		suma_teologica: "Summa Theologiae (Tractatus de Deo)"
+	},
+	formacao_livros: {
+		a_paciencia: "Patientia",
+		"a_preguiça": "Acedia",
+		a_inveja: "Invidia",
+		autodominio: "Sui Dominium",
+		o_homem_bom: "Vir Bonus",
+		a_sabedoria_da_cruz: "Sapientia Crucis",
+		o_otimismo: "Optimismus",
+		fortaleza: "Fortitudo",
+		a_maturidade: "Maturitas",
+		para_estar_com_deus: "Ut Cum Deo Simus"
+	},
+	espiritualidade_livros: {
+		filoteia: "Philothea",
+		imitacao_de_cristo: "De Imitatione Christi",
+		o_combate_espiritual: "Certamen Spirituale",
+		tratado_do_desanimo: "Tractatus de Pusillanimitate",
+		tratado_da_verdadeira_devocao: "Tractatus de Vera Devotione ad Beatissimam Virginem Mariam",
+		ser_ou_nao_ser_santo: "Sanctum Esse aut Non Esse",
+		as_3_vias_e_as_3_conversoes: "Tres Viae et Tres Conversiones",
+		castelo_interior: "Castellum Interius"
+	},
+	biografias_livros: {
+		confissoes: "Confessiones",
+		vida_de_santo_antao: "Vita Sancti Antonii",
+		vida_de_sao_francisco_de_assis: "Sanctus Franciscus Assisiensis",
+		historia_alma: "Historia Animae",
+		vida_de_santa_teresa_de_jesus: "Vita Sanctae Teresiae a Iesu",
+		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
+	}
+};
 const locale_la_46json_50dfc134 = {
 	menu: menu$1,
 	header: header$1,
 	footer: footer$1,
-	home: home$1
+	home: home$1,
+	livro: livro$1
 };
 
 var menu = {
@@ -2440,7 +2760,7 @@ var header = {
 var footer = {
 	sobre_projeto: "About the Project",
 	contato: "Contact",
-	aviso: "* The homilies are embedded directly from YouTube. All rights, views, and credits are directed to the official channel of Fr. Mário Sartori.",
+	aviso: "* The homilies are embedded directly from YouTube. All rights, views, and credits belong to the official channel of Fr. Mário Sartori.",
 	direitos: "© 2026 MEA ECCLESIA CATHOLICA. ALL RIGHTS RESERVED.",
 	desenvolvido: "Developed with",
 	fe_codigo: "Faith & Code",
@@ -2449,44 +2769,45 @@ var footer = {
 var home = {
 	explore_title: "Explore the Faith",
 	map_title: "Find Parishes",
-	map_desc: "Navigate the map to find parishes, monasteries, and shrines near you.",
-	faq_btn: "Still have questions? Go to FAQ",
+	map_desc: "Browse the map to find parishes, monasteries, and shrines near you.",
+	faq_btn: "Still have questions? Visit the FAQ",
+	sobre_nos: "About Us",
 	sobre: {
 		badge: "Who is behind M.E.C?",
-		title: "About \"us\" (or just myself)",
-		desc: "To be honest, the \"About Us\" in the main menu is just to give the site a corporate portal look. In reality, there is no big team behind the scenes here.",
-		btn: "Read full story, see photos and playlist"
+		title: "About \"us\" (or just me)",
+		desc: "To be honest, the \"About Us\" in the main menu is just to make the site look like a corporate portal. In reality, there is no big team behind the scenes here.",
+		btn: "Read the full story, see photos and playlist"
 	},
 	carousel: {
 		slide1_sub: "Mea Ecclesia Catholica",
 		slide1_title: "Who Are We?",
-		slide1_desc: "A small space dedicated to helping people understand and love the Church, its doctrine, and its history.",
+		slide1_desc: "A small space dedicated to helping people understand and love the Church, Her doctrine, and Her history.",
 		slide1_btn: "About us",
 		slide2_sub: "Patristics and Magisterium",
-		slide2_title: "Treasures of Tradition",
+		slide2_title: "The Treasures of Tradition",
 		slide2_desc: "Understand the Catechism, the writings of the Church Fathers, and the eternal truths guarded for over two millennia.",
-		slide2_btn: "Deepen Studies",
+		slide2_btn: "Deepen Your Studies",
 		slide3_sub: "Liturgy",
 		slide3_title: "The Holy Mass",
-		slide3_desc: "See here what happens in the Holy Sacrifice of the Altar and understand the liturgical responses.",
+		slide3_desc: "See what happens during the Holy Sacrifice of the Altar and understand the liturgical responses.",
 		slide3_btn: "See here",
 		slide4_sub: "Examples of Faith",
 		slide4_title: "Saint of the Day",
-		slide4_desc: "Discover the stories of men and women who gave their lives for Christ and find inspiration for your daily journey.",
-		slide4_btn: "See which",
+		slide4_desc: "Discover the history of men and women who gave their lives for Christ and find inspiration for your daily journey.",
+		slide4_btn: "See who",
 		slide5_sub: "Formation",
 		slide5_title: "Daily Homily",
-		slide5_desc: "Deepen your faith with the daily homily, commented by Fr. Mario Sartori.",
+		slide5_desc: "Deepen your faith with the daily homily, commentated by Fr. Mario Sartori.",
 		slide5_btn: "Watch"
 	},
 	topics: {
 		trindade: "Trinity",
 		sacramentos: "Sacraments",
-		missa: "Holy Mass",
+		missa: "Mass",
 		milagres: "Eucharistic Miracles",
-		escritura: "Sacred Scripture",
+		escritura: "Scripture",
 		sucessao: "Apostolic Succession",
-		tradicao: "Tradition & Magisterium",
+		tradicao: "Tradition and Magisterium",
 		papado: "The Papacy",
 		orientais: "Eastern Churches",
 		concilios: "Councils and Rites",
@@ -2496,18 +2817,177 @@ var home = {
 		ciencia: "Science",
 		apologetica: "Apologetics",
 		dogmas: "Marian Dogmas",
-		intercessao: "Intercession & Mediation",
+		intercessao: "Intercession and Mediation",
 		imagens: "Images and Idolatry",
 		catecismo: "Catechism",
 		oracoes: "Prayers",
 		rosario: "Rosary"
 	}
 };
+var livro = {
+	titulo: "Books",
+	subtitulo: "A curation of fundamental works for deepening the Catholic faith. From recommended editions of Sacred Scripture to the great treasures of Patristics and Doctrine, explore books that have shaped the Tradition of the Church over the centuries.",
+	sagrada_escritura: "Sacred Scripture",
+	patristica: "Patristics",
+	historia: "Church History",
+	doutrina_apologetica: "Doctrine and Apologetics",
+	escolastica: "Philosophy and Scholasticism",
+	formacao_humana: "Human Formation and Virtues",
+	espiritualidade_ascetica: "Spiritual and Ascetical Life",
+	biografias: "Biographies and Lives of the Saints",
+	tesouro_tradicao: "Holy Bible: Treasure of Tradition",
+	biblia_sagrada: "Holy Bible",
+	jerusalem: "Jerusalem Bible",
+	ave_maria: "Ave Maria Bible",
+	peregrino: "The Pilgrim Bible",
+	navarra: "The Navarre Bible",
+	sacra_vulgata: "Biblia Sacra Vulgata",
+	minha_biblioteca_catolica: "Minha Biblioteca Católica",
+	paulus: "Paulus",
+	editora_ave_maria: "Ave Maria",
+	quadrante: "Quadrante",
+	capa_alt: "Cover of the book {titulo}",
+	labels: {
+		autor: "Author",
+		duracao: "Length",
+		dificuldade: "Difficulty"
+	},
+	duracao: {
+		muito_curto: "Very Short",
+		curto: "Short",
+		medio: "Medium",
+		longo: "Long",
+		muito_longo: "Very Long",
+		muito_longo1: "Very Long (4 Vol)",
+		muito_longo2: "Very Long (5 Vol)",
+		muito_longo3: "Very Long (10 Vol)",
+		muito_longo4: "Very Long (2 Vol)"
+	},
+	dificuldade: {
+		facil: "Easy",
+		facil_media: "Easy/Medium",
+		media: "Medium",
+		media_dificil: "Medium/Difficult",
+		dificil: "Difficult",
+		muito_dificil: "Very Difficult"
+	},
+	autores: {
+		papa_bento_xvi: "Pope Benedict XVI",
+		padres_apostolicos: "Apostolic Fathers",
+		santo_agostinho: "Saint Augustine",
+		eusebio_cesareia: "Eusebius of Caesarea",
+		santo_irineu: "Saint Irenaeus of Lyon",
+		thomas_woods: "Thomas E. Woods Jr.",
+		regine_pernoud: "Régine Pernoud",
+		thomas_madden: "Thomas F. Madden",
+		jonathan_riley_smith: "Jonathan Riley-Smith",
+		edward_peters: "Edward Peters",
+		henry_kamen: "Henry Kamen",
+		giacomo_martina: "Giacomo Martina",
+		daniel_rops: "Daniel-Rops",
+		sao_pio_x: "Pope Saint Pius X",
+		scott_hahn: "Scott Hahn",
+		leo_trese: "Leo J. Trese",
+		jose_miguel: "Fr. José Miguel",
+		jimenez_yaniz: "Jiménez and Yániz",
+		julio_maria: "Fr. Júlio Maria",
+		leonel_franca: "Fr. Leonel Franca",
+		santo_afonso: "Saint Alphonsus Liguori",
+		sao_joao_paulo_ii: "Promulgated by Pope Saint John Paul II",
+		chesterton: "G.K. Chesterton",
+		santo_tomas: "Saint Thomas Aquinas",
+		francisco_faus: "Francisco Faus",
+		rafael_llano: "Rafael Llano Cifuentes",
+		sao_francisco_sales: "Saint Francis de Sales",
+		tomas_kempis: "Thomas à Kempis",
+		lorenzo_scupoli: "Lorenzo Scupoli",
+		jean_michel: "Fr. Jean Michel",
+		grignion_de_montfort: "Saint Louis de Montfort",
+		antonio_royo_marin: "Fr. Antonio Royo Marín",
+		garrigou_lagrange: "Réginald Garrigou-Lagrange",
+		santa_teresa: "Saint Teresa of Ávila",
+		santo_atanasio: "Saint Athanasius",
+		santa_teresinha: "Saint Thérèse of Lisieux",
+		sao_john_henry_newman: "Saint John Henry Newman"
+	},
+	patristica_livros: {
+		padres_igreja: "The Fathers of the Church",
+		patristica_paulus_1: "Patristics Paulus, Volume 1",
+		patristica_paulus_32: "Patristics Paulus, Volume 32: Faith and the Creed",
+		sobre_o_livre_arbitrio: "On the Free Choice of the Will",
+		enchiridion: "Enchiridion on Faith, Hope, and Love",
+		patristica_paulus_15: "Patristics Paulus, Volume 15: Ecclesiastical History",
+		patristica_paulus_4: "Patristics Paulus, Volume 4: Against Heresies",
+		cidade_de_deus: "The City of God",
+		doutrina_crista: "On Christian Doctrine",
+		patristica_paulus_7: "Patristics Paulus, Volume 7: On the Trinity"
+	},
+	historia_livros: {
+		civilizacao: "How the Catholic Church Built Western Civilization",
+		luz_sobre_idade_media: "Those Terrible Middle Ages: Debunking the Myths",
+		as_cruzadas: "The Crusades",
+		as_cruzadas_historia: "The Crusades: A History",
+		inquisition: "Inquisition",
+		inquisicao_espanhola: "The Spanish Inquisition: A Historical Revision",
+		historia_da_igreja: "History of the Church",
+		historia_da_igreja_de_cristo: "History of the Church of Christ"
+	},
+	doutrina_apologetica_livros: {
+		youcat: "YOUCAT",
+		catecismo_maior_sao_pio_x: "Catechism of Saint Pius X",
+		todos_os_caminhos_levam_a_roma: "Rome Sweet Home",
+		"a_fé_explicada": "The Faith Explained",
+		introducao_ao_cristianismo: "Introduction to Christianity",
+		o_amor_que_fez_o_sol_e_as_estrelas: "The Love That Made the Sun and the Stars",
+		sintese_da_fe_catolica: "Synthesis of the Catholic Faith",
+		o_diabo_lutero_e_o_protestantismo: "The Devil, Luther, and Protestantism",
+		sao_gabriel_maome_e_o_islamismo: "Saint Gabriel, Muhammad, and Islam",
+		o_protestantismo_no_brasil: "Protestantism in Brazil",
+		historia_das_heresias: "The History of Heresies and Their Refutation",
+		catecismo_da_igreja_catolica: "Catechism of the Catholic Church"
+	},
+	escolastica_livros: {
+		gk_tomas_aquino: "St. Thomas Aquinas: The Dumb Ox",
+		compendio_teologia: "Compendium of Theology",
+		suma_teologica: "Summa Theologica (Treatise on God)"
+	},
+	formacao_livros: {
+		a_paciencia: "Patience",
+		"a_preguiça": "Sloth",
+		a_inveja: "Envy",
+		autodominio: "Self-Mastery",
+		o_homem_bom: "The Good Man",
+		a_sabedoria_da_cruz: "The Wisdom of the Cross",
+		o_otimismo: "Optimism",
+		fortaleza: "Fortitude",
+		a_maturidade: "Maturity",
+		para_estar_com_deus: "To Be with God"
+	},
+	espiritualidade_livros: {
+		filoteia: "Introduction to the Devout Life",
+		imitacao_de_cristo: "The Imitation of Christ",
+		o_combate_espiritual: "The Spiritual Combat",
+		tratado_do_desanimo: "Treatise on Discouragement",
+		tratado_da_verdadeira_devocao: "Treatise on True Devotion to the Blessed Virgin",
+		ser_ou_nao_ser_santo: "To Be or Not to Be a Saint",
+		as_3_vias_e_as_3_conversoes: "The Three Ages of the Interior Life",
+		castelo_interior: "The Interior Castle"
+	},
+	biografias_livros: {
+		confissoes: "Confessions",
+		vida_de_santo_antao: "The Life of Saint Antony",
+		vida_de_sao_francisco_de_assis: "Saint Francis of Assisi",
+		historia_alma: "The Story of a Soul",
+		vida_de_santa_teresa_de_jesus: "The Life of St. Teresa of Jesus",
+		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
+	}
+};
 const locale_en_46json_c5e9ec7b = {
 	menu: menu,
 	header: header,
 	footer: footer,
-	home: home
+	home: home,
+	livro: livro
 };
 
 // @ts-nocheck
@@ -2819,7 +3299,7 @@ function findBrowserLocale(locales, browserLocales) {
   return matchedLocales.sort(compareBrowserLocale).at(0)?.code ?? "";
 }
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/png","href":"/logosfundo.png"}],"style":[],"script":[],"noscript":[],"title":"Mea Ecclesia Catholica"};
 
 const appRootTag = "div";
 

@@ -1,5 +1,5 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, getCookie, setCookie, sanitizeStatusCode, removeResponseHeader, getRouterParam, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatusText } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/h3/dist/index.mjs';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, createError, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, appendResponseHeader, getRequestURL, getResponseHeader, removeResponseHeader, getQuery as getQuery$1, readBody, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler, getResponseStatus, getRouterParam, getResponseStatusText } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import crypto$1 from 'node:crypto';
@@ -8,7 +8,6 @@ import { escapeHtml } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/n
 import viteNodeEntry_mjs from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs';
 import { viteNodeFetch } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/vite-builder/dist/vite-node.mjs';
 import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, joinRelativeURL, parsePath, withLeadingSlash, withoutTrailingSlash, withTrailingSlash, decodePath, encodePath } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/ufo/dist/index.mjs';
 import { renderToString } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/vue/server-renderer/index.mjs';
 import destr, { destr as destr$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/destr/dist/index.mjs';
 import { createHooks } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/hookable/dist/index.mjs';
@@ -20,7 +19,7 @@ import fsDriver from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_mo
 import lruCache from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unstorage/drivers/lru-cache.mjs';
 import { digest, hash as hash$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/ohash/dist/index.mjs';
 import { klona } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/klona/dist/index.mjs';
-import defu, { defuFn, createDefu } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/defu/dist/defu.mjs';
+import defu, { defuFn } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/defu/dist/defu.mjs';
 import { snakeCase } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/scule/dist/index.mjs';
 import { getContext } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unctx/dist/index.mjs';
 import { toRouteMatcher, createRouter } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/radix3/dist/index.mjs';
@@ -29,7 +28,6 @@ import consola, { consola as consola$1 } from 'file:///mnt/Dados/Dev/VSCODE/mea-
 import { ErrorParser } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/youch-core/build/index.js';
 import { Youch } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/youch/build/index.js';
 import { SourceMapConsumer } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/source-map/source-map.js';
-import { createRouterMatcher } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxtjs/i18n/node_modules/vue-router/vue-router.node.mjs';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { stringify, uneval } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/devalue/index.js';
 import { captureRawStackTrace, parseRawStackTrace } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/errx/dist/index.js';
@@ -41,6 +39,265 @@ import { dirname as dirname$1, resolve as resolve$1 } from 'file:///mnt/Dados/De
 import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unhead/dist/server.mjs';
 import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unhead/dist/plugins.mjs';
 import { walkResolver } from 'file:///mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/unhead/dist/utils.mjs';
+
+const HASH_RE = /#/g;
+const AMPERSAND_RE = /&/g;
+const SLASH_RE = /\//g;
+const EQUAL_RE = /=/g;
+const IM_RE = /\?/g;
+const PLUS_RE = /\+/g;
+const ENC_CARET_RE = /%5e/gi;
+const ENC_BACKTICK_RE = /%60/gi;
+const ENC_PIPE_RE = /%7c/gi;
+const ENC_SPACE_RE = /%20/gi;
+const ENC_SLASH_RE = /%2f/gi;
+const ENC_ENC_SLASH_RE = /%252f/gi;
+function encode(text) {
+  return encodeURI("" + text).replace(ENC_PIPE_RE, "|");
+}
+function encodeQueryValue(input) {
+  return encode(typeof input === "string" ? input : JSON.stringify(input)).replace(PLUS_RE, "%2B").replace(ENC_SPACE_RE, "+").replace(HASH_RE, "%23").replace(AMPERSAND_RE, "%26").replace(ENC_BACKTICK_RE, "`").replace(ENC_CARET_RE, "^").replace(SLASH_RE, "%2F");
+}
+function encodeQueryKey(text) {
+  return encodeQueryValue(text).replace(EQUAL_RE, "%3D");
+}
+function encodePath(text) {
+  return encode(text).replace(HASH_RE, "%23").replace(IM_RE, "%3F").replace(ENC_ENC_SLASH_RE, "%2F").replace(AMPERSAND_RE, "%26").replace(PLUS_RE, "%2B");
+}
+function decode(text = "") {
+  try {
+    return decodeURIComponent("" + text);
+  } catch {
+    return "" + text;
+  }
+}
+function decodePath(text) {
+  return decode(text.replace(ENC_SLASH_RE, "%252F"));
+}
+function decodeQueryKey(text) {
+  return decode(text.replace(PLUS_RE, " "));
+}
+function decodeQueryValue(text) {
+  return decode(text.replace(PLUS_RE, " "));
+}
+
+function parseQuery(parametersString = "") {
+  const object = /* @__PURE__ */ Object.create(null);
+  if (parametersString[0] === "?") {
+    parametersString = parametersString.slice(1);
+  }
+  for (const parameter of parametersString.split("&")) {
+    const s = parameter.match(/([^=]+)=?(.*)/) || [];
+    if (s.length < 2) {
+      continue;
+    }
+    const key = decodeQueryKey(s[1]);
+    if (key === "__proto__" || key === "constructor") {
+      continue;
+    }
+    const value = decodeQueryValue(s[2] || "");
+    if (object[key] === void 0) {
+      object[key] = value;
+    } else if (Array.isArray(object[key])) {
+      object[key].push(value);
+    } else {
+      object[key] = [object[key], value];
+    }
+  }
+  return object;
+}
+function encodeQueryItem(key, value) {
+  if (typeof value === "number" || typeof value === "boolean") {
+    value = String(value);
+  }
+  if (!value) {
+    return encodeQueryKey(key);
+  }
+  if (Array.isArray(value)) {
+    return value.map(
+      (_value) => `${encodeQueryKey(key)}=${encodeQueryValue(_value)}`
+    ).join("&");
+  }
+  return `${encodeQueryKey(key)}=${encodeQueryValue(value)}`;
+}
+function stringifyQuery(query) {
+  return Object.keys(query).filter((k) => query[k] !== void 0).map((k) => encodeQueryItem(k, query[k])).filter(Boolean).join("&");
+}
+
+const PROTOCOL_STRICT_REGEX = /^[\s\w\0+.-]{2,}:([/\\]{1,2})/;
+const PROTOCOL_REGEX = /^[\s\w\0+.-]{2,}:([/\\]{2})?/;
+const PROTOCOL_RELATIVE_REGEX = /^([/\\]\s*){2,}[^/\\]/;
+const JOIN_LEADING_SLASH_RE = /^\.?\//;
+function hasProtocol(inputString, opts = {}) {
+  if (typeof opts === "boolean") {
+    opts = { acceptRelative: opts };
+  }
+  if (opts.strict) {
+    return PROTOCOL_STRICT_REGEX.test(inputString);
+  }
+  return PROTOCOL_REGEX.test(inputString) || (opts.acceptRelative ? PROTOCOL_RELATIVE_REGEX.test(inputString) : false);
+}
+function hasTrailingSlash(input = "", respectQueryAndFragment) {
+  {
+    return input.endsWith("/");
+  }
+}
+function withoutTrailingSlash(input = "", respectQueryAndFragment) {
+  {
+    return (hasTrailingSlash(input) ? input.slice(0, -1) : input) || "/";
+  }
+}
+function withTrailingSlash(input = "", respectQueryAndFragment) {
+  {
+    return input.endsWith("/") ? input : input + "/";
+  }
+}
+function hasLeadingSlash(input = "") {
+  return input.startsWith("/");
+}
+function withLeadingSlash(input = "") {
+  return hasLeadingSlash(input) ? input : "/" + input;
+}
+function withoutBase(input, base) {
+  if (isEmptyURL(base)) {
+    return input;
+  }
+  const _base = withoutTrailingSlash(base);
+  if (!input.startsWith(_base)) {
+    return input;
+  }
+  const nextChar = input[_base.length];
+  if (nextChar && nextChar !== "/" && nextChar !== "?") {
+    return input;
+  }
+  const trimmed = input.slice(_base.length).replace(/^\/+/, "");
+  return "/" + trimmed;
+}
+function withQuery(input, query) {
+  const parsed = parseURL(input);
+  const mergedQuery = { ...parseQuery(parsed.search), ...query };
+  parsed.search = stringifyQuery(mergedQuery);
+  return stringifyParsedURL(parsed);
+}
+function getQuery(input) {
+  return parseQuery(parseURL(input).search);
+}
+function isEmptyURL(url) {
+  return !url || url === "/";
+}
+function isNonEmptyURL(url) {
+  return url && url !== "/";
+}
+function joinURL(base, ...input) {
+  let url = base || "";
+  for (const segment of input.filter((url2) => isNonEmptyURL(url2))) {
+    if (url) {
+      const _segment = segment.replace(JOIN_LEADING_SLASH_RE, "");
+      url = withTrailingSlash(url) + _segment;
+    } else {
+      url = segment;
+    }
+  }
+  return url;
+}
+function joinRelativeURL(..._input) {
+  const JOIN_SEGMENT_SPLIT_RE = /\/(?!\/)/;
+  const input = _input.filter(Boolean);
+  const segments = [];
+  let segmentsDepth = 0;
+  for (const i of input) {
+    if (!i || i === "/") {
+      continue;
+    }
+    for (const [sindex, s] of i.split(JOIN_SEGMENT_SPLIT_RE).entries()) {
+      if (!s || s === ".") {
+        continue;
+      }
+      if (s === "..") {
+        if (segments.length === 1 && hasProtocol(segments[0])) {
+          continue;
+        }
+        segments.pop();
+        segmentsDepth--;
+        continue;
+      }
+      if (sindex === 1 && segments[segments.length - 1]?.endsWith(":/")) {
+        segments[segments.length - 1] += "/" + s;
+        continue;
+      }
+      segments.push(s);
+      segmentsDepth++;
+    }
+  }
+  let url = segments.join("/");
+  if (segmentsDepth >= 0) {
+    if (input[0]?.startsWith("/") && !url.startsWith("/")) {
+      url = "/" + url;
+    } else if (input[0]?.startsWith("./") && !url.startsWith("./")) {
+      url = "./" + url;
+    }
+  } else {
+    url = "../".repeat(-1 * segmentsDepth) + url;
+  }
+  if (input[input.length - 1]?.endsWith("/") && !url.endsWith("/")) {
+    url += "/";
+  }
+  return url;
+}
+
+const protocolRelative = Symbol.for("ufo:protocolRelative");
+function parseURL(input = "", defaultProto) {
+  const _specialProtoMatch = input.match(
+    /^[\s\0]*(blob:|data:|javascript:|vbscript:)(.*)/i
+  );
+  if (_specialProtoMatch) {
+    const [, _proto, _pathname = ""] = _specialProtoMatch;
+    return {
+      protocol: _proto.toLowerCase(),
+      pathname: _pathname,
+      href: _proto + _pathname,
+      auth: "",
+      host: "",
+      search: "",
+      hash: ""
+    };
+  }
+  if (!hasProtocol(input, { acceptRelative: true })) {
+    return defaultProto ? parseURL(defaultProto + input) : parsePath(input);
+  }
+  const [, protocol = "", auth, hostAndPath = ""] = input.replace(/\\/g, "/").match(/^[\s\0]*([\w+.-]{2,}:)?\/\/([^/@]+@)?(.*)/) || [];
+  let [, host = "", path = ""] = hostAndPath.match(/([^#/?]*)(.*)?/) || [];
+  if (protocol === "file:") {
+    path = path.replace(/\/(?=[A-Za-z]:)/, "");
+  }
+  const { pathname, search, hash } = parsePath(path);
+  return {
+    protocol: protocol.toLowerCase(),
+    auth: auth ? auth.slice(0, Math.max(0, auth.length - 1)) : "",
+    host,
+    pathname,
+    search,
+    hash,
+    [protocolRelative]: !protocol
+  };
+}
+function parsePath(input = "") {
+  const [pathname = "", search = "", hash = ""] = (input.match(/([^#?]*)(\?[^#]*)?(#.*)?/) || []).splice(1);
+  return {
+    pathname,
+    search,
+    hash
+  };
+}
+function stringifyParsedURL(parsed) {
+  const pathname = parsed.pathname || "";
+  const search = parsed.search ? (parsed.search.startsWith("?") ? "" : "?") + parsed.search : "";
+  const hash = parsed.hash || "";
+  const auth = parsed.auth ? parsed.auth + "@" : "";
+  const host = parsed.host || "";
+  const proto = parsed.protocol || parsed[protocolRelative] ? (parsed.protocol || "") + "//" : "";
+  return proto + auth + host + pathname + search + hash;
+}
 
 const serverAssets = [{"baseName":"server","dir":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/server/assets"}];
 
@@ -89,19 +346,19 @@ const _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_4
   },
 );
 
-const storage$1 = createStorage({});
+const storage = createStorage({});
 
-storage$1.mount('/assets', assets$1);
+storage.mount('/assets', assets$1);
 
-storage$1.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic","watchOptions":{"ignored":[null]}}));
-storage$1.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/server","watchOptions":{"ignored":[null]}}));
-storage$1.mount('cache:nuxt:payload', _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache/nuxt/payload"}));
-storage$1.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt"}));
-storage$1.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache"}));
-storage$1.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/server","watchOptions":{"ignored":[null]}}));
+storage.mount('cache:nuxt:payload', _47mnt_47Dados_47Dev_47VSCODE_47mea_45ecclesia_45catholic_47node_modules_47_64nuxt_47nitro_45server_47dist_47runtime_47utils_47cache_45driver_46js({"driver":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/node_modules/@nuxt/nitro-server/dist/runtime/utils/cache-driver.js","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache/nuxt/payload"}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/.data/kv"}));
 
 function useStorage(base = "") {
-  return base ? prefixStorage(storage$1, base) : storage$1;
+  return base ? prefixStorage(storage, base) : storage;
 }
 
 const Hasher = /* @__PURE__ */ (() => {
@@ -697,24 +954,45 @@ const _inlineRuntimeConfig = {
     "i18n": {
       "baseUrl": "",
       "defaultLocale": "en",
+      "defaultDirection": "ltr",
+      "strategy": "no_prefix",
+      "lazy": true,
       "rootRedirect": "",
-      "redirectStatusCode": 302,
+      "routesNameSeparator": "___",
+      "defaultLocaleRouteNameSuffix": "default",
       "skipSettingLocaleOnNavigate": false,
+      "differentDomains": false,
+      "trailingSlash": false,
       "locales": [
         {
           "code": "pt",
           "name": "Português",
-          "language": ""
+          "files": [
+            {
+              "path": "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/i18n/locales/pt.json",
+              "cache": ""
+            }
+          ]
         },
         {
           "code": "la",
           "name": "Latim",
-          "language": ""
+          "files": [
+            {
+              "path": "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/i18n/locales/la.json",
+              "cache": ""
+            }
+          ]
         },
         {
           "code": "en",
           "name": "Inglês",
-          "language": ""
+          "files": [
+            {
+              "path": "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic/i18n/locales/en.json",
+              "cache": ""
+            }
+          ]
         }
       ],
       "detectBrowserLanguage": {
@@ -729,19 +1007,15 @@ const _inlineRuntimeConfig = {
       },
       "experimental": {
         "localeDetector": "",
+        "switchLocalePathLinkSSR": false,
+        "autoImportTranslationFunctions": false,
         "typedPages": true,
         "typedOptionsAndMessages": false,
-        "alternateLinkCanonicalQueries": true,
-        "devCache": false,
-        "cacheLifetime": "",
-        "stripMessagesPayload": false,
-        "preload": false,
-        "strictSeo": false,
-        "nitroContextDetection": true,
-        "httpCacheDuration": 10,
-        "compactRoutes": false,
-        "prerenderMessages": false
+        "generatedLocaleFilePathFormat": "absolute",
+        "alternateLinkCanonicalQueries": false,
+        "hmr": true
       },
+      "multiDomainLocales": false,
       "domainLocales": {
         "pt": {
           "domain": ""
@@ -2160,1144 +2434,7 @@ const _DsNfOwli9IhXIsfkWqsxcAswPpPLpf4WmGGPNVau_Y = (function(nitro) {
   });
 });
 
-/*!
-  * shared v11.4.2
-  * (c) 2026 kazuya kawaguchi
-  * Released under the MIT License.
-  */
-const _create = Object.create;
-const create = (obj = null) => _create(obj);
-/* eslint-enable */
-/**
- * Useful Utilities By Evan you
- * Modified by kazuya kawaguchi
- * MIT License
- * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/index.ts
- * https://github.com/vuejs/vue-next/blob/master/packages/shared/src/codeframe.ts
- */
-const isArray = Array.isArray;
-const isFunction = (val) => typeof val === 'function';
-const isString = (val) => typeof val === 'string';
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const isObject = (val) => val !== null && typeof val === 'object';
-const objectToString = Object.prototype.toString;
-const toTypeString = (value) => objectToString.call(value);
-
-const isNotObjectOrIsArray = (val) => !isObject(val) || isArray(val);
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function deepCopy(src, des) {
-    // src and des should both be objects, and none of them can be a array
-    if (isNotObjectOrIsArray(src) || isNotObjectOrIsArray(des)) {
-        throw new Error('Invalid value');
-    }
-    const stack = [{ src, des }];
-    while (stack.length) {
-        const { src, des } = stack.pop();
-        // using `Object.keys` which skips prototype properties
-        Object.keys(src).forEach(key => {
-            if (key === '__proto__') {
-                return;
-            }
-            // if src[key] is an object/array, set des[key]
-            // to empty object/array to prevent setting by reference
-            if (isObject(src[key]) && !isObject(des[key])) {
-                des[key] = Array.isArray(src[key]) ? [] : create();
-            }
-            if (isNotObjectOrIsArray(des[key]) || isNotObjectOrIsArray(src[key])) {
-                // replace with src[key] when:
-                // src[key] or des[key] is not an object, or
-                // src[key] or des[key] is an array
-                des[key] = src[key];
-            }
-            else {
-                // src[key] and des[key] are both objects, merge them
-                stack.push({ src: src[key], des: des[key] });
-            }
-        });
-    }
-}
-
-const __nuxtMock = { runWithContext: async (fn) => await fn() };
-const merger = createDefu((obj, key, value) => {
-  if (key === "messages" || key === "datetimeFormats" || key === "numberFormats") {
-    obj[key] ??= create(null);
-    deepCopy(value, obj[key]);
-    return true;
-  }
-});
-async function loadVueI18nOptions(vueI18nConfigs) {
-  const nuxtApp = __nuxtMock;
-  let vueI18nOptions = { messages: create(null) };
-  for (const configFile of vueI18nConfigs) {
-    const resolver = await configFile().then((x) => isModule(x) ? x.default : x);
-    const resolved = isFunction(resolver) ? await nuxtApp.runWithContext(() => resolver()) : resolver;
-    vueI18nOptions = merger(create(null), resolved, vueI18nOptions);
-  }
-  vueI18nOptions.fallbackLocale ??= false;
-  return vueI18nOptions;
-}
-const isModule = (val) => toTypeString(val) === "[object Module]";
-async function getLocaleMessages(locale, loader) {
-  const nuxtApp = __nuxtMock;
-  try {
-    const getter = await nuxtApp.runWithContext(loader.load).then((x) => isModule(x) ? x.default : x);
-    return isFunction(getter) ? await nuxtApp.runWithContext(() => getter(locale)) : getter;
-  } catch (e) {
-    throw new Error(`Failed loading locale (${locale}): ` + e.message);
-  }
-}
-async function getLocaleMessagesMerged(locale, loaders = []) {
-  const nuxtApp = __nuxtMock;
-  const messages = await Promise.all(
-    loaders.map((loader) => nuxtApp.runWithContext(() => getLocaleMessages(locale, loader)))
-  );
-  const merged = {};
-  for (const message of messages) {
-    deepCopy(message, merged);
-  }
-  return merged;
-}
-
-var menu$2 = {
-	inicio: "Início",
-	livros: "Livros",
-	artigos: "Artigos Religiosos",
-	homilias: "Homilias",
-	santo_dia: "Santo do Dia"
-};
-var header$2 = {
-	busca: "O que você está buscando?",
-	idioma_atual: "Idioma Atual"
-};
-var footer$2 = {
-	sobre_projeto: "Sobre o Projeto",
-	contato: "Contato",
-	aviso: "* As homilias são incorporadas diretamente do YouTube. Todos os direitos, visualizações e créditos são direcionados ao canal oficial do Pe. Mário Sartori.",
-	direitos: "© 2026 MEA ECCLESIA CATHOLICA. TODOS OS DIREITOS RESERVADOS.",
-	desenvolvido: "Desenvolvido com",
-	fe_codigo: "Fé & Código",
-	por: "por"
-};
-var home$2 = {
-	explore_title: "Explore a Fé",
-	map_title: "Encontre Paróquias",
-	map_desc: "Navegue pelo mapa para encontrar paróquias, mosteiros e santuários próximos a você.",
-	faq_btn: "Ainda tem dúvidas? Acesse o FAQ",
-	sobre_nos: "Sobre Nós",
-	sobre: {
-		badge: "Quem está por trás do M.E.C?",
-		title: "Sobre \"nós\" (ou só eu mesmo)",
-		desc: "Para ser sincero, o \"Sobre Nós\" no menu principal é só para deixar o site com cara de portal corporativo. Na verdade, não existe uma grande equipe aqui nos bastidores.",
-		btn: "Ler história completa, ver fotos e playlist"
-	},
-	carousel: {
-		slide1_sub: "Mea Ecclesia Catholica",
-		slide1_title: "Quem Somos?",
-		slide1_desc: "Um pequeno espaço dedicado a ajudar as pessoas a compreenderem e amarem a Igreja, sua doutrina e sua história.",
-		slide1_btn: "Sobre nós",
-		slide2_sub: "Patrística e Magistério",
-		slide2_title: "Os Tesouros da Tradição",
-		slide2_desc: "Entenda o Catecismo, os escritos dos Padres da Igreja e as verdades eternas guardadas por mais de dois milênios.",
-		slide2_btn: "Aprofundar Estudos",
-		slide3_sub: "Liturgia",
-		slide3_title: "A Santa Missa",
-		slide3_desc: "Veja aqui o que acontece no Santo Sacrifício do Altar e compreenda as respostas litúrgicas.",
-		slide3_btn: "Ver aqui",
-		slide4_sub: "Exemplos de Fé",
-		slide4_title: "O Santo do Dia",
-		slide4_desc: "Descubra a história de homens e mulheres que doaram suas vidas por Cristo e encontre inspiração para a sua caminhada diária.",
-		slide4_btn: "Veja qual",
-		slide5_sub: "Formação",
-		slide5_title: "Homilia Diária",
-		slide5_desc: "Aprofunde sua fé com a homilia diária, comentada pelo Pe. Mario Sartori.",
-		slide5_btn: "Assistir"
-	},
-	topics: {
-		trindade: "Trindade",
-		sacramentos: "Sacramentos",
-		missa: "Missa",
-		milagres: "Milagres Eucarísticos",
-		escritura: "Escritura",
-		sucessao: "Sucessão Apostólica",
-		tradicao: "Tradição e Magistério",
-		papado: "O Papado",
-		orientais: "Igrejas Orientais",
-		concilios: "Concílios e Ritos",
-		historia: "História",
-		patristica: "Patrística",
-		escolastica: "Escolástica",
-		ciencia: "Ciência",
-		apologetica: "Apologética",
-		dogmas: "Dogmas Marianos",
-		intercessao: "Intercessão e Mediação",
-		imagens: "Imagens e Idolatria",
-		catecismo: "Catecismo",
-		oracoes: "Orações",
-		rosario: "Rosário"
-	}
-};
-var livro$2 = {
-	titulo: "Livros",
-	subtitulo: "Uma curadoria de obras fundamentais para o aprofundamento da fé católica. Desde edições recomendadas da Sagrada Escritura até os grandes tesouros da Patrística e da Doutrina, explore livros que moldaram a Tradição da Igreja ao longo dos séculos.",
-	sagrada_escritura: "Sagrada Escritura",
-	patristica: "Patrística",
-	historia: "História da Igreja",
-	doutrina_apologetica: "Doutrina e Apologética",
-	escolastica: "Filosofia e Escolástica",
-	formacao_humana: "Formação Humana e Virtudes",
-	espiritualidade_ascetica: "Vida Espiritual e Ascética",
-	biografias: "Biografias e Vida dos Santos",
-	tesouro_tradicao: "Bíblia Sagrada: Tesouro da Tradição",
-	biblia_sagrada: "Bíblia Sagrada",
-	jerusalem: "Bíblia de Jerusalém",
-	ave_maria: "Bíblia Ave Maria",
-	peregrino: "Bíblia do Peregrino",
-	navarra: "Bíblia de Navarra",
-	sacra_vulgata: "Bíblia Sacra Vulgata",
-	minha_biblioteca_catolica: "Minha Biblioteca Católica",
-	paulus: "Paulus",
-	editora_ave_maria: "Ave Maria",
-	quadrante: "Quadrante",
-	capa_alt: "Capa do livro {titulo}",
-	labels: {
-		autor: "Autor",
-		duracao: "Duração",
-		dificuldade: "Dificuldade"
-	},
-	duracao: {
-		muito_curto: "Muito Curto",
-		curto: "Curto",
-		medio: "Médio",
-		longo: "Longo",
-		muito_longo: "Muito Longo",
-		muito_longo1: "Muito Longo (4 Vol)",
-		muito_longo2: "Muito Longo (5 Vol)",
-		muito_longo3: "Muito Longo (10 Vol)",
-		muito_longo4: "Muito Longo (2 Vol)"
-	},
-	dificuldade: {
-		facil: "Fácil",
-		facil_media: "Fácil/Média",
-		media: "Média",
-		media_dificil: "Média/Difícil",
-		dificil: "Difícil",
-		muito_dificil: "Muito Difícil"
-	},
-	autores: {
-		papa_bento_xvi: "Papa Bento XVI",
-		padres_apostolicos: "Padres Apostólicos",
-		santo_agostinho: "Santo Agostinho",
-		eusebio_cesareia: "Eusébio de Cesareia",
-		santo_irineu: "Santo Irineu de Lyon",
-		thomas_woods: "Thomas E. Woods Jr.",
-		regine_pernoud: "Regine Pernoud",
-		thomas_madden: "Thomas Madden",
-		jonathan_riley_smith: "Jonathan Riley-Smith",
-		edward_peters: "Edward Peters",
-		henry_kamen: "Henry Kamen",
-		giacomo_martina: "Giacomo Martina",
-		daniel_rops: "Daniel-Rops",
-		sao_pio_x: "São Pio X",
-		scott_hahn: "Scott Hahn",
-		leo_trese: "Leo J. Trese",
-		jose_miguel: "Pe. José Miguel",
-		jimenez_yaniz: "Jiménez e Yániz",
-		julio_maria: "Pe. Júlio Maria",
-		leonel_franca: "Pe. Leonel Franca",
-		santo_afonso: "Santo Afonso de Ligório",
-		sao_joao_paulo_ii: "Promulgado por São João Paulo II",
-		chesterton: "G.K. Chesterton",
-		santo_tomas: "São Tomás de Aquino",
-		francisco_faus: "Francisco Faus",
-		rafael_llano: "Rafael LLano Cifuentes",
-		sao_francisco_sales: "São Francisco de Sales",
-		tomas_kempis: "Tomás de Kempis",
-		lorenzo_scupoli: "Lorenzo Scupoli",
-		jean_michel: "Pe. Jean Michel",
-		grignion_de_montfort: "Grignion de Montfort",
-		antonio_royo_marin: "Pe. Antonio Royo Marín",
-		garrigou_lagrange: "Garrigou-Lagrange",
-		santa_teresa: "Santa Teresa d'Ávila",
-		santo_atanasio: "Santo Atanásio",
-		santa_teresinha: "Santa Teresinha",
-		sao_john_henry_newman: "São John Henry Newman"
-	},
-	patristica_livros: {
-		padres_igreja: "Os Padres da Igreja",
-		patristica_paulus_1: "Patrística Paulus, Volume 1",
-		patristica_paulus_32: "Patrística Paulus, Volume 32: Fé e Símbolo",
-		sobre_o_livre_arbitrio: "Sobre o Livre-Arbítrio",
-		enchiridion: "Enchiridion (Manual da Fé)",
-		patristica_paulus_15: "Patrística Paulus, Volume 15: História Eclesiástica",
-		patristica_paulus_4: "Patrística Paulus, Volume 4: Contra as Heresias",
-		cidade_de_deus: "A Cidade de Deus",
-		doutrina_crista: "A Doutrina Cristã",
-		patristica_paulus_7: "Patrística Paulus, Volume 7: A Trindade"
-	},
-	historia_livros: {
-		civilizacao: "Como a Igreja Católica Construiu a Civilização Ocidental",
-		luz_sobre_idade_media: "Luz sobre a Idade Média",
-		as_cruzadas: "As Cruzadas",
-		as_cruzadas_historia: "As cruzadas: uma história",
-		inquisition: "Inquisition",
-		inquisicao_espanhola: "A Inquisição Espanhola",
-		historia_da_igreja: "História da Igreja",
-		historia_da_igreja_de_cristo: "História da Igreja de Cristo"
-	},
-	doutrina_apologetica_livros: {
-		youcat: "Youcat",
-		catecismo_maior_sao_pio_x: "Catecismo Maior de São Pio X",
-		todos_os_caminhos_levam_a_roma: "Todos os caminhos levam a Roma",
-		"a_fé_explicada": "A Fé Explicada",
-		introducao_ao_cristianismo: "Introdução ao Cristianismo",
-		o_amor_que_fez_o_sol_e_as_estrelas: "O amor que fez o sol e as estrelas",
-		sintese_da_fe_catolica: "Síntese da Fé Católica",
-		o_diabo_lutero_e_o_protestantismo: "O Diabo, Lutero e o Protestantismo",
-		sao_gabriel_maome_e_o_islamismo: "São Gabriel, Maomé e o Islamismo",
-		o_protestantismo_no_brasil: "O Protestantismo no Brasil",
-		historia_das_heresias: "História das Heresias",
-		catecismo_da_igreja_catolica: "Catecismo da Igreja Católica"
-	},
-	escolastica_livros: {
-		gk_tomas_aquino: "Santo Tomás de Aquino",
-		compendio_teologia: "Compêndio de Teologia",
-		suma_teologica: "Suma Teológica (Tratado de Deus)"
-	},
-	formacao_livros: {
-		a_paciencia: "A paciência",
-		"a_preguiça": "A Preguiça",
-		a_inveja: "A Inveja",
-		autodominio: "Autodomínio",
-		o_homem_bom: "O Homem Bom",
-		a_sabedoria_da_cruz: "A Sabedoria da Cruz",
-		o_otimismo: "O Otimismo",
-		fortaleza: "Fortaleza",
-		a_maturidade: "A Maturidade",
-		para_estar_com_deus: "Para estar com Deus"
-	},
-	espiritualidade_livros: {
-		filoteia: "Filoteia",
-		imitacao_de_cristo: "Imitação de Cristo",
-		o_combate_espiritual: "O Combate Espiritual",
-		tratado_do_desanimo: "Tratado do Desânimo",
-		tratado_da_verdadeira_devocao: "Tratado da Verdadeira Devoção a Santíssima Virgem Maria",
-		ser_ou_nao_ser_santo: "Ser ou não ser santo",
-		as_3_vias_e_as_3_conversoes: "As 3 vias e as 3 conversões",
-		castelo_interior: "Castelo Interior"
-	},
-	biografias_livros: {
-		confissoes: "Confissões",
-		vida_de_santo_antao: "Vida de Santo Antão",
-		vida_de_sao_francisco_de_assis: "São Francisco de Assis",
-		historia_alma: "História de uma Alma",
-		vida_de_santa_teresa_de_jesus: "Vida de Santa Teresa de Jesus",
-		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
-	}
-};
-const locale_pt_46json_d769759e = {
-	menu: menu$2,
-	header: header$2,
-	footer: footer$2,
-	home: home$2,
-	livro: livro$2
-};
-
-var menu$1 = {
-	inicio: "Principium",
-	livros: "Libri",
-	artigos: "Articuli Religiosi",
-	homilias: "Homiliae",
-	santo_dia: "Sanctus Diei"
-};
-var header$1 = {
-	busca: "Quid quaeris?",
-	idioma_atual: "Lingua Praesens"
-};
-var footer$1 = {
-	sobre_projeto: "De Opere",
-	contato: "Communicatio",
-	aviso: "* Homiliae directe ex YouTube inseruntur. Omnia iura, visiones et laudes ad tramitem officialem Patris Marii Sartori diriguntur.",
-	direitos: "© MMXXVI MEA ECCLESIA CATHOLICA. OMNIA IURA RESERVATA.",
-	desenvolvido: "Elaboratum cum",
-	fe_codigo: "Fides & Codex",
-	por: "a"
-};
-var home$1 = {
-	explore_title: "Explora Fidem",
-	map_title: "Inveni Paroecias",
-	map_desc: "Naviga per tabulam geographicam ut paroecias, monasteria et sanctuaria tibi propinqua invenias.",
-	faq_btn: "Adhuc habes dubia? Adi Quaestiones Frequentes (FAQ)",
-	sobre_nos: "De Nobis",
-	sobre: {
-		badge: "Quis est post M.E.C?",
-		title: "De \"nobis\" (vel solum de me ipso)",
-		desc: "Ut verum fatear, \"De Nobis\" in elencho principali solum est ut situs interretialis speciem portae corporativae habeat. Revera, non est magna turma hic in scaenis.",
-		btn: "Lege historiam integram, vide imagines et indicem cantuum"
-	},
-	carousel: {
-		slide1_sub: "Mea Ecclesia Catholica",
-		slide1_title: "Qui Sumus?",
-		slide1_desc: "Parvum spatium dicatum ad adiuvandum homines ut Ecclesiam, eius doctrinam et eius historiam comprehendant et ament.",
-		slide1_btn: "De Nobis",
-		slide2_sub: "Patristica et Magisterium",
-		slide2_title: "Thesauri Traditionis",
-		slide2_desc: "Comprehende Catechismum, scripta Patrum Ecclesiae et veritates aeternas per plus quam duo millennia custoditas.",
-		slide2_btn: "Altius Investigare",
-		slide3_sub: "Liturgia",
-		slide3_title: "Sancta Missa",
-		slide3_desc: "Vide hic quid in Sancto Sacrificio Altaris eveniat et comprehende responsa liturgica.",
-		slide3_btn: "Vide hic",
-		slide4_sub: "Exempla Fidei",
-		slide4_title: "Sanctus Diei",
-		slide4_desc: "Inveni historiam virorum et mulierum qui pro Christo vitas suas tradiderunt, et inveni inspirationem pro itinere tuo quotidiano.",
-		slide4_btn: "Vide quis sit",
-		slide5_sub: "Formatio",
-		slide5_title: "Homilia Quotidiana",
-		slide5_desc: "Profunda fidem tuam per homiliam quotidianam, a Patre Mario Sartori explicatam.",
-		slide5_btn: "Spectare"
-	},
-	topics: {
-		trindade: "Trinitas",
-		sacramentos: "Sacramenta",
-		missa: "Missa",
-		milagres: "Miracula Eucharistica",
-		escritura: "Scriptura",
-		sucessao: "Successio Apostolica",
-		tradicao: "Traditio et Magisterium",
-		papado: "Pontificatus",
-		orientais: "Ecclesiae Orientales",
-		concilios: "Concilia et Ritus",
-		historia: "Historia",
-		patristica: "Patristica",
-		escolastica: "Scholastica",
-		ciencia: "Scientia",
-		apologetica: "Apologetica",
-		dogmas: "Dogmata Mariana",
-		intercessao: "Intercessio et Mediatio",
-		imagens: "Imagines et Idolatria",
-		catecismo: "Catechismus",
-		oracoes: "Orationes",
-		rosario: "Rosarium"
-	}
-};
-var livro$1 = {
-	titulo: "Libri",
-	subtitulo: "Cura operum praecipuorum ad fidem catholicam profundandam. Ab editionibus commendatis Sacrae Scripturae usque ad thesauros magnos Patristicae et Doctrinae, explora libros qui Traditionem Ecclesiae per saecula formaverunt.",
-	sagrada_escritura: "Sacra Scriptura",
-	patristica: "Patristica",
-	historia: "Historia Ecclesiae",
-	doutrina_apologetica: "Doctrina et Apologetica",
-	escolastica: "Philosophia et Scholastica",
-	formacao_humana: "Formatio Humana et Virtutes",
-	espiritualidade_ascetica: "Vita Spiritualis et Ascetica",
-	biografias: "Biographiae et Vitae Sanctorum",
-	tesouro_tradicao: "Biblia Sacra: Thesaurus Traditionis",
-	biblia_sagrada: "Biblia Sacra",
-	jerusalem: "Biblia Hierosolymitana",
-	ave_maria: "Biblia Ave Maria",
-	peregrino: "Biblia Peregrini",
-	navarra: "Biblia Navarrensis",
-	sacra_vulgata: "Biblia Sacra Vulgata",
-	minha_biblioteca_catolica: "Bibliotheca Catholica Mea",
-	paulus: "Paulus",
-	editora_ave_maria: "Ave Maria",
-	quadrante: "Quadrante",
-	capa_alt: "Involucrum libri {titulo}",
-	labels: {
-		autor: "Auctor",
-		duracao: "Duratio",
-		dificuldade: "Difficultas"
-	},
-	duracao: {
-		muito_curto: "Valde Brevis",
-		curto: "Brevis",
-		medio: "Medius",
-		longo: "Longus",
-		muito_longo: "Valde Longus",
-		muito_longo1: "Valde Longus (IV Volumina)",
-		muito_longo2: "Valde Longus (V Volumina)",
-		muito_longo3: "Valde Longus (X Volumina)",
-		muito_longo4: "Valde Longus (II Volumina)"
-	},
-	dificuldade: {
-		facil: "Facilis",
-		facil_media: "Facilis/Media",
-		media: "Media",
-		media_dificil: "Media/Difficilis",
-		dificil: "Difficilis",
-		muito_dificil: "Valde Difficilis"
-	},
-	autores: {
-		papa_bento_xvi: "Papa Benedictus XVI",
-		padres_apostolicos: "Patres Apostolici",
-		santo_agostinho: "Sanctus Augustinus",
-		eusebio_cesareia: "Eusebius Caesariensis",
-		santo_irineu: "Sanctus Irenaeus Lugdunensis",
-		thomas_woods: "Thomas E. Woods Jr.",
-		regine_pernoud: "Regine Pernoud",
-		thomas_madden: "Thomas Madden",
-		jonathan_riley_smith: "Jonathan Riley-Smith",
-		edward_peters: "Edward Peters",
-		henry_kamen: "Henry Kamen",
-		giacomo_martina: "Giacomo Martina",
-		daniel_rops: "Daniel-Rops",
-		sao_pio_x: "Sanctus Pius X",
-		scott_hahn: "Scott Hahn",
-		leo_trese: "Leo J. Trese",
-		jose_miguel: "Pater José Miguel",
-		jimenez_yaniz: "Jiménez et Yániz",
-		julio_maria: "Pater Júlio Maria",
-		leonel_franca: "Pater Leonel Franca",
-		santo_afonso: "Sanctus Alphonsus a Ligorio",
-		sao_joao_paulo_ii: "A Sancto Ioanne Paulo II Promulgatum",
-		chesterton: "G.K. Chesterton",
-		santo_tomas: "Sanctus Thomas Aquinas",
-		francisco_faus: "Francisco Faus",
-		rafael_llano: "Rafael LLano Cifuentes",
-		sao_francisco_sales: "Sanctus Franciscus Salesius",
-		tomas_kempis: "Thomas a Kempis",
-		lorenzo_scupoli: "Lorenzo Scupoli",
-		jean_michel: "Pater Jean Michel",
-		grignion_de_montfort: "Grignion de Montfort",
-		antonio_royo_marin: "Pater Antonio Royo Marín",
-		garrigou_lagrange: "Garrigou-Lagrange",
-		santa_teresa: "Sancta Teresia Abulensis",
-		santo_atanasio: "Sanctus Athanasius",
-		santa_teresinha: "Sancta Teresia a Iesu Infante",
-		sao_john_henry_newman: "Sanctus Ioannes Henricus Newman"
-	},
-	patristica_livros: {
-		padres_igreja: "Patres Ecclesiae",
-		patristica_paulus_1: "Patristica Paulus, Volumen I",
-		patristica_paulus_32: "Patristica Paulus, Volumen XXXII: Fides et Symbolus",
-		sobre_o_livre_arbitrio: "De Libero Arbitrio",
-		enchiridion: "Enchiridion (Manuale Fidei)",
-		patristica_paulus_15: "Patristica Paulus, Volumen XV: Historia Ecclesiastica",
-		patristica_paulus_4: "Patristica Paulus, Volumen IV: Adversus Haereses",
-		cidade_de_deus: "De Civitate Dei",
-		doutrina_crista: "De Doctrina Christiana",
-		patristica_paulus_7: "Patristica Paulus, Volumen VII: De Trinitate"
-	},
-	historia_livros: {
-		civilizacao: "Quomodo Ecclesia Catholica Civilisationem Occidentalem Aedificaverit",
-		luz_sobre_idade_media: "Lux super Medium Aevum",
-		as_cruzadas: "Expeditiones Sacrae",
-		as_cruzadas_historia: "Expeditiones Sacrae: Historia",
-		inquisition: "Inquisitio",
-		inquisicao_espanhola: "Inquisitio Hispanica",
-		historia_da_igreja: "Historia Ecclesiae",
-		historia_da_igreja_de_cristo: "Historia Ecclesiae Christi"
-	},
-	doutrina_apologetica_livros: {
-		youcat: "Youcat",
-		catecismo_maior_sao_pio_x: "Catechismus Maior Sancti Pii X",
-		todos_os_caminhos_levam_a_roma: "Omnes Viae Romam Ducunt",
-		"a_fé_explicada": "Fides Explicata",
-		introducao_ao_cristianismo: "Introductio in Christianismum",
-		o_amor_que_fez_o_sol_e_as_estrelas: "Amor qui Solem et Stellas Fecit",
-		sintese_da_fe_catolica: "Synthesis Fidei Catholicae",
-		o_diabo_lutero_e_o_protestantismo: "Diabolus, Lutherus et Protestantismus",
-		sao_gabriel_maome_e_o_islamismo: "Sanctus Gabriel, Mahometus et Islamismus",
-		o_protestantismo_no_brasil: "Protestantismus in Brasilia",
-		historia_das_heresias: "Historia Haeresium",
-		catecismo_da_igreja_catolica: "Catechismus Catholicae Ecclesiae"
-	},
-	escolastica_livros: {
-		gk_tomas_aquino: "Sanctus Thomas Aquinas",
-		compendio_teologia: "Compendium Theologiae",
-		suma_teologica: "Summa Theologiae (Tractatus de Deo)"
-	},
-	formacao_livros: {
-		a_paciencia: "Patientia",
-		"a_preguiça": "Acedia",
-		a_inveja: "Invidia",
-		autodominio: "Sui Dominium",
-		o_homem_bom: "Vir Bonus",
-		a_sabedoria_da_cruz: "Sapientia Crucis",
-		o_otimismo: "Optimismus",
-		fortaleza: "Fortitudo",
-		a_maturidade: "Maturitas",
-		para_estar_com_deus: "Ut Cum Deo Simus"
-	},
-	espiritualidade_livros: {
-		filoteia: "Philothea",
-		imitacao_de_cristo: "De Imitatione Christi",
-		o_combate_espiritual: "Certamen Spirituale",
-		tratado_do_desanimo: "Tractatus de Pusillanimitate",
-		tratado_da_verdadeira_devocao: "Tractatus de Vera Devotione ad Beatissimam Virginem Mariam",
-		ser_ou_nao_ser_santo: "Sanctum Esse aut Non Esse",
-		as_3_vias_e_as_3_conversoes: "Tres Viae et Tres Conversiones",
-		castelo_interior: "Castellum Interius"
-	},
-	biografias_livros: {
-		confissoes: "Confessiones",
-		vida_de_santo_antao: "Vita Sancti Antonii",
-		vida_de_sao_francisco_de_assis: "Sanctus Franciscus Assisiensis",
-		historia_alma: "Historia Animae",
-		vida_de_santa_teresa_de_jesus: "Vita Sanctae Teresiae a Iesu",
-		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
-	}
-};
-const locale_la_46json_50dfc134 = {
-	menu: menu$1,
-	header: header$1,
-	footer: footer$1,
-	home: home$1,
-	livro: livro$1
-};
-
-var menu = {
-	inicio: "Home",
-	livros: "Books",
-	artigos: "Religious Articles",
-	homilias: "Homilies",
-	santo_dia: "Saint of the Day"
-};
-var header = {
-	busca: "What are you looking for?",
-	idioma_atual: "Current Language"
-};
-var footer = {
-	sobre_projeto: "About the Project",
-	contato: "Contact",
-	aviso: "* The homilies are embedded directly from YouTube. All rights, views, and credits belong to the official channel of Fr. Mário Sartori.",
-	direitos: "© 2026 MEA ECCLESIA CATHOLICA. ALL RIGHTS RESERVED.",
-	desenvolvido: "Developed with",
-	fe_codigo: "Faith & Code",
-	por: "by"
-};
-var home = {
-	explore_title: "Explore the Faith",
-	map_title: "Find Parishes",
-	map_desc: "Browse the map to find parishes, monasteries, and shrines near you.",
-	faq_btn: "Still have questions? Visit the FAQ",
-	sobre_nos: "About Us",
-	sobre: {
-		badge: "Who is behind M.E.C?",
-		title: "About \"us\" (or just me)",
-		desc: "To be honest, the \"About Us\" in the main menu is just to make the site look like a corporate portal. In reality, there is no big team behind the scenes here.",
-		btn: "Read the full story, see photos and playlist"
-	},
-	carousel: {
-		slide1_sub: "Mea Ecclesia Catholica",
-		slide1_title: "Who Are We?",
-		slide1_desc: "A small space dedicated to helping people understand and love the Church, Her doctrine, and Her history.",
-		slide1_btn: "About us",
-		slide2_sub: "Patristics and Magisterium",
-		slide2_title: "The Treasures of Tradition",
-		slide2_desc: "Understand the Catechism, the writings of the Church Fathers, and the eternal truths guarded for over two millennia.",
-		slide2_btn: "Deepen Your Studies",
-		slide3_sub: "Liturgy",
-		slide3_title: "The Holy Mass",
-		slide3_desc: "See what happens during the Holy Sacrifice of the Altar and understand the liturgical responses.",
-		slide3_btn: "See here",
-		slide4_sub: "Examples of Faith",
-		slide4_title: "Saint of the Day",
-		slide4_desc: "Discover the history of men and women who gave their lives for Christ and find inspiration for your daily journey.",
-		slide4_btn: "See who",
-		slide5_sub: "Formation",
-		slide5_title: "Daily Homily",
-		slide5_desc: "Deepen your faith with the daily homily, commentated by Fr. Mario Sartori.",
-		slide5_btn: "Watch"
-	},
-	topics: {
-		trindade: "Trinity",
-		sacramentos: "Sacraments",
-		missa: "Mass",
-		milagres: "Eucharistic Miracles",
-		escritura: "Scripture",
-		sucessao: "Apostolic Succession",
-		tradicao: "Tradition and Magisterium",
-		papado: "The Papacy",
-		orientais: "Eastern Churches",
-		concilios: "Councils and Rites",
-		historia: "History",
-		patristica: "Patristics",
-		escolastica: "Scholasticism",
-		ciencia: "Science",
-		apologetica: "Apologetics",
-		dogmas: "Marian Dogmas",
-		intercessao: "Intercession and Mediation",
-		imagens: "Images and Idolatry",
-		catecismo: "Catechism",
-		oracoes: "Prayers",
-		rosario: "Rosary"
-	}
-};
-var livro = {
-	titulo: "Books",
-	subtitulo: "A curation of fundamental works for deepening the Catholic faith. From recommended editions of Sacred Scripture to the great treasures of Patristics and Doctrine, explore books that have shaped the Tradition of the Church over the centuries.",
-	sagrada_escritura: "Sacred Scripture",
-	patristica: "Patristics",
-	historia: "Church History",
-	doutrina_apologetica: "Doctrine and Apologetics",
-	escolastica: "Philosophy and Scholasticism",
-	formacao_humana: "Human Formation and Virtues",
-	espiritualidade_ascetica: "Spiritual and Ascetical Life",
-	biografias: "Biographies and Lives of the Saints",
-	tesouro_tradicao: "Holy Bible: Treasure of Tradition",
-	biblia_sagrada: "Holy Bible",
-	jerusalem: "Jerusalem Bible",
-	ave_maria: "Ave Maria Bible",
-	peregrino: "The Pilgrim Bible",
-	navarra: "The Navarre Bible",
-	sacra_vulgata: "Biblia Sacra Vulgata",
-	minha_biblioteca_catolica: "Minha Biblioteca Católica",
-	paulus: "Paulus",
-	editora_ave_maria: "Ave Maria",
-	quadrante: "Quadrante",
-	capa_alt: "Cover of the book {titulo}",
-	labels: {
-		autor: "Author",
-		duracao: "Length",
-		dificuldade: "Difficulty"
-	},
-	duracao: {
-		muito_curto: "Very Short",
-		curto: "Short",
-		medio: "Medium",
-		longo: "Long",
-		muito_longo: "Very Long",
-		muito_longo1: "Very Long (4 Vol)",
-		muito_longo2: "Very Long (5 Vol)",
-		muito_longo3: "Very Long (10 Vol)",
-		muito_longo4: "Very Long (2 Vol)"
-	},
-	dificuldade: {
-		facil: "Easy",
-		facil_media: "Easy/Medium",
-		media: "Medium",
-		media_dificil: "Medium/Difficult",
-		dificil: "Difficult",
-		muito_dificil: "Very Difficult"
-	},
-	autores: {
-		papa_bento_xvi: "Pope Benedict XVI",
-		padres_apostolicos: "Apostolic Fathers",
-		santo_agostinho: "Saint Augustine",
-		eusebio_cesareia: "Eusebius of Caesarea",
-		santo_irineu: "Saint Irenaeus of Lyon",
-		thomas_woods: "Thomas E. Woods Jr.",
-		regine_pernoud: "Régine Pernoud",
-		thomas_madden: "Thomas F. Madden",
-		jonathan_riley_smith: "Jonathan Riley-Smith",
-		edward_peters: "Edward Peters",
-		henry_kamen: "Henry Kamen",
-		giacomo_martina: "Giacomo Martina",
-		daniel_rops: "Daniel-Rops",
-		sao_pio_x: "Pope Saint Pius X",
-		scott_hahn: "Scott Hahn",
-		leo_trese: "Leo J. Trese",
-		jose_miguel: "Fr. José Miguel",
-		jimenez_yaniz: "Jiménez and Yániz",
-		julio_maria: "Fr. Júlio Maria",
-		leonel_franca: "Fr. Leonel Franca",
-		santo_afonso: "Saint Alphonsus Liguori",
-		sao_joao_paulo_ii: "Promulgated by Pope Saint John Paul II",
-		chesterton: "G.K. Chesterton",
-		santo_tomas: "Saint Thomas Aquinas",
-		francisco_faus: "Francisco Faus",
-		rafael_llano: "Rafael Llano Cifuentes",
-		sao_francisco_sales: "Saint Francis de Sales",
-		tomas_kempis: "Thomas à Kempis",
-		lorenzo_scupoli: "Lorenzo Scupoli",
-		jean_michel: "Fr. Jean Michel",
-		grignion_de_montfort: "Saint Louis de Montfort",
-		antonio_royo_marin: "Fr. Antonio Royo Marín",
-		garrigou_lagrange: "Réginald Garrigou-Lagrange",
-		santa_teresa: "Saint Teresa of Ávila",
-		santo_atanasio: "Saint Athanasius",
-		santa_teresinha: "Saint Thérèse of Lisieux",
-		sao_john_henry_newman: "Saint John Henry Newman"
-	},
-	patristica_livros: {
-		padres_igreja: "The Fathers of the Church",
-		patristica_paulus_1: "Patristics Paulus, Volume 1",
-		patristica_paulus_32: "Patristics Paulus, Volume 32: Faith and the Creed",
-		sobre_o_livre_arbitrio: "On the Free Choice of the Will",
-		enchiridion: "Enchiridion on Faith, Hope, and Love",
-		patristica_paulus_15: "Patristics Paulus, Volume 15: Ecclesiastical History",
-		patristica_paulus_4: "Patristics Paulus, Volume 4: Against Heresies",
-		cidade_de_deus: "The City of God",
-		doutrina_crista: "On Christian Doctrine",
-		patristica_paulus_7: "Patristics Paulus, Volume 7: On the Trinity"
-	},
-	historia_livros: {
-		civilizacao: "How the Catholic Church Built Western Civilization",
-		luz_sobre_idade_media: "Those Terrible Middle Ages: Debunking the Myths",
-		as_cruzadas: "The Crusades",
-		as_cruzadas_historia: "The Crusades: A History",
-		inquisition: "Inquisition",
-		inquisicao_espanhola: "The Spanish Inquisition: A Historical Revision",
-		historia_da_igreja: "History of the Church",
-		historia_da_igreja_de_cristo: "History of the Church of Christ"
-	},
-	doutrina_apologetica_livros: {
-		youcat: "YOUCAT",
-		catecismo_maior_sao_pio_x: "Catechism of Saint Pius X",
-		todos_os_caminhos_levam_a_roma: "Rome Sweet Home",
-		"a_fé_explicada": "The Faith Explained",
-		introducao_ao_cristianismo: "Introduction to Christianity",
-		o_amor_que_fez_o_sol_e_as_estrelas: "The Love That Made the Sun and the Stars",
-		sintese_da_fe_catolica: "Synthesis of the Catholic Faith",
-		o_diabo_lutero_e_o_protestantismo: "The Devil, Luther, and Protestantism",
-		sao_gabriel_maome_e_o_islamismo: "Saint Gabriel, Muhammad, and Islam",
-		o_protestantismo_no_brasil: "Protestantism in Brazil",
-		historia_das_heresias: "The History of Heresies and Their Refutation",
-		catecismo_da_igreja_catolica: "Catechism of the Catholic Church"
-	},
-	escolastica_livros: {
-		gk_tomas_aquino: "St. Thomas Aquinas: The Dumb Ox",
-		compendio_teologia: "Compendium of Theology",
-		suma_teologica: "Summa Theologica (Treatise on God)"
-	},
-	formacao_livros: {
-		a_paciencia: "Patience",
-		"a_preguiça": "Sloth",
-		a_inveja: "Envy",
-		autodominio: "Self-Mastery",
-		o_homem_bom: "The Good Man",
-		a_sabedoria_da_cruz: "The Wisdom of the Cross",
-		o_otimismo: "Optimism",
-		fortaleza: "Fortitude",
-		a_maturidade: "Maturity",
-		para_estar_com_deus: "To Be with God"
-	},
-	espiritualidade_livros: {
-		filoteia: "Introduction to the Devout Life",
-		imitacao_de_cristo: "The Imitation of Christ",
-		o_combate_espiritual: "The Spiritual Combat",
-		tratado_do_desanimo: "Treatise on Discouragement",
-		tratado_da_verdadeira_devocao: "Treatise on True Devotion to the Blessed Virgin",
-		ser_ou_nao_ser_santo: "To Be or Not to Be a Saint",
-		as_3_vias_e_as_3_conversoes: "The Three Ages of the Interior Life",
-		castelo_interior: "The Interior Castle"
-	},
-	biografias_livros: {
-		confissoes: "Confessions",
-		vida_de_santo_antao: "The Life of Saint Antony",
-		vida_de_sao_francisco_de_assis: "Saint Francis of Assisi",
-		historia_alma: "The Story of a Soul",
-		vida_de_santa_teresa_de_jesus: "The Life of St. Teresa of Jesus",
-		apologia_pro_vita_sua: "Apologia Pro Vita Sua"
-	}
-};
-const locale_en_46json_c5e9ec7b = {
-	menu: menu,
-	header: header,
-	footer: footer,
-	home: home,
-	livro: livro
-};
-
-// @ts-nocheck
-const localeCodes =  [
-  "pt",
-  "la",
-  "en"
-];
-const localeLoaders = {
-  pt: [
-    {
-      key: "locale_pt_46json_d769759e",
-      load: () => Promise.resolve(locale_pt_46json_d769759e),
-      cache: true
-    }
-  ],
-  la: [
-    {
-      key: "locale_la_46json_50dfc134",
-      load: () => Promise.resolve(locale_la_46json_50dfc134),
-      cache: true
-    }
-  ],
-  en: [
-    {
-      key: "locale_en_46json_c5e9ec7b",
-      load: () => Promise.resolve(locale_en_46json_c5e9ec7b),
-      cache: true
-    }
-  ]
-};
-const vueI18nConfigs = [];
-const normalizedLocales = [
-  {
-    code: "pt",
-    name: "Português",
-    language: undefined
-  },
-  {
-    code: "la",
-    name: "Latim",
-    language: undefined
-  },
-  {
-    code: "en",
-    name: "Inglês",
-    language: undefined
-  }
-];
-
-const setupVueI18nOptions = async (defaultLocale) => {
-  const options = await loadVueI18nOptions(vueI18nConfigs);
-  options.locale = defaultLocale || options.locale || "en-US";
-  options.defaultLocale = defaultLocale;
-  options.fallbackLocale ??= false;
-  options.messages ??= {};
-  for (const locale of localeCodes) {
-    options.messages[locale] ??= {};
-  }
-  return options;
-};
-
-function defineNitroPlugin(def) {
-  return def;
-}
-
-function defineRenderHandler(render) {
-  const runtimeConfig = useRuntimeConfig();
-  return eventHandler(async (event) => {
-    const nitroApp = useNitroApp();
-    const ctx = { event, render, response: void 0 };
-    await nitroApp.hooks.callHook("render:before", ctx);
-    if (!ctx.response) {
-      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
-        setResponseHeader(event, "Content-Type", "image/x-icon");
-        return send(
-          event,
-          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-        );
-      }
-      ctx.response = await ctx.render(event);
-      if (!ctx.response) {
-        const _currentStatus = getResponseStatus(event);
-        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
-        return send(
-          event,
-          "No response returned from render handler: " + event.path
-        );
-      }
-    }
-    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
-    if (ctx.response.headers) {
-      setResponseHeaders(event, ctx.response.headers);
-    }
-    if (ctx.response.statusCode || ctx.response.statusMessage) {
-      setResponseStatus(
-        event,
-        ctx.response.statusCode,
-        ctx.response.statusMessage
-      );
-    }
-    return ctx.response.body;
-  });
-}
-
-const scheduledTasks = false;
-
-const tasks = {
-  
-};
-
-const __runningTasks__ = {};
-async function runTask(name, {
-  payload = {},
-  context = {}
-} = {}) {
-  if (__runningTasks__[name]) {
-    return __runningTasks__[name];
-  }
-  if (!(name in tasks)) {
-    throw createError({
-      message: `Task \`${name}\` is not available!`,
-      statusCode: 404
-    });
-  }
-  if (!tasks[name].resolve) {
-    throw createError({
-      message: `Task \`${name}\` is not implemented!`,
-      statusCode: 501
-    });
-  }
-  const handler = await tasks[name].resolve();
-  const taskEvent = { name, payload, context };
-  __runningTasks__[name] = handler.run(taskEvent);
-  try {
-    const res = await __runningTasks__[name];
-    return res;
-  } finally {
-    delete __runningTasks__[name];
-  }
-}
-
-function buildAssetsDir() {
-	
-	return useRuntimeConfig().app.buildAssetsDir;
-}
-function buildAssetsURL(...path) {
-	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
-}
-function publicAssetsURL(...path) {
-	
-	const app = useRuntimeConfig().app;
-	const publicBase = app.cdnURL || app.baseURL;
-	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
-}
-
-function parseAcceptLanguage(value) {
-  return value.split(",").map((tag) => tag.split(";")[0]).filter(
-    (tag) => !(tag === "*" || tag === "")
-  );
-}
-function createPathIndexLanguageParser(index = 0) {
-  return (path) => {
-    const rawPath = typeof path === "string" ? path : path.pathname;
-    const normalizedPath = rawPath.split("?")[0];
-    const parts = normalizedPath.split("/");
-    if (parts[0] === "") {
-      parts.shift();
-    }
-    return parts.length > index ? parts[index] || "" : "";
-  };
-}
-
-function useRuntimeI18n(nuxtApp, event) {
-  {
-    return useRuntimeConfig(event).public.i18n;
-  }
-}
-function useI18nDetection(nuxtApp) {
-  const detectBrowserLanguage = useRuntimeI18n().detectBrowserLanguage;
-  const detect = detectBrowserLanguage || {};
-  return {
-    ...detect,
-    enabled: !!detectBrowserLanguage,
-    cookieKey: detect.cookieKey || "i18n_redirected"
-  };
-}
-function resolveRootRedirect(config) {
-  if (!config) {
-    return void 0;
-  }
-  return {
-    path: "/" + (isString(config) ? config : config.path).replace(/^\//, ""),
-    code: !isString(config) && config.statusCode || 302
-  };
-}
-function toArray(value) {
-  return Array.isArray(value) ? value : [value];
-}
-
-function createLocaleConfigs(fallbackLocale) {
-  const localeConfigs = {};
-  for (const locale of localeCodes) {
-    const fallbacks = getFallbackLocaleCodes(fallbackLocale, [locale]);
-    const cacheable = isLocaleWithFallbacksCacheable(locale, fallbacks);
-    localeConfigs[locale] = { fallbacks, cacheable };
-  }
-  return localeConfigs;
-}
-function getFallbackLocaleCodes(fallback, locales) {
-  if (fallback === false) {
-    return [];
-  }
-  if (isArray(fallback)) {
-    return fallback;
-  }
-  let fallbackLocales = [];
-  if (isString(fallback)) {
-    if (locales.every((locale) => locale !== fallback)) {
-      fallbackLocales.push(fallback);
-    }
-    return fallbackLocales;
-  }
-  const targets = [...locales, "default"];
-  for (const locale of targets) {
-    if (locale in fallback == false) {
-      continue;
-    }
-    fallbackLocales = [...fallbackLocales, ...fallback[locale].filter(Boolean)];
-  }
-  return fallbackLocales;
-}
-function isLocaleCacheable(locale) {
-  return localeLoaders[locale] != null && localeLoaders[locale].every((loader) => loader.cache !== false);
-}
-function isLocaleWithFallbacksCacheable(locale, fallbackLocales) {
-  return isLocaleCacheable(locale) && fallbackLocales.every((fallbackLocale) => isLocaleCacheable(fallbackLocale));
-}
-function getDefaultLocaleForDomain(host) {
-  return normalizedLocales.find((l) => !!l.defaultForDomains?.includes(host))?.code;
-}
-const isSupportedLocale = (locale) => localeCodes.includes(locale || "");
-
-function useI18nContext(event) {
-  if (event.context.nuxtI18n == null) {
-    throw new Error("Nuxt I18n server context has not been set up yet.");
-  }
-  return event.context.nuxtI18n;
-}
-function tryUseI18nContext(event) {
-  return event.context.nuxtI18n;
-}
-const getHost = (event) => getRequestURL(event, { xForwardedHost: true }).host;
-async function initializeI18nContext(event) {
-  const runtimeI18n = useRuntimeI18n(void 0, event);
-  const defaultLocale = runtimeI18n.defaultLocale || "";
-  const options = await setupVueI18nOptions(getDefaultLocaleForDomain(getHost(event)) || defaultLocale);
-  const localeConfigs = createLocaleConfigs(options.fallbackLocale);
-  const ctx = createI18nContext();
-  ctx.vueI18nOptions = options;
-  ctx.localeConfigs = localeConfigs;
-  event.context.nuxtI18n = ctx;
-  return ctx;
-}
-function createI18nContext() {
-  return {
-    messages: {},
-    slp: {},
-    localeConfigs: {},
-    trackMap: {},
-    vueI18nOptions: void 0,
-    trackKey(key, locale) {
-      this.trackMap[locale] ??= /* @__PURE__ */ new Set();
-      this.trackMap[locale].add(key);
-    }
-  };
-}
-
-function matchBrowserLocale(locales, browserLocales) {
-  const matchedLocales = [];
-  for (const [index, browserCode] of browserLocales.entries()) {
-    const matchedLocale = locales.find((l) => l.language?.toLowerCase() === browserCode.toLowerCase());
-    if (matchedLocale) {
-      matchedLocales.push({ code: matchedLocale.code, score: 1 - index / browserLocales.length });
-      break;
-    }
-  }
-  for (const [index, browserCode] of browserLocales.entries()) {
-    const languageCode = browserCode.split("-")[0].toLowerCase();
-    const matchedLocale = locales.find((l) => l.language?.split("-")[0].toLowerCase() === languageCode);
-    if (matchedLocale) {
-      matchedLocales.push({ code: matchedLocale.code, score: 0.999 - index / browserLocales.length });
-      break;
-    }
-  }
-  return matchedLocales;
-}
-function compareBrowserLocale(a, b) {
-  if (a.score === b.score) {
-    return b.code.length - a.code.length;
-  }
-  return b.score - a.score;
-}
-function findBrowserLocale(locales, browserLocales) {
-  const matchedLocales = matchBrowserLocale(
-    locales.map((l) => ({ code: l.code, language: l.language || l.code })),
-    browserLocales
-  );
-  return matchedLocales.sort(compareBrowserLocale).at(0)?.code ?? "";
-}
+const rootDir = "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"icon","type":"image/png","href":"/logosfundo.png"}],"style":[],"script":[],"noscript":[],"title":"Mea Ecclesia Catholica"};
 
@@ -3310,245 +2447,6 @@ const appTeleportTag = "div";
 const appTeleportAttrs = {"id":"teleports"};
 
 const appId = "nuxt-app";
-
-const separator = "___";
-const pathLanguageParser = createPathIndexLanguageParser(0);
-const getLocaleFromRoutePath = (path) => pathLanguageParser(path);
-const getLocaleFromRouteName = (name) => name.split(separator).at(1) ?? "";
-function normalizeInput(input) {
-  return typeof input !== "object" ? String(input) : String(input?.name || input?.path || "");
-}
-function getLocaleFromRoute(route) {
-  const input = normalizeInput(route);
-  if (input[0] === "/") {
-    return getLocaleFromRoutePath(input);
-  }
-  const fromName = getLocaleFromRouteName(input);
-  if (fromName) {
-    return fromName;
-  }
-  if (typeof route === "object" && route?.path) {
-    return getLocaleFromRoutePath(String(route.path));
-  }
-  return "";
-}
-
-function matchDomainLocale(locales, host, pathLocale) {
-  const normalizeDomain = (domain = "") => domain.replace(/https?:\/\//, "");
-  const matches = locales.filter(
-    (locale) => normalizeDomain(locale.domain) === host || toArray(locale.domains).includes(host)
-  );
-  if (matches.length <= 1) {
-    return matches[0]?.code;
-  }
-  return (
-    // match by current path locale
-    matches.find((l) => l.code === pathLocale)?.code || matches.find((l) => l.defaultForDomains?.includes(host) ?? l.domainDefault)?.code
-  );
-}
-
-const getCookieLocale = (event, cookieName) => (getCookie(event, cookieName)) || void 0;
-const getRouteLocale = (event, route) => getLocaleFromRoute(route);
-const getHeaderLocale = (event) => findBrowserLocale(normalizedLocales, parseAcceptLanguage(getRequestHeader(event, "accept-language") || ""));
-const getHostLocale = (event, path, domainLocales) => {
-  const host = getRequestURL(event, { xForwardedHost: true }).host;
-  const locales = normalizedLocales.map((l) => ({
-    ...l,
-    domain: domainLocales[l.code]?.domain ?? l.domain
-  }));
-  return matchDomainLocale(locales, host, getLocaleFromRoutePath(path));
-};
-const useDetectors = (event, config, nuxtApp) => {
-  if (!event) {
-    throw new Error("H3Event is required for server-side locale detection");
-  }
-  const runtimeI18n = useRuntimeI18n();
-  return {
-    cookie: () => getCookieLocale(event, config.cookieKey),
-    header: () => getHeaderLocale(event) ,
-    navigator: () => void 0,
-    host: (path) => getHostLocale(event, path, runtimeI18n.domainLocales),
-    route: (path) => getRouteLocale(event, path)
-  };
-};
-
-// Generated by @nuxtjs/i18n
-const pathToI18nConfig = {};
-const i18nPathToPath = {};
-const disabledI18nPathToPath = {};
-
-const formatTrailingSlash = withoutTrailingSlash;
-const matcher = createRouterMatcher([], {});
-for (const path of Object.keys(i18nPathToPath)) {
-  matcher.addRoute({ path, component: () => "", meta: {} });
-}
-const disabledI18nMatcher = createRouterMatcher([], {});
-for (const path of Object.keys(disabledI18nPathToPath)) {
-  disabledI18nMatcher.addRoute({ path, component: () => "", meta: {} });
-}
-const getI18nPathToI18nPath = (path, locale) => {
-  if (!path || !locale) {
-    return;
-  }
-  const plainPath = i18nPathToPath[path];
-  const i18nConfig = pathToI18nConfig[plainPath];
-  if (i18nConfig && i18nConfig[locale]) {
-    return i18nConfig[locale] === true ? plainPath : i18nConfig[locale];
-  }
-};
-function isExistingNuxtRoute(path) {
-  if (path === "") {
-    return;
-  }
-  if (path.endsWith("/__nuxt_error")) {
-    return;
-  }
-  const disabledI18nResolvedMatch = disabledI18nMatcher.resolve({ path }, { path: "/", name: "", matched: [], params: {}, meta: {} });
-  if (disabledI18nResolvedMatch.matched.length > 0) {
-    return;
-  }
-  const resolvedMatch = matcher.resolve({ path }, { path: "/", name: "", matched: [], params: {}, meta: {} });
-  return resolvedMatch.matched.length > 0 ? resolvedMatch : void 0;
-}
-function matchLocalized(path, locale, defaultLocale) {
-  if (path === "") {
-    return;
-  }
-  const parsed = parsePath(path);
-  const resolvedMatch = matcher.resolve(
-    { path: parsed.pathname || "/" },
-    { path: "/", name: "", matched: [], params: {}, meta: {} }
-  );
-  if (resolvedMatch.matched.length > 0) {
-    const alternate = getI18nPathToI18nPath(resolvedMatch.matched[0].path, locale);
-    const match = matcher.resolve(
-      { params: resolvedMatch.params },
-      { path: alternate || "/", name: "", matched: [], params: {}, meta: {} }
-    );
-    return formatTrailingSlash(withLeadingSlash(joinURL("", match.path)), true);
-  }
-}
-
-function* detect(detectors, detection, path) {
-  if (detection.enabled) {
-    yield { locale: detectors.cookie(), source: "cookie" };
-    yield { locale: detectors.header(), source: "header" };
-  }
-  yield { locale: detection.fallbackLocale, source: "fallback" };
-}
-function createRedirectResponse(event, dest, code) {
-  event.node.res.setHeader("location", dest);
-  event.node.res.statusCode = sanitizeStatusCode(code, event.node.res.statusCode);
-  return {
-    headers: event.node.res.getHeaders(),
-    statusCode: event.node.res.statusCode,
-    body: `<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=${dest.replace(/"/g, "%22")}"></head></html>`
-  };
-}
-const _DAG2ZS1svT5sjRGrGYPztwUSwCY1L4tyChuhFd2Emc = defineNitroPlugin(async (nitro) => {
-  const runtimeI18n = useRuntimeI18n();
-  const rootRedirect = resolveRootRedirect(runtimeI18n.rootRedirect);
-  runtimeI18n.defaultLocale || "";
-  try {
-    const cacheStorage = useStorage("cache");
-    const cachedKeys = await cacheStorage.getKeys("nitro:handlers:i18n");
-    await Promise.all(cachedKeys.map((key) => cacheStorage.removeItem(key)));
-  } catch {
-  }
-  const detection = useI18nDetection();
-  const cookieOptions = {
-    path: "/",
-    domain: detection.cookieDomain || void 0,
-    maxAge: 60 * 60 * 24 * 365,
-    sameSite: "lax",
-    secure: detection.cookieSecure
-  };
-  const createBaseUrlGetter = () => {
-    isFunction(runtimeI18n.baseUrl) ? "" : runtimeI18n.baseUrl || "";
-    if (isFunction(runtimeI18n.baseUrl)) {
-      console.warn("[nuxt-i18n] Configuring baseUrl as a function is deprecated and will be removed in v11.");
-      return () => "";
-    }
-    return (event, defaultLocale) => {
-      return "";
-    };
-  };
-  function resolveRedirectPath(event, path, pathLocale, defaultLocale, detector) {
-    let locale = "";
-    for (const detected of detect(detector, detection, event.path)) {
-      if (detected.locale && isSupportedLocale(detected.locale)) {
-        locale = detected.locale;
-        break;
-      }
-    }
-    locale ||= defaultLocale;
-    function getLocalizedMatch(locale2) {
-      const res = matchLocalized(path || "/", locale2);
-      if (res && res !== event.path) {
-        return res;
-      }
-    }
-    let resolvedPath = void 0;
-    let redirectCode = 302;
-    const requestURL = getRequestURL(event);
-    if (rootRedirect && requestURL.pathname === "/") {
-      locale = detection.enabled && locale || defaultLocale;
-      resolvedPath = isSupportedLocale(detector.route(rootRedirect.path)) && rootRedirect.path || matchLocalized(rootRedirect.path, locale);
-      redirectCode = rootRedirect.code;
-    } else if (runtimeI18n.redirectStatusCode) {
-      redirectCode = runtimeI18n.redirectStatusCode;
-    }
-    switch (detection.redirectOn) {
-      case "root":
-        if (requestURL.pathname !== "/") {
-          break;
-        }
-      // fallthrough (root has no prefix)
-      case "no prefix":
-        if (pathLocale) {
-          break;
-        }
-      // fallthrough to resolve
-      case "all":
-        resolvedPath ??= getLocalizedMatch(locale);
-        break;
-    }
-    if (requestURL.pathname === "/" && "no_prefix" === "prefix") ;
-    return { path: resolvedPath, code: redirectCode, locale };
-  }
-  const baseUrlGetter = createBaseUrlGetter();
-  nitro.hooks.hook("request", async (event) => {
-    await initializeI18nContext(event);
-  });
-  nitro.hooks.hook("render:before", async (context) => {
-    const { event } = context;
-    const ctx = useI18nContext(event);
-    const url = getRequestURL(event);
-    const detector = useDetectors(event, detection);
-    const localeSegment = detector.route(event.path);
-    const pathLocale = isSupportedLocale(localeSegment) && localeSegment || void 0;
-    const path = (pathLocale && url.pathname.slice(pathLocale.length + 1)) ?? url.pathname;
-    if (!url.pathname.includes("/_i18n") && !isExistingNuxtRoute(path)) {
-      return;
-    }
-    const resolved = resolveRedirectPath(event, path, pathLocale, ctx.vueI18nOptions.defaultLocale, detector);
-    if (resolved.path && resolved.path !== url.pathname) {
-      ctx.detectLocale = resolved.locale;
-      detection.useCookie && setCookie(event, detection.cookieKey, resolved.locale, cookieOptions);
-      context.response = createRedirectResponse(
-        event,
-        joinURL(baseUrlGetter(event, ctx.vueI18nOptions.defaultLocale), resolved.path + url.search),
-        resolved.code
-      );
-      return;
-    }
-  });
-  nitro.hooks.hook("render:html", (htmlContext, { event }) => {
-    tryUseI18nContext(event);
-  });
-});
-
-const rootDir = "/mnt/Dados/Dev/VSCODE/mea-ecclesia-catholic";
 
 const devReducers = {
 	VNode: (data) => isVNode(data) ? {
@@ -3639,7 +2537,6 @@ function onConsoleLog(callback) {
 
 const plugins = [
   _DsNfOwli9IhXIsfkWqsxcAswPpPLpf4WmGGPNVau_Y,
-_DAG2ZS1svT5sjRGrGYPztwUSwCY1L4tyChuhFd2Emc,
 _u5mj2lFS3x_4IZPUn2RgHjd3AgkyEAFQo0vA1VR8Pk,
 _wH6JrtIxmaSoA8lCPWFnE9z4lQeXW6H5z3l5aymEQw
 ];
@@ -3733,123 +2630,6 @@ const _AOMOvw = eventHandler((event) => {
   return readAsset(id);
 });
 
-const storage = prefixStorage(useStorage(), "i18n");
-function cachedFunctionI18n(fn, opts) {
-  opts = { maxAge: 1, ...opts };
-  const pending = {};
-  async function get(key, resolver) {
-    const isPending = pending[key];
-    if (!isPending) {
-      pending[key] = Promise.resolve(resolver());
-    }
-    try {
-      return await pending[key];
-    } finally {
-      delete pending[key];
-    }
-  }
-  return async (...args) => {
-    const key = [opts.name, opts.getKey(...args)].join(":").replace(/:\/$/, ":index");
-    const maxAge = opts.maxAge ?? 1;
-    const isCacheable = !opts.shouldBypassCache(...args) && maxAge >= 0;
-    const cache = isCacheable && await storage.getItemRaw(key);
-    if (!cache || cache.ttl < Date.now()) {
-      pending[key] = Promise.resolve(fn(...args));
-      const value = await get(key, () => fn(...args));
-      if (isCacheable) {
-        await storage.setItemRaw(key, { ttl: Date.now() + maxAge * 1e3, value, mtime: Date.now() });
-      }
-      return value;
-    }
-    return cache.value;
-  };
-}
-
-const _getMessages = async (locale) => {
-  return { [locale]: await getLocaleMessagesMerged(locale, localeLoaders[locale]) };
-};
-cachedFunctionI18n(_getMessages, {
-  name: "messages",
-  maxAge: -1 ,
-  getKey: (locale) => locale,
-  shouldBypassCache: (locale) => !isLocaleCacheable(locale)
-});
-const getMessages = _getMessages ;
-const _getMergedMessages = async (locale, fallbackLocales) => {
-  const merged = {};
-  try {
-    if (fallbackLocales.length > 0) {
-      const messages = await Promise.all(fallbackLocales.map(getMessages));
-      for (const message2 of messages) {
-        deepCopy(message2, merged);
-      }
-    }
-    const message = await getMessages(locale);
-    deepCopy(message, merged);
-    return merged;
-  } catch (e) {
-    throw new Error("Failed to merge messages: " + e.message);
-  }
-};
-const getMergedMessages = cachedFunctionI18n(_getMergedMessages, {
-  name: "merged-single",
-  maxAge: -1 ,
-  getKey: (locale, fallbackLocales) => `${locale}-[${[...new Set(fallbackLocales)].sort().join("-")}]`,
-  shouldBypassCache: (locale, fallbackLocales) => !isLocaleWithFallbacksCacheable(locale, fallbackLocales)
-});
-const _getAllMergedMessages = async (locales) => {
-  const merged = {};
-  try {
-    const messages = await Promise.all(locales.map(getMessages));
-    for (const message of messages) {
-      deepCopy(message, merged);
-    }
-    return merged;
-  } catch (e) {
-    throw new Error("Failed to merge messages: " + e.message);
-  }
-};
-cachedFunctionI18n(_getAllMergedMessages, {
-  name: "merged-all",
-  maxAge: -1 ,
-  getKey: (locales) => locales.join("-"),
-  shouldBypassCache: (locales) => !locales.every((locale) => isLocaleCacheable(locale))
-});
-
-const _messagesHandler = defineEventHandler(async (event) => {
-  const locale = getRouterParam(event, "locale");
-  if (!locale) {
-    throw createError({ status: 400, message: "Locale not specified." });
-  }
-  const ctx = useI18nContext(event);
-  if (ctx.localeConfigs && locale in ctx.localeConfigs === false) {
-    throw createError({ status: 404, message: `Locale '${locale}' not found.` });
-  }
-  const messages = await getMergedMessages(locale, ctx.localeConfigs?.[locale]?.fallbacks ?? []);
-  deepCopy(messages, ctx.messages);
-  return ctx.messages;
-});
-const _cachedMessageLoader = defineCachedFunction(_messagesHandler, {
-  name: "i18n:messages-internal",
-  maxAge: -1 ,
-  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-"),
-  async shouldBypassCache(event) {
-    const locale = getRouterParam(event, "locale");
-    if (locale == null) {
-      return false;
-    }
-    const ctx = tryUseI18nContext(event) || await initializeI18nContext(event);
-    return !ctx.localeConfigs?.[locale]?.cacheable;
-  }
-});
-defineCachedEventHandler(_cachedMessageLoader, {
-  name: "i18n:messages",
-  maxAge: -1 ,
-  swr: false,
-  getKey: (event) => [getRouterParam(event, "locale") ?? "null", getRouterParam(event, "hash") ?? "null"].join("-")
-});
-const _lh730q = _messagesHandler ;
-
 const VueResolver = (_, value) => {
   return isRef(value) ? toValue(value) : value;
 };
@@ -3933,6 +2713,20 @@ function setSSRError(ssrContext, error) {
 	ssrContext.error = true;
 	ssrContext.payload = { error };
 	ssrContext.url = error.url;
+}
+
+function buildAssetsDir() {
+	
+	return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+	return joinRelativeURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+	
+	const app = useRuntimeConfig().app;
+	const publicBase = app.cdnURL || app.baseURL;
+	return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
 // @ts-expect-error private property consumed by vite-generated url helpers
@@ -4283,7 +3077,6 @@ const _lazy_rT6dy_ = () => Promise.resolve().then(function () { return renderer;
 const handlers = [
   { route: '', handler: _AOMOvw, lazy: false, middleware: true, method: undefined },
   { route: '/__nuxt_error', handler: _lazy_rT6dy_, lazy: true, middleware: false, method: undefined },
-  { route: '/_i18n/:hash/:locale/messages.json', handler: _lh730q, lazy: false, middleware: false, method: undefined },
   { route: '/__nuxt_island/**', handler: handler$1, lazy: false, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_rT6dy_, lazy: true, middleware: false, method: undefined }
 ];
@@ -4428,6 +3221,82 @@ function useNitroApp() {
   return nitroApp$1;
 }
 runNitroPlugins(nitroApp$1);
+
+function defineRenderHandler(render) {
+  const runtimeConfig = useRuntimeConfig();
+  return eventHandler(async (event) => {
+    const nitroApp = useNitroApp();
+    const ctx = { event, render, response: void 0 };
+    await nitroApp.hooks.callHook("render:before", ctx);
+    if (!ctx.response) {
+      if (event.path === `${runtimeConfig.app.baseURL}favicon.ico`) {
+        setResponseHeader(event, "Content-Type", "image/x-icon");
+        return send(
+          event,
+          "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        );
+      }
+      ctx.response = await ctx.render(event);
+      if (!ctx.response) {
+        const _currentStatus = getResponseStatus(event);
+        setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+        return send(
+          event,
+          "No response returned from render handler: " + event.path
+        );
+      }
+    }
+    await nitroApp.hooks.callHook("render:response", ctx.response, ctx);
+    if (ctx.response.headers) {
+      setResponseHeaders(event, ctx.response.headers);
+    }
+    if (ctx.response.statusCode || ctx.response.statusMessage) {
+      setResponseStatus(
+        event,
+        ctx.response.statusCode,
+        ctx.response.statusMessage
+      );
+    }
+    return ctx.response.body;
+  });
+}
+
+const scheduledTasks = false;
+
+const tasks = {
+  
+};
+
+const __runningTasks__ = {};
+async function runTask(name, {
+  payload = {},
+  context = {}
+} = {}) {
+  if (__runningTasks__[name]) {
+    return __runningTasks__[name];
+  }
+  if (!(name in tasks)) {
+    throw createError({
+      message: `Task \`${name}\` is not available!`,
+      statusCode: 404
+    });
+  }
+  if (!tasks[name].resolve) {
+    throw createError({
+      message: `Task \`${name}\` is not implemented!`,
+      statusCode: 501
+    });
+  }
+  const handler = await tasks[name].resolve();
+  const taskEvent = { name, payload, context };
+  __runningTasks__[name] = handler.run(taskEvent);
+  try {
+    const res = await __runningTasks__[name];
+    return res;
+  } finally {
+    delete __runningTasks__[name];
+  }
+}
 
 if (!globalThis.crypto) {
   globalThis.crypto = crypto$1.webcrypto;

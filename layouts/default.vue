@@ -133,7 +133,7 @@
           <NuxtLink to="/livros" class="hover:text-[#D4AF37] transition">{{
             $t("menu.livros")
           }}</NuxtLink>
-          <NuxtLink to="/artigos" class="hover:text-[#D4AF37] transition">{{
+          <NuxtLink to="/artigos-religiosos" class="hover:text-[#D4AF37] transition">{{
             $t("menu.artigos")
           }}</NuxtLink>
           <NuxtLink to="/homilias" class="hover:text-[#D4AF37] transition">{{
@@ -264,7 +264,7 @@
             >{{ $t("menu.livros") }}</NuxtLink
           >
           <NuxtLink
-            to="/artigos"
+            to="/artigos-religiosos"
             @click="isMobileMenuOpen = false"
             class="text-white hover:text-[#D4AF37] transition"
             >{{ $t("menu.artigos") }}</NuxtLink

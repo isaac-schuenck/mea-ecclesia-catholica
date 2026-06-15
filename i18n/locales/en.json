@@ -234,5 +234,25 @@
       "vida_de_santa_teresa_de_jesus": "The Life of St. Teresa of Jesus",
       "apologia_pro_vita_sua": "Apologia Pro Vita Sua"
     }
+  },
+  "artigos_religiosos": {
+    "titulo": "Religious Articles",
+    "p1": "Welcome to our Religious Articles section. In the Catholic {tradicao}, many of these sacred objects are given a specific name: Sacramentals. First and foremost, it is very important to understand that they are not \"amulets\" or magic objects that bring good luck. The Church firmly condemns any kind of superstition attached to objects, as this diverts our trust in God ({catecismo2111}). Likewise, the use of medals, crucifixes, and rosaries is not about {idolatria}, we do not worship the material of the object, but we use it as a sacred sign that points us to Heaven (understand in depth about the use of {imagens_sagradas}).",
+    "p2": "On the contrary, sacramentals are visible signs instituted by the Church that connect us deeply to our faith. As the Magisterium teaches, they bear a resemblance to the {sacramentos} and exist to prepare our hearts to receive the grace of God, sanctifying the most diverse circumstances of our daily lives ({catecismo1667}).",
+    "p3": "By wearing or keeping these articles in our homes, we are constantly reminded that we do not fight alone in our daily {batalha_epiritual}. The devout use of these objects, always united to the {oracao} of the Church, raises our minds to God, protects us from the snares of the enemy, and places us under the intercession and protection of the {virgem_maria}, the {anjos}, and the {santos} of the {igreja_triunfante}."
+  },
+  "palavras_chave": {
+    "tradicao": "tradition",
+    "catecismo2111": "CCC 2111",
+    "idolatria": "idolatry", 
+    "imagens_sagradas": "Sacred Images",
+    "sacramentos": "sacraments",
+    "catecismo1667": "CCC 1667",
+    "batalha_epiritual": "spiritual warfare",
+    "oracao": "prayer", 
+    "virgem_maria": "Virgin Mary",
+    "anjos": "Angels",
+    "santos": "Saints",
+    "igreja_triunfante": "Church Triumphant"
   }
 }

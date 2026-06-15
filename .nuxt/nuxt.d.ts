@@ -12,7 +12,6 @@
 /// <reference path="types/app.config.d.ts" />
 /// <reference path="../node_modules/@nuxt/vite-builder/dist/index.d.mts" />
 /// <reference path="../node_modules/@nuxt/nitro-server/dist/index.d.mts" />
-/// <reference path="types/i18n-plugin.d.ts" />
 /// <reference types="vue-router" />
 /// <reference path="types/middleware.d.ts" />
 /// <reference path="types/nitro-middleware.d.ts" />
@@ -21,6 +20,7 @@
 /// <reference path="imports.d.ts" />
 /// <reference path="types/imports.d.ts" />
 /// <reference path="schema/nuxt.schema.d.ts" />
+/// <reference path="types/i18n-plugin.d.ts" />
 /// <reference path="types/nitro.d.ts" />
 
 export {}

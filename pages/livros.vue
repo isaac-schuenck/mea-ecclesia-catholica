@@ -774,9 +774,10 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.filoteia",
     secondaryKey: "livro.autores.sao_francisco_sales",
-    capas: ["https://static.cedet.com.br/produtos_imagem_principal_large/13799-525x791.jpg?v=1750275747",
+    capas: [
+      "https://static.cedet.com.br/produtos_imagem_principal_large/13799-525x791.jpg?v=1750275747",
       "https://cdn.awsli.com.br/2500x2500/618/618258/produto/399694934/01-18-0wmtp3emwi.webp",
-      "https://m.media-amazon.com/images/I/61W4DkPXAoS._SY425_.jpg"
+      "https://m.media-amazon.com/images/I/61W4DkPXAoS._SY425_.jpg",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
@@ -806,8 +807,9 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.o_combate_espiritual",
     secondaryKey: "livro.autores.lorenzo_scupoli",
-    capas: ["https://m.media-amazon.com/images/I/61i9yiv-C+L._SY466_.jpg",
-      "https://images.tcdn.com.br/img/img_prod/431290/o_combate_espiritual_e_o_caminho_do_paraiso_pe_lourenco_scupoli_2651_1_063057935f47e25401515708d7ea708e_20241107150522.jpg", 
+    capas: [
+      "https://m.media-amazon.com/images/I/61i9yiv-C+L._SY466_.jpg",
+      "https://images.tcdn.com.br/img/img_prod/431290/o_combate_espiritual_e_o_caminho_do_paraiso_pe_lourenco_scupoli_2651_1_063057935f47e25401515708d7ea708e_20241107150522.jpg",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.curto" },
@@ -820,7 +822,8 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.tratado_do_desanimo",
     secondaryKey: "livro.autores.jean_michel",
-    capas: ["https://http2.mlstatic.com/D_NQ_NP_2X_719206-MLU77445280289_072024-F.webp",
+    capas: [
+      "https://http2.mlstatic.com/D_NQ_NP_2X_719206-MLU77445280289_072024-F.webp",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.curto" },
@@ -833,8 +836,9 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.tratado_da_verdadeira_devocao",
     secondaryKey: "livro.autores.grignion_de_montfort",
-    capas: ["https://m.media-amazon.com/images/I/51tVIuoUpLL._SY466_.jpg",
-      "https://cdn.awsli.com.br/2500x2500/618/618258/produto/125724926/839fd54dab.jpg"
+    capas: [
+      "https://m.media-amazon.com/images/I/51tVIuoUpLL._SY466_.jpg",
+      "https://cdn.awsli.com.br/2500x2500/618/618258/produto/125724926/839fd54dab.jpg",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.curto" },
@@ -847,7 +851,9 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.ser_ou_nao_ser_santo",
     secondaryKey: "livro.autores.antonio_royo_marin",
-    capas: ["https://loja.cancaonova.com/upload/produto/imagem/b_livro-ser-ou-n-o-ser-santo-eis-a-quest-o.webp"],
+    capas: [
+      "https://loja.cancaonova.com/upload/produto/imagem/b_livro-ser-ou-n-o-ser-santo-eis-a-quest-o.webp",
+    ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
       {
@@ -859,7 +865,9 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.as_3_vias_e_as_3_conversoes",
     secondaryKey: "livro.autores.garrigou_lagrange",
-    capas: ["https://livrariashalom.org/media/catalog/product/cache/35a2cd48c8c1e1e5901264fe6cfdb389/a/t/atresviaseastresconversoes_capasite.webp"],
+    capas: [
+      "https://livrariashalom.org/media/catalog/product/cache/35a2cd48c8c1e1e5901264fe6cfdb389/a/t/atresviaseastresconversoes_capasite.webp",
+    ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
       {
@@ -871,8 +879,9 @@ const livrosEspiritualidadeAscetica = ref([
   {
     tituloKey: "livro.espiritualidade_livros.castelo_interior",
     secondaryKey: "livro.autores.santa_teresa",
-    capas: ["https://m.media-amazon.com/images/I/61mrKWh+NLL._SY466_.jpg",
-      "https://m.media-amazon.com/images/I/51DqLJOp2xL._SY425_.jpg"
+    capas: [
+      "https://m.media-amazon.com/images/I/61mrKWh+NLL._SY466_.jpg",
+      "https://m.media-amazon.com/images/I/51DqLJOp2xL._SY425_.jpg",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
@@ -889,9 +898,10 @@ const livrosBiografias = ref([
   {
     tituloKey: "livro.biografias_livros.confissoes",
     secondaryKey: "livro.autores.santo_agostinho",
-    capas: ["https://m.media-amazon.com/images/I/91hlMYSrG7L._SY466_.jpg",
+    capas: [
+      "https://m.media-amazon.com/images/I/91hlMYSrG7L._SY466_.jpg",
       "https://m.media-amazon.com/images/I/51Z16gRNfuL._SY342_.jpg",
-      "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8f4b8wl747l86@resize_w450_nl.webp"
+      "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8f4b8wl747l86@resize_w450_nl.webp",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
@@ -916,7 +926,9 @@ const livrosBiografias = ref([
   {
     tituloKey: "livro.biografias_livros.vida_de_sao_francisco_de_assis",
     secondaryKey: "livro.autores.chesterton",
-    capas: ["https://static.cedet.com.br/produtos_imagem_principal_large/3057-525x791.jpg?v=1750275411",],
+    capas: [
+      "https://static.cedet.com.br/produtos_imagem_principal_large/3057-525x791.jpg?v=1750275411",
+    ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
       {
@@ -928,8 +940,9 @@ const livrosBiografias = ref([
   {
     tituloKey: "livro.biografias_livros.historia_alma",
     secondaryKey: "livro.autores.santa_teresinha",
-    capas: ["https://m.media-amazon.com/images/I/71E1-X1qefL._SY466_.jpg",
-      "https://cdn.awsli.com.br/2500x2500/618/618258/produto/398891070/01-16-sluv44hton.webp"
+    capas: [
+      "https://m.media-amazon.com/images/I/71E1-X1qefL._SY466_.jpg",
+      "https://cdn.awsli.com.br/2500x2500/618/618258/produto/398891070/01-16-sluv44hton.webp",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
@@ -942,8 +955,9 @@ const livrosBiografias = ref([
   {
     tituloKey: "livro.biografias_livros.vida_de_santa_teresa_de_jesus",
     secondaryKey: "livro.autores.santa_teresa",
-    capas: ["https://livrarialoyola.fbitsstatic.net/img/p/vida-de-santa-teresa-de-jesus-193123/387867.jpg?w=800&h=800&v=no-change&qs=ignore",
-      "https://loja.cancaonova.com/upload/produto/imagem/b_livro-teresa-de-jesus-vida-mensagem-e-atualidade-da-santa-de-vila-3.webp"
+    capas: [
+      "https://livrarialoyola.fbitsstatic.net/img/p/vida-de-santa-teresa-de-jesus-193123/387867.jpg?w=800&h=800&v=no-change&qs=ignore",
+      "https://loja.cancaonova.com/upload/produto/imagem/b_livro-teresa-de-jesus-vida-mensagem-e-atualidade-da-santa-de-vila-3.webp",
     ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.medio" },
@@ -956,7 +970,9 @@ const livrosBiografias = ref([
   {
     tituloKey: "livro.biografias_livros.apologia_pro_vita_sua",
     secondaryKey: "livro.autores.sao_john_henry_newman",
-    capas: ["https://static.cedet.com.br/produtos_imagem_principal_large/28303-525x791.jpg?v=1750276109"],
+    capas: [
+      "https://static.cedet.com.br/produtos_imagem_principal_large/28303-525x791.jpg?v=1750276109",
+    ],
     meta: [
       { labelKey: "livro.labels.duracao", valueKey: "livro.duracao.longo" },
       {

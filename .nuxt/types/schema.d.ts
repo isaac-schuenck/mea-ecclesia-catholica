@@ -21,11 +21,23 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
 
       defaultLocale: string,
 
+      defaultDirection: string,
+
+      strategy: string,
+
+      lazy: boolean,
+
       rootRedirect: any,
 
-      redirectStatusCode: number,
+      routesNameSeparator: string,
+
+      defaultLocaleRouteNameSuffix: string,
 
       skipSettingLocaleOnNavigate: boolean,
+
+      differentDomains: boolean,
+
+      trailingSlash: boolean,
 
       locales: Array<{
 
@@ -52,30 +64,22 @@ import { NuxtModule, ModuleDependencyMeta } from '@nuxt/schema'
       experimental: {
          localeDetector: string,
 
+         switchLocalePathLinkSSR: boolean,
+
+         autoImportTranslationFunctions: boolean,
+
          typedPages: boolean,
 
          typedOptionsAndMessages: boolean,
 
+         generatedLocaleFilePathFormat: string,
+
          alternateLinkCanonicalQueries: boolean,
 
-         devCache: boolean,
-
-         cacheLifetime: any,
-
-         stripMessagesPayload: boolean,
-
-         preload: boolean,
-
-         strictSeo: boolean,
-
-         nitroContextDetection: boolean,
-
-         httpCacheDuration: number,
-
-         compactRoutes: boolean,
-
-         prerenderMessages: boolean,
+         hmr: boolean,
       },
+
+      multiDomainLocales: boolean,
 
       domainLocales: {
          pt: {

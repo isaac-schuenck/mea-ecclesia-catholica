@@ -234,5 +234,25 @@
       "vida_de_santa_teresa_de_jesus": "Vita Sanctae Teresiae a Iesu",
       "apologia_pro_vita_sua": "Apologia Pro Vita Sua"
     }
+  },
+  "artigos_religiosos": {
+    "titulo": "Articuli Religiosi",
+    "p1": "Gratus adventus in sectionem nostram Articulorum Religiosorum. In {tradicao} Catholica, multa ex his rebus sacris nomen specificum accipiunt: Sacramentalia. Ante omnia, valde magni momenti est comprehendere ea non esse \"amuleta\" vel res magicas quae fortunam ferunt. Ecclesia firmiter damnat quamlibet superstitionis formam rebus adnexam, quia hoc fiduciam nostram a Deo avertit ({catecismo2111}). Simili modo, usus nomismatum, crucifixorum et rosariorum non est {idolatria}, non adoramus materiam rei, sed ea utimur sicut signo sacro quod nos ad Caelum remittit (intellige penitus de usu {imagens_sagradas}).",
+    "p2": "E contra, sacramentalia sunt signa visibilia, ab Ecclesia instituta, quae nos profunde fidei nostrae iungunt. Sicut docet Magisterium, quodammodo imitantur {sacramentos} et exsistunt ut cor nostrum praeparent ad gratiam Dei recipiendam, sanctificantes varias circumstantias vitae nostrae quotidianae ({catecismo1667}).",
+    "p3": "Dum hos articulos gerimus vel in domibus nostris habemus, continenter admonemur nos non solos pugnare in {batalha_epiritual} nostra quotidiana. Devotus usus harum rerum, semper cum {oracao} Ecclesiae coniunctus, mentem nostram ad Deum elevat, nos protegit ab insidiis inimici et nos ponit sub intercessione et praesidio {virgem_maria}, {anjos} et {santos} {igreja_triunfante}."
+  },
+  "palavras_chave": {
+    "tradicao": "traditione",
+    "catecismo2111": "CCE 2111",
+    "idolatria": "idolatria", 
+    "imagens_sagradas": "Imaginum Sacrarum",
+    "sacramentos": "sacramenta",
+    "catecismo1667": "CCE 1667",
+    "batalha_epiritual": "certamine spirituali",
+    "oracao": "oratione", 
+    "virgem_maria": "Virginis Mariae",
+    "anjos": "Angelorum",
+    "santos": "Sanctorum",
+    "igreja_triunfante": "Ecclesiae Triumphantis"
   }
 }

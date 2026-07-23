@@ -267,17 +267,21 @@
               </div>
 
               <i18n-t keypath="artigos_religiosos.terco_p1" tag="p" class="leading-relaxed text-justify mb-2">
-                <template #tradicao><NuxtLink to="/tradicao-e-magisterio" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.tradicao") }}</NuxtLink></template>
               </i18n-t>
 
               <i18n-t keypath="artigos_religiosos.terco_p2" tag="p" class="leading-relaxed text-justify mb-2">
-                <template #sao_pedro><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pedro") }}</NuxtLink></template>
-                <template #eusebio_cesareia><a href="https://pt.wikipedia.org/wiki/Eus%C3%A9bio_de_Cesareia" target="_blank" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.eusebio_cesareia") }}</a></template>
+                <template #salmos><a href="https://www.vatican.va/archive/bible/psalms/documents/bible_psalms_po.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.salmos") }}</a></template>
+                <template #biblia><a href="https://www.vatican.va/archive/bible/index_po.htm" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.biblia") }}</a></template>
+                <template #liturgia_horas><a href="https://www.vatican.va/content/paul-vi/pt/apost_constitutions/documents/hf_p-vi_apc_19701101_laudis-canticum.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.liturgia_horas") }}</a></template>
+                <template #pai_nosso><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.pai_nosso") }}</NuxtLink></template>
+                <template #paternosters><a href="https://www.newadvent.org/cathen/13184b.htm" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.paternosters") }}</a></template>
+                <template #enciclopedia_catolica><a href="https://www.newadvent.org/cathen/13184b.htm" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.enciclopedia_catolica") }}</a></template>
+                <template #abadia_cluny><a href="https://pt.wikipedia.org/wiki/Abadia_de_Cluny" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.abadia_cluny") }}</a></template>
               </i18n-t>
 
               <i18n-t keypath="artigos_religiosos.terco_p3" tag="p" class="leading-relaxed text-justify mb-2">
-                <template #sao_pedro><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pedro") }}</NuxtLink></template>
-                <template #eusebio_cesareia><a href="https://pt.wikipedia.org/wiki/Eus%C3%A9bio_de_Cesareia" target="_blank" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.eusebio_cesareia") }}</a></template>
+                <template #devocao><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.devocao") }}</NuxtLink></template>
+                <template #ave_maria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.ave_maria") }}</NuxtLink></template>
               </i18n-t>
 
 
@@ -296,24 +300,29 @@
               </div>
 
               <i18n-t keypath="artigos_religiosos.terco_p4" tag="p" class="leading-relaxed text-justify mb-2">
-                <template #texto_apocrifo><NuxtLink to="/apocrifos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.texto_apocrifo") }}</NuxtLink></template>
-                <template #wilhelm><a href="https://en.wikipedia.org/wiki/Wilhelm_Schneemelcher" target="_blank" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.wilhelm") }}</a></template>
-                <template #margherita><a href="https://pt.wikipedia.org/wiki/Margherita_Guarducci" target="_blank" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.margherita") }}</a></template>
+                <template #sao_domingos><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_domingos") }}</NuxtLink></template>
+                <template #virgem_maria><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.virgem_maria") }}</NuxtLink></template>
+                <template #rosario><a href="https://www.vatican.va/special/rosary/documents/misteri_po.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.rosario") }}</a></template>
               </i18n-t>
 
               <i18n-t keypath="artigos_religiosos.terco_p5" tag="p" class="leading-relaxed text-justify">
-                <template #sao_pedro><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pedro") }}</NuxtLink></template>
-                <template #papado><NuxtLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.papado") }}</NuxtLink></template>
+                <template #ave_marias><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.ave_marias") }}</NuxtLink></template>
+                <template #rosario><a href="https://www.vatican.va/special/rosary/documents/misteri_po.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.rosario") }}</a></template>
+                <template #misterios_luminosos><a href="https://www.vatican.va/special/rosary/documents/misteri_luminosi_po.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.misterios_luminosos") }}</a></template>
+                <template #papa_joao_paulo_ii><a href="https://www.vatican.va/content/john-paul-ii/pt.html" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.papa_joao_paulo_ii") }}</a></template>
               </i18n-t>
 
               <i18n-t keypath="artigos_religiosos.terco_p6" tag="p" class="leading-relaxed text-justify mb-2">
-                <template #sao_pedro><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pedro") }}</NuxtLink></template>
-                <template #papado><NuxtLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.papado") }}</NuxtLink></template>
+                <template #jesus_cristo><NuxtLink to="/" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.jesus_cristo") }}</NuxtLink></template>
               </i18n-t>
 
               <i18n-t keypath="artigos_religiosos.terco_p7" tag="p" class="leading-relaxed text-justify">
-                <template #sao_pedro><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pedro") }}</NuxtLink></template>
-                <template #papado><NuxtLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.papado") }}</NuxtLink></template>
+                <template #batalha_espiritual><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.batalha_epiritual") }}</NuxtLink></template>
+                <template #sao_pio><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.sao_pio") }}</NuxtLink></template>
+                <template #aparicoes><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.aparicoes") }}</NuxtLink></template>
+                <template #fatima><a href="https://www.fatima.pt/pt/" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.fatima") }}</a></template>
+                <template #lourdes><a href="https://www.lourdes-france.com/pt-pt/" target="_blank" rel="noopener noreferrer" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.lourdes") }}</a></template>
+                <template #virgem_maria><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">{{ $t("palavras_chave.virgem_maria") }}</NuxtLink></template>
               </i18n-t>
 
             </div>

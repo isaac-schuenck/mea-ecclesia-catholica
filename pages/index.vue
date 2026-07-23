@@ -136,7 +136,7 @@
           v-for="(item, index) in topics"
           :key="index"
           :to="item.link"
-          class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 p-3 lg:p-4 flex flex-col items-center text-center border border-gray-100 group cursor-pointer w-[calc(50%-0.5rem)] md:w-[calc(33.33%-0.66rem)] lg:w-[calc(100%/7-1.2857rem)]"
+          class="bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 p-3 lg:p-4 flex flex-col items-center text-center border border-gray-100 group cursor-pointer w-[calc(50%-0.5rem)] sm:w-[calc(33.333%-0.667rem)] md:w-[calc(25%-0.75rem)] lg:w-[calc(16.667%-1.25rem)] xl:w-[calc(12.5%-1.3125rem)]"
         >
           <div
             class="w-full aspect-square mb-3 lg:mb-4 rounded-xl overflow-hidden bg-gray-100 relative"
@@ -364,6 +364,11 @@ const topics = computed(() => [
   },
   { name: t("home.topics.missa"), image: "/mass.jpg", link: "/missa" },
   {
+    name: t("home.topics.ano_liturgico"),
+    image: "https://www.jornaldamadeira.com/wp-content/uploads/2024/03/cirio-pascal.jpg",
+    link: "/ano-liturgico",
+  },
+  {
     name: t("home.topics.milagres"),
     image: "/Eucaristia.jpg",
     link: "/milagres",
@@ -398,10 +403,10 @@ const topics = computed(() => [
     link: "/igrejas-orientais",
   },
   {
-    name: t("home.topics.concilios"),
+    name: t("home.topics.ritos"),
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pasquale_Cati_-_Concile_de_Trente.jpg",
-    link: "/concilios-e-ritos",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjCaO8RMufBHtnk2Y-5EXpCbVkLgNJK2DIQMsJemQ318ARLpovmL0oEKdMsjHc0HgluWZIvaQGKVRvvE7JQ8IDslcxPuBzsyLd9XhAaM1yw_nlYBNhzXN4B3vyci0xPgIGwFtHNOtOCDEn/s640/1-divine-liturgy-in-st-barbara-in-vienna.jpg",
+    link: "/ritos",
   },
   {
     name: t("home.topics.historia"),
@@ -426,6 +431,12 @@ const topics = computed(() => [
     image:
       "https://cdn.royalacademy.org.uk/images/00tajd9lkku7nota.jpg?format=auto&width=1200",
     link: "/apologetica",
+  },
+  {
+    name: t("home.topics.termologia_catolica"),
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Pasquale_Cati_-_Concile_de_Trente.jpg",
+    link: "/termologia-catolica",
   },
   {
     name: t("home.topics.dogmas"),

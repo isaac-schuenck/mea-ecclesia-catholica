@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   },
 
   i18n: {
+    fallbackLocale: 'pt',
     locales: [
       { code: 'pt', file: 'pt.json', name: 'Português' },
       { code: 'la', file: 'la.json', name: 'Latim' },

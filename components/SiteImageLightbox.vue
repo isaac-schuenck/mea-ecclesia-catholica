@@ -1,0 +1,112 @@
+<template>
+  <Teleport to="body">
+    <div
+      v-if="isOpen"
+      class="fixed inset-0 z-[200] flex items-center justify-center bg-black/85 p-4 md:p-8"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="caption"
+      @click.self="close"
+    >
+      <figure class="relative flex w-fit max-h-full max-w-full flex-col items-center">
+        <button
+          type="button"
+          class="absolute right-0 top-0 z-[201] flex h-9 w-9 translate-x-1/3 -translate-y-1/3 items-center justify-center rounded-full border border-white/60 bg-black/70 text-2xl leading-none text-white shadow-lg transition hover:bg-black/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37] md:h-10 md:w-10"
+          aria-label="Fechar imagem ampliada"
+          @click="close"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+
+        <img
+          :src="imageUrl"
+          :alt="caption"
+          class="max-h-[82vh] max-w-[94vw] rounded-lg object-contain shadow-2xl"
+        />
+        <figcaption v-if="caption" class="mt-3 text-center text-sm italic text-white/85">
+          {{ caption }}
+        </figcaption>
+      </figure>
+    </div>
+  </Teleport>
+</template>
+
+<script setup>
+import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
+
+const route = useRoute();
+const enabledPaths = new Set(["/missa", "/ano-liturgico", "/livros", "/artigos-religiosos", "/santo-do-dia"]);
+const isEnabled = computed(() => enabledPaths.has(route.path));
+
+const isOpen = ref(false);
+const historyActive = ref(false);
+const imageUrl = ref("");
+const caption = ref("");
+
+const open = (image, figure) => {
+  imageUrl.value = image.currentSrc || image.src;
+  caption.value = figure?.querySelector("figcaption")?.textContent?.trim() || image.alt || "Imagem ampliada";
+  isOpen.value = true;
+  window.history.pushState({ ...window.history.state, siteImageLightbox: true }, "");
+  historyActive.value = true;
+};
+
+const close = () => {
+  if (!isOpen.value) return;
+  if (historyActive.value) {
+    window.history.back();
+    return;
+  }
+  isOpen.value = false;
+};
+
+const handleDocumentClick = (event) => {
+  if (!isEnabled.value || isOpen.value) return;
+  const image = event.target.closest?.("main figure img, main [data-lightbox-image]");
+  if (!image) return;
+
+  event.preventDefault();
+  event.stopPropagation();
+  open(image, image.closest("figure"));
+};
+
+const handleKeydown = (event) => {
+  if (event.key === "Escape" && isOpen.value) close();
+};
+
+const handlePopstate = () => {
+  if (!isOpen.value) return;
+  historyActive.value = false;
+  isOpen.value = false;
+};
+
+watch(isOpen, (openState) => {
+  if (import.meta.client) document.body.style.overflow = openState ? "hidden" : "";
+});
+
+watch(isEnabled, (enabled) => {
+  if (import.meta.client) document.body.classList.toggle("site-lightbox-enabled", enabled);
+}, { immediate: true });
+
+onMounted(() => {
+  document.body.classList.toggle("site-lightbox-enabled", isEnabled.value);
+  document.addEventListener("click", handleDocumentClick, true);
+  window.addEventListener("keydown", handleKeydown);
+  window.addEventListener("popstate", handlePopstate);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleDocumentClick, true);
+  window.removeEventListener("keydown", handleKeydown);
+  window.removeEventListener("popstate", handlePopstate);
+  document.body.classList.remove("site-lightbox-enabled");
+  document.body.style.overflow = "";
+});
+</script>
+
+<style>
+body.site-lightbox-enabled main figure img,
+body.site-lightbox-enabled main [data-lightbox-image] {
+  cursor: zoom-in;
+}
+</style>

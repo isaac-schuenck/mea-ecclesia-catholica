@@ -163,12 +163,17 @@
           ><TextLink to="/santos" :text="$t('palavras_chave.sao_joao')"
         /></template>
         <template #quaresma
-          ><TextLink to="/ano-liturgico" :text="$t('palavras_chave.quaresma')"
+          ><TextLink to="/ano-liturgico#quaresma" :text="$t('palavras_chave.quaresma')"
         /></template>
         <template #tempo_pascal
           ><TextLink
-            to="/ano-liturgico"
+            to="/ano-liturgico#tempo-pascal"
             :text="$t('palavras_chave.tempo_pascal')"
+        /></template>
+        <template #calendario_liturgico_contexto
+          ><TextLink
+            to="/ano-liturgico"
+            :text="$t('palavras_chave.calendario_liturgico_contexto')"
         /></template>
       </i18n-t>
       <i18n-t
@@ -180,6 +185,11 @@
           ><TextLink
             to="/ano-liturgico"
             :text="$t('palavras_chave.ano_liturgico')"
+        /></template>
+        <template #advento
+          ><TextLink
+            to="/ano-liturgico#advento"
+            :text="$t('palavras_chave.advento')"
         /></template>
       </i18n-t>
 
@@ -215,13 +225,11 @@
           ><TextLink
             to="/ritos"
             :text="$t('palavras_chave.vestes_liturgicas')"
-            bold
         /></template>
         <template #calendario_liturgico
           ><TextLink
             to="/ano-liturgico"
             :text="$t('palavras_chave.calendario_liturgico')"
-            bold
         /></template>
       </i18n-t>
       <p class="text-gray-600 leading-relaxed text-justify mb-10">
@@ -232,7 +240,8 @@
         <article
           v-for="(cor, index) in coresLiturgicas"
           :key="cor.id"
-          class="flex flex-col md:flex-row items-center gap-5 md:gap-8 py-8 first:pt-0"
+          :id="cor.id"
+          class="flex flex-col md:flex-row items-center gap-5 md:gap-8 py-8 first:pt-0 scroll-mt-24"
           :class="index % 2 ? 'md:flex-row-reverse' : ''"
         >
           <h4
@@ -245,6 +254,7 @@
           <img
             :src="cor.image"
             :alt="$t(cor.nomeKey)"
+            data-lightbox-image
             class="w-40 h-40 md:w-48 md:h-48 flex-shrink-0 rounded-lg object-cover shadow-sm"
           />
           <div class="flex-1 w-full">
@@ -262,32 +272,32 @@
             >
               <template #tempo_comum
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#tempo-comum-primeira-parte"
                   :text="$t('palavras_chave.tempo_comum')"
               /></template>
               <template #advento
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#advento"
                   :text="$t('palavras_chave.advento')"
               /></template>
               <template #quaresma
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#quaresma"
                   :text="$t('palavras_chave.quaresma')"
               /></template>
               <template #natal
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#tempo-natal"
                   :text="$t('palavras_chave.natal')"
               /></template>
               <template #tempo_pascal
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#tempo-pascal"
                   :text="$t('palavras_chave.tempo_pascal')"
               /></template>
               <template #grandes_solenidades
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#datas-principais"
                   :text="$t('palavras_chave.grandes_solenidades')"
               /></template>
               <template #santos
@@ -298,32 +308,32 @@
               /></template>
               <template #pentecostes
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#pentecostes"
                   :text="$t('palavras_chave.pentecostes')"
               /></template>
               <template #domingo_ramos
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#semana-santa"
                   :text="$t('palavras_chave.domingo_ramos')"
               /></template>
               <template #sexta_feira_santa
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#triduo-pascal"
                   :text="$t('palavras_chave.sexta_feira_santa')"
               /></template>
               <template #gaudete
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#gaudete"
                   :text="$t('palavras_chave.gaudete')"
               /></template>
               <template #laetare
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#laetare"
                   :text="$t('palavras_chave.laetare')"
               /></template>
               <template #finados
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#finados"
                   :text="$t('palavras_chave.finados')"
               /></template>
               <template #exequias
@@ -338,27 +348,37 @@
             >
               <template #advento
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#advento"
                   :text="$t('palavras_chave.advento')"
+              /></template>
+              <template #ano_liturgico_verde
+                ><TextLink
+                  to="/ano-liturgico"
+                  :text="$t('palavras_chave.ano_liturgico_verde')"
+              /></template>
+              <template #ano_liturgico_rosa
+                ><TextLink
+                  to="/ano-liturgico"
+                  :text="$t('palavras_chave.ano_liturgico_rosa')"
               /></template>
               <template #quaresma
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#quaresma"
                   :text="$t('palavras_chave.quaresma')"
               /></template>
               <template #pascoa
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#triduo-pascal"
                   :text="$t('palavras_chave.pascoa')"
               /></template>
               <template #natal
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#tempo-natal"
                   :text="$t('palavras_chave.natal')"
               /></template>
               <template #solenidades
                 ><TextLink
-                  to="/ano-liturgico"
+                  to="/ano-liturgico#datas-principais"
                   :text="$t('palavras_chave.solenidades')"
               /></template>
               <template #virgem_maria
@@ -1064,11 +1084,8 @@
           <div>
             <h5 class="text-xl font-bold text-[#041122] font-serif mb-3">{{ $t("missa.misterio_fe_titulo") }}</h5>
             <p class="text-gray-600 leading-relaxed mb-3">{{ $t("missa.misterio_fe_intro") }}</p>
-            <div class="border-l-2 border-[#041122]/25 pl-4 my-4 text-gray-600 italic">
+            <div class="border-l-2 border-[#041122]/25 pl-4 my-4 space-y-2 text-gray-600 italic">
               <p><strong class="not-italic text-[#A52A2A]">{{ $t("missa.sacerdote_label") }}:</strong> <RichText keypath="missa.misterio_fe_sacerdote" tag="span" /></p>
-            </div>
-            <p class="text-gray-600 leading-relaxed">{{ $t("missa.misterio_fe_resposta_intro") }}</p>
-            <div class="border-l-2 border-[#041122]/25 pl-4 my-4 text-gray-600 italic">
               <p><strong class="not-italic text-[#A52A2A]">{{ $t("missa.assembleia_label") }}:</strong> {{ $t("missa.misterio_fe_assembleia") }}</p>
             </div>
           </div>
@@ -1383,6 +1400,7 @@ const richTextLinks = {
   cruz_processional: ["/ritos", "cruz_processional"],
   velas_processionais: ["/ritos", "velas_processionais"],
   evangeliario: ["/escritura", "evangeliario"],
+  ano_liturgico: ["/ano-liturgico", "ano_liturgico"],
   altar: ["/missa", "altar"],
   velas_liturgicas: ["/ritos", "velas_liturgicas"],
   missal: ["/ritos", "missal"],
@@ -1396,14 +1414,14 @@ const richTextLinks = {
   santissima_trindade: ["/trindade", "santissima_trindade"],
   pai: ["/trindade", "pai"],
   filho: ["/trindade", "filho"],
-  advento: ["/ano-liturgico", "advento"],
-  quaresma: ["/ano-liturgico", "quaresma"],
-  solenidades: ["/ano-liturgico", "solenidades"],
-  festas: ["/ano-liturgico", "festas"],
+  advento: ["/ano-liturgico#advento", "advento"],
+  quaresma: ["/ano-liturgico#quaresma", "quaresma"],
+  solenidades: ["/ano-liturgico#datas-principais", "solenidades"],
+  festas: ["/ano-liturgico#datas-principais", "festas"],
   calendario_liturgico: ["/ano-liturgico", "calendario_liturgico"],
   sagradas_escrituras: ["/escritura", "sagradas_escrituras"],
   antigo_testamento: ["/escritura", "antigo_testamento"],
-  tempo_pascal: ["/ano-liturgico", "tempo_pascal"],
+  tempo_pascal: ["/ano-liturgico#tempo-pascal", "tempo_pascal"],
   atos_apostolos: ["/escritura", "atos_apostolos"],
   lecionario_romano: ["/ritos", "lecionario_romano"],
   salmo: ["/escritura", "salmo"],

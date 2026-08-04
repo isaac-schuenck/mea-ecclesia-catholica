@@ -62,6 +62,7 @@
               >
                 <img
                   :src="img"
+                  data-lightbox-image
                   class="w-full h-full object-contain p-2"
                   :alt="$t('livro.capa_alt', { titulo: $t(book.tituloKey) })"
                 />

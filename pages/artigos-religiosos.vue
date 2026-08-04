@@ -1,6 +1,27 @@
 <template>
   <main class="flex-grow">
-    <section class="max-w-7xl mx-auto pt-20 pb-12 px-6">
+    <section id="artigos-religiosos" class="max-w-7xl mx-auto pt-20 pb-12 px-6 scroll-mt-24">
+      <nav
+        aria-label="Sumário da página"
+        class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mb-12 text-sm md:text-base text-center"
+      >
+        <a
+          href="#artigos-religiosos"
+          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
+        >
+          {{ $t("artigos_religiosos.titulo") }}
+        </a>
+        <template v-for="categoria in categorias" :key="categoria.id">
+          <span class="text-gray-400" aria-hidden="true">•</span>
+          <a
+            :href="`#${categoria.id}`"
+            class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
+          >
+            {{ $t(categoria.tituloKey) }}
+          </a>
+        </template>
+      </nav>
+
       <h3
         class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
       >
@@ -134,7 +155,7 @@
 
         <template #igreja_triunfante>
             <NuxtLink
-              to="/intercessao-e-mediacao""
+              to="/intercessao-e-mediacao"
               class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200"
             >
               {{ $t("palavras_chave.igreja_triunfante") }}
@@ -144,10 +165,41 @@
     </section>
 
     <section class="max-w-7xl mx-auto px-6 pb-20">
-      
-      <div class="space-y-4">
-        
-        <div v-for="item in artigosLista" :key="item.id" class="border-b border-[#D4AF37]/30 pb-4 last:border-0">
+      <div
+        v-for="categoria in categorias"
+        :id="categoria.id"
+        :key="categoria.id"
+        class="mb-16 last:mb-0 scroll-mt-24"
+      >
+        <h2
+          class="text-3xl font-bold text-[#041122] mb-8 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
+        >
+          {{ $t(categoria.tituloKey) }}
+        </h2>
+
+        <i18n-t
+          :keypath="categoria.textoKey"
+          tag="p"
+          class="text-gray-600 leading-relaxed text-justify mb-6"
+        >
+          <template #santa_missa>
+            <NuxtLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">
+              {{ $t("palavras_chave.santa_missa") }}
+            </NuxtLink>
+          </template>
+          <template #sacramentos>
+            <NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200">
+              {{ $t("palavras_chave.sacramentos") }}
+            </NuxtLink>
+          </template>
+        </i18n-t>
+
+        <div v-if="categoria.itens.length" class="space-y-4">
+          <div
+            v-for="item in artigosLista.filter((artigo) => categoria.itens.includes(artigo.id))"
+            :key="item.id"
+            class="border-b border-[#D4AF37]/30 pb-4 last:border-0"
+          >
           
           <button @click="item.isOpen = !item.isOpen" class="w-full flex items-center py-6 hover:opacity-80 transition-opacity text-left group">
             <svg class="w-6 h-6 text-[#D4AF37] mr-4 transition-transform duration-300 flex-shrink-0" 
@@ -330,12 +382,34 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
   </main>
 </template>
 
 <script setup>
 import { ref } from "vue";
+
+const categorias = [
+  {
+    id: "artigos-liturgicos",
+    tituloKey: "artigos_religiosos.artigos_liturgicos_titulo",
+    textoKey: "artigos_religiosos.artigos_liturgicos_p1",
+    itens: [],
+  },
+  {
+    id: "artigos-devocionais",
+    tituloKey: "artigos_religiosos.artigos_devocionais_titulo",
+    textoKey: "artigos_religiosos.artigos_devocionais_p1",
+    itens: ["crucifixo", "terco"],
+  },
+  {
+    id: "simbolos-cristaos",
+    tituloKey: "artigos_religiosos.simbolos_cristaos_titulo",
+    textoKey: "artigos_religiosos.simbolos_cristaos_p1",
+    itens: ["cruz_petrina"],
+  },
+];
 
 // O array agora fica super enxuto. Ele só serve para o Vue saber o que criar e controlar quem tá aberto/fechado.
 const artigosLista = ref([

@@ -343,8 +343,9 @@ const slides = computed(() => [
     subtitle: t("home.carousel.slide5_sub"),
     description: t("home.carousel.slide5_desc"),
     buttonText: t("home.carousel.slide5_btn"),
-    link: "/homilias",
-    image: "/PeMario.png",
+    link: "/estrutura",
+    image:
+      "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/reuters/2025/05/08/21/1746732421421.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
     positionClass: "object-[right_80%] md:object-[center_40%]",
   },
 ]);
@@ -407,6 +408,12 @@ const topics = computed(() => [
     image:
       "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjCaO8RMufBHtnk2Y-5EXpCbVkLgNJK2DIQMsJemQ318ARLpovmL0oEKdMsjHc0HgluWZIvaQGKVRvvE7JQ8IDslcxPuBzsyLd9XhAaM1yw_nlYBNhzXN4B3vyci0xPgIGwFtHNOtOCDEn/s640/1-divine-liturgy-in-st-barbara-in-vienna.jpg",
     link: "/ritos",
+  },
+  {
+    name: t("home.topics.personagens_historicos"),
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIM05Vlwl0-hEAnbut4ri86I_dYuBXSx1bXDJ4j-RTSKSSgguO5uY5YJU&s=10",
+    link: "/personagens-historicos",
   },
   {
     name: t("home.topics.historia"),

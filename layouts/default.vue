@@ -66,8 +66,51 @@
 
           <NuxtLink to="/livros" class="hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</NuxtLink>
           <NuxtLink to="/artigos-religiosos" class="hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</NuxtLink>
-          <NuxtLink to="/homilias" class="hover:text-[#D4AF37] transition">{{ $t("menu.homilias") }}</NuxtLink>
+          <NuxtLink to="/estrutura" class="hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</NuxtLink>
           <NuxtLink to="/santo-do-dia" class="hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</NuxtLink>
+
+          <div v-if="!isHome" class="relative py-4 -my-4">
+            <button
+              type="button"
+              class="p-1.5 text-[#D4AF37] hover:text-white transition-colors"
+              :aria-expanded="isTopicsOpen"
+              aria-label="Abrir todos os temas"
+              @click="isTopicsOpen = !isTopicsOpen; isLangOpen = false"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+            <div
+              v-show="isTopicsOpen"
+              class="absolute top-full right-0 mt-2 w-[min(56rem,calc(100vw-3rem))] max-h-[70vh] overflow-y-auto rounded-xl border border-white/10 bg-[#0a1e3f] p-5 shadow-2xl z-[70]"
+            >
+              <p class="mb-4 font-serif text-lg font-bold text-[#D4AF37]">
+                {{ $t("home.explore_title") }}
+              </p>
+              <div class="grid grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-1">
+                <NuxtLink
+                  v-for="topic in topicLinks"
+                  :key="topic.link"
+                  :to="topic.link"
+                  class="rounded-md px-3 py-2 text-sm text-gray-200 hover:bg-white/10 hover:text-[#D4AF37] transition-colors"
+                  @click="isTopicsOpen = false"
+                >
+                  {{ topic.name }}
+                </NuxtLink>
+              </div>
+              <div class="mt-4 border-t border-white/10 pt-4">
+                <NuxtLink
+                  to="/faq"
+                  class="block rounded-md px-3 py-2 text-sm font-semibold text-[#D4AF37] hover:bg-white/10 hover:text-white transition-colors"
+                  @click="isTopicsOpen = false"
+                >
+                  {{ $t("home.faq_btn") }}
+                </NuxtLink>
+              </div>
+            </div>
+          </div>
         </div>
 
         <button
@@ -95,6 +138,14 @@
         </div>
       </div>
     </header>
+
+    <button
+      v-if="isTopicsOpen"
+      type="button"
+      class="fixed inset-0 z-40 hidden lg:block cursor-default"
+      aria-label="Fechar menu de temas"
+      @click="isTopicsOpen = false"
+    ></button>
 
     <div v-if="isMobileMenuOpen" class="fixed inset-0 z-[100] flex justify-end lg:hidden">
       <div @click="isMobileMenuOpen = false" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
@@ -129,17 +180,42 @@
           </div>
         </div>
 
-        <div class="flex flex-col px-6 py-6 space-y-6 text-lg font-serif">
+        <div class="flex-1 overflow-y-auto flex flex-col px-6 py-6 space-y-6 text-lg font-serif">
           <NuxtLink to="/" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.inicio") }}</NuxtLink>
           <NuxtLink to="/livros" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</NuxtLink>
           <NuxtLink to="/artigos-religiosos" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</NuxtLink>
-          <NuxtLink to="/homilias" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.homilias") }}</NuxtLink>
+          <NuxtLink to="/estrutura" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</NuxtLink>
           <NuxtLink to="/santo-do-dia" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</NuxtLink>
+
+          <div v-if="!isHome" class="border-t border-white/10 pt-6">
+            <p class="mb-4 text-sm font-bold uppercase tracking-widest text-[#D4AF37]">
+              {{ $t("home.explore_title") }}
+            </p>
+            <div class="flex flex-col gap-4 text-base">
+              <NuxtLink
+                v-for="topic in topicLinks"
+                :key="`mobile-${topic.link}`"
+                :to="topic.link"
+                class="text-gray-200 hover:text-[#D4AF37] transition-colors"
+                @click="isMobileMenuOpen = false"
+              >
+                {{ topic.name }}
+              </NuxtLink>
+              <NuxtLink
+                to="/faq"
+                class="border-t border-white/10 pt-4 font-semibold text-[#D4AF37] hover:text-white transition-colors"
+                @click="isMobileMenuOpen = false"
+              >
+                {{ $t("home.faq_btn") }}
+              </NuxtLink>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <slot />
+    <SiteImageLightbox />
 
     <footer class="bg-[#041122] text-gray-300 pt-16 pb-8 px-6 md:px-12 w-full border-t border-white/5">
       <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-end border-b border-white/10 pb-12 mb-8 gap-10 md:gap-0">
@@ -150,9 +226,6 @@
             <a href="https://instagram.com/seu_usuario" target="_blank" class="hover:text-[#D4AF37] transition font-medium tracking-wide">Instagram</a>
             <a href="https://github.com/isaac-schuenck/mea-ecclesia-catholica" target="_blank" class="hover:text-[#D4AF37] transition font-medium tracking-wide">GitHub</a>
           </div>
-          <p class="text-[11px] md:text-xs text-gray-500 max-w-md italic">
-            {{ $t("footer.aviso") }}
-          </p>
         </div>
         <div class="flex flex-col items-center md:items-end w-full md:w-auto group">
           <img src="/assets/logosfundo.png" alt="MEC Logo" class="h-24 md:h-32 w-auto opacity-30 group-hover:opacity-100 transition-opacity duration-500 mb-4" />
@@ -175,11 +248,50 @@
 
 <script setup>
 import { ref, computed } from "vue";
-const { setLocale, locale } = useI18n();
+const { setLocale, locale, t } = useI18n();
+const route = useRoute();
 
 const isMobileMenuOpen = ref(false);
 const isMobileSearchOpen = ref(false);
 const isLangOpen = ref(false); // <-- Resolvido aqui!
+const isTopicsOpen = ref(false);
+
+const isHome = computed(() => route.path === "/");
+
+const topicLinks = computed(() => [
+  { name: t("home.topics.trindade"), link: "/trindade" },
+  { name: t("home.topics.sacramentos"), link: "/sacramentos" },
+  { name: t("home.topics.missa"), link: "/missa" },
+  { name: t("home.topics.ano_liturgico"), link: "/ano-liturgico" },
+  { name: t("home.topics.milagres"), link: "/milagres" },
+  { name: t("home.topics.escritura"), link: "/escritura" },
+  { name: t("home.topics.sucessao"), link: "/sucessao-apostolica" },
+  { name: t("home.topics.tradicao"), link: "/tradicao-e-magisterio" },
+  { name: t("home.topics.papado"), link: "/papado" },
+  { name: t("home.topics.orientais"), link: "/igrejas-orientais" },
+  { name: t("home.topics.ritos"), link: "/ritos" },
+  { name: t("home.topics.personagens_historicos"), link: "/personagens-historicos" },
+  { name: t("home.topics.historia"), link: "/historia" },
+  { name: t("home.topics.patristica"), link: "/patristica" },
+  { name: t("home.topics.escolastica"), link: "/escolastica" },
+  { name: t("home.topics.ciencia"), link: "/ciencia" },
+  { name: t("home.topics.apologetica"), link: "/apologetica" },
+  { name: t("home.topics.termologia_catolica"), link: "/termologia-catolica" },
+  { name: t("home.topics.dogmas"), link: "/dogmas-marianos" },
+  { name: t("home.topics.intercessao"), link: "/intercessao-e-mediacao" },
+  { name: t("home.topics.imagens"), link: "/imagens-e-idolatria" },
+  { name: t("home.topics.catecismo"), link: "/catecismo" },
+  { name: t("home.topics.oracoes"), link: "/oracoes" },
+  { name: t("home.topics.rosario"), link: "/rosario" },
+]);
+
+watch(
+  () => route.fullPath,
+  () => {
+    isTopicsOpen.value = false;
+    isMobileMenuOpen.value = false;
+  },
+);
 
 // Descobre qual é a bandeira certa baseada na língua atual
 const currentLangDisplay = computed(() => {
@@ -194,5 +306,6 @@ const changeLang = (newLocale) => {
   setLocale(newLocale);
   isMobileMenuOpen.value = false;
   isLangOpen.value = false;
+  isTopicsOpen.value = false;
 };
 </script>

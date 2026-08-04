@@ -1,0 +1,18 @@
+{
+  "id": "sao-paulo",
+  "nome": "São Paulo",
+  "titulo": "Apóstolo dos Gentios e mártir",
+  "data": "06-29",
+  "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/79/Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg",
+  "imagem_alt": "Pintura de São Paulo Apóstolo",
+  "imagem_legenda": "São Paulo Apóstolo",
+  "bibliografia": [
+    "São Paulo, originalmente chamado Saulo, nasceu em Tarso e recebeu sólida formação na tradição judaica. Cidadão romano e fariseu zeloso, perseguiu os primeiros cristãos por acreditar que defendia a fidelidade à Lei. A caminho de Damasco, porém, teve um encontro decisivo com Cristo ressuscitado, experiência que transformou completamente sua vida.",
+    "Depois de receber o Batismo, Paulo dedicou-se sem reservas ao anúncio do Evangelho. Realizou extensas viagens missionárias, fundou e fortaleceu comunidades cristãs e enfrentou prisões, perseguições, naufrágios e inúmeras dificuldades. Suas cartas, dirigidas às primeiras comunidades e a alguns de seus colaboradores, tornaram-se parte essencial do Novo Testamento.",
+    "Conhecido como Apóstolo dos Gentios, Paulo ensinou que a salvação é dom da graça de Deus oferecido a todos em Jesus Cristo. Segundo a tradição, foi martirizado em Roma durante a perseguição de Nero, provavelmente por decapitação em razão de sua cidadania romana. A Igreja celebra sua missão e seu martírio em 29 de junho, no mesmo dia de São Pedro, preservando, contudo, a história e a vocação próprias de cada Apóstolo."
+  ],
+  "fonte": {
+    "nome": "Vatican News",
+    "url": "https://www.vaticannews.va/pt/santo-do-dia/06/29.html"
+  }
+}

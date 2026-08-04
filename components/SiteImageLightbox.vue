@@ -42,8 +42,25 @@ const isOpen = ref(false);
 const historyActive = ref(false);
 const imageUrl = ref("");
 const caption = ref("");
+let savedScrollPosition = { x: 0, y: 0 };
+let previousScrollRestoration = "auto";
+
+const restoreReadingPosition = () => {
+  const { x, y } = savedScrollPosition;
+  window.scrollTo(x, y);
+  window.requestAnimationFrame(() => {
+    window.scrollTo(x, y);
+    window.setTimeout(() => {
+      window.scrollTo(x, y);
+      window.history.scrollRestoration = previousScrollRestoration;
+    }, 0);
+  });
+};
 
 const open = (image, figure) => {
+  savedScrollPosition = { x: window.scrollX, y: window.scrollY };
+  previousScrollRestoration = window.history.scrollRestoration;
+  window.history.scrollRestoration = "manual";
   imageUrl.value = image.currentSrc || image.src;
   caption.value = figure?.querySelector("figcaption")?.textContent?.trim() || image.alt || "Imagem ampliada";
   isOpen.value = true;
@@ -58,6 +75,7 @@ const close = () => {
     return;
   }
   isOpen.value = false;
+  window.history.scrollRestoration = previousScrollRestoration;
 };
 
 const handleDocumentClick = (event) => {
@@ -78,6 +96,7 @@ const handlePopstate = () => {
   if (!isOpen.value) return;
   historyActive.value = false;
   isOpen.value = false;
+  restoreReadingPosition();
 };
 
 watch(isOpen, (openState) => {
@@ -101,6 +120,7 @@ onBeforeUnmount(() => {
   window.removeEventListener("popstate", handlePopstate);
   document.body.classList.remove("site-lightbox-enabled");
   document.body.style.overflow = "";
+  window.history.scrollRestoration = previousScrollRestoration;
 });
 </script>
 

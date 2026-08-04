@@ -15,6 +15,14 @@
         <a href="#hierarquia" class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
           {{ $t("hierarquia.sumario_hierarquia") }}
         </a>
+        <span class="text-gray-400" aria-hidden="true">•</span>
+        <a href="#organizacao-territorial" class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
+          {{ $t("hierarquia.sumario_organizacao") }}
+        </a>
+        <span class="text-gray-400" aria-hidden="true">•</span>
+        <a href="#lugares-sagrados" class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
+          {{ $t("hierarquia.sumario_lugares_sagrados") }}
+        </a>
       </nav>
 
       <h1
@@ -401,6 +409,10 @@
       <div class="md:border-l-4 md:border-[#D4AF37]/40 md:pl-8 md:mt-8 md:space-y-8">
         <div class="mt-8 md:mt-0">
           <h4 id="leitores" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.leitores_titulo") }}</h4>
+          <figure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmlNh-Cs8tgPiMlkoyDF_WIMsXT-qht3mfapiMSfNRj5BbUsOhU6HUNkQ&s=10" :alt="$t('hierarquia.imagem_leitores')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+            <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_leitores") }}</figcaption>
+          </figure>
           <i18n-t keypath="hierarquia.leitores_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
             <template #leituras><NuxtLink to="/missa#ciclo-das-leituras" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.leituras") }}</NuxtLink></template>
             <template #sagrada_escritura><NuxtLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrada_escritura") }}</NuxtLink></template>
@@ -411,7 +423,11 @@
         </div>
 
         <div class="mt-8 md:mt-0">
-          <h4 id="acolitos" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.acolitos_titulo") }}</h4>
+          <h4 id="acolitos" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.acolitos_titulo") }}</h4>
+          <figure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+            <img src="https://www.paieterno.com.br/wp-content/uploads/2014/10/DESTAQUE_FIQUE_POR_DENTRO_14_10_2014.png" :alt="$t('hierarquia.imagem_acolitos')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+            <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_acolitos") }}</figcaption>
+          </figure>
           <i18n-t keypath="hierarquia.acolitos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
             <template #altar><NuxtLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.altar") }}</NuxtLink></template>
             <template #comunhao><NuxtLink to="/missa#comunhao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.comunhao") }}</NuxtLink></template>
@@ -420,7 +436,11 @@
         </div>
 
         <div class="mt-8 md:mt-0">
-          <h4 id="coroinhas" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.coroinhas_titulo") }}</h4>
+          <h4 id="coroinhas" class="clear-both md:clear-right text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.coroinhas_titulo") }}</h4>
+          <figure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+            <img src="https://dj.org.br/wp-content/uploads/2021/05/acolitos.jpg" :alt="$t('hierarquia.imagem_coroinhas')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+            <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_coroinhas") }}</figcaption>
+          </figure>
           <i18n-t keypath="hierarquia.coroinhas_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
             <template #celebracoes><NuxtLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.celebracoes") }}</NuxtLink></template>
             <template #cruz_processional><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cruz_processional") }}</NuxtLink></template>
@@ -440,7 +460,11 @@
         </div>
 
         <div class="mt-8 md:mt-0">
-          <h4 id="ministros-comunhao" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.ministros_comunhao_titulo") }}</h4>
+          <h4 id="ministros-comunhao" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.ministros_comunhao_titulo") }}</h4>
+          <figure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+            <img src="https://images.a12.com/source/files/c/304016/ministros_da_sagrada_comunhao_-_3_feira_Santa_2023-705181_4227-3170-0-0.jpg" :alt="$t('hierarquia.imagem_ministros_comunhao')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+            <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_ministros_comunhao") }}</figcaption>
+          </figure>
           <i18n-t keypath="hierarquia.ministros_comunhao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
             <template #sagrada_comunhao><NuxtLink to="/missa#comunhao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrada_comunhao") }}</NuxtLink></template>
           </i18n-t>
@@ -448,7 +472,11 @@
         </div>
 
         <div class="mt-8 md:mt-0">
-          <h4 id="fieis-leigos" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.fieis_leigos_titulo") }}</h4>
+          <h4 id="fieis-leigos" class="clear-both md:clear-right text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.fieis_leigos_titulo") }}</h4>
+          <figure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+            <img src="https://www.centroloyola.org.br/images/outras-palavras/espiritualidade/2095075.jpg" :alt="$t('hierarquia.imagem_fieis_leigos')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+            <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_fieis_leigos") }}</figcaption>
+          </figure>
           <i18n-t keypath="hierarquia.fieis_leigos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
             <template #batizados><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batizados") }}</NuxtLink></template>
             <template #sacramento_ordem><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</NuxtLink></template>
@@ -467,6 +495,228 @@
           </i18n-t>
         </div>
       </div>
+    </section>
+
+    <section id="organizacao-territorial" class="clear-both max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
+      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
+        {{ $t("hierarquia.organizacao_titulo") }}
+      </h2>
+
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.organizacao_intro") }}</p>
+
+      <h3 id="igreja-universal" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.igreja_universal_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://s2-valor.glbimg.com/uByfWSz1WaJFCccwwnZary_bKAs=/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2019/q/r/ibVDIwSBiQWB9RoDBayQ/vaticano-papa-bento-xvi-praca-sao-pedro-multidao-despedida0.jpg" :alt="$t('hierarquia.imagem_igreja_universal')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_igreja_universal") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.igreja_universal_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.igreja_universal_p2") }}</p>
+
+      <h3 id="diocese" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.diocese_organizacao_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.arquidioceseolindarecife.org/wp-content/uploads/2025/01/drai-1080x675.jpg" :alt="$t('hierarquia.imagem_diocese')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_diocese") }}</figcaption>
+      </figure>
+      <i18n-t keypath="hierarquia.diocese_organizacao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
+        <template #eucaristia><NuxtLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</NuxtLink></template>
+      </i18n-t>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.diocese_organizacao_p2") }}</p>
+
+      <h3 id="arquidiocese" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.arquidiocese_organizacao_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://cdn.prod.website-files.com/6581f201a6c472f90b0fd34f/6a3254df7ceaf9d84aba3229_66c5d6ebedf3d4f1a0b47308_2_.webp" :alt="$t('hierarquia.imagem_arquidiocese')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_arquidiocese") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.arquidiocese_organizacao_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.arquidiocese_organizacao_p2") }}</p>
+
+      <h3 id="provincia-eclesiastica" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.provincia_titulo") }}</h3>
+      <figure class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Ecclesiastical_Province_of_Los_Angeles_map.png" :alt="$t('hierarquia.imagem_provincia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_provincia") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.provincia_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.provincia_p2") }}</p>
+
+      <h3 id="conferencia-episcopal" class="clear-both md:clear-none text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.conferencia_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.cnbb.org.br/wp-content/uploads/2024/04/Celebracao-final-scaled.jpeg" :alt="$t('hierarquia.imagem_conferencia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_conferencia") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.conferencia_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.conferencia_p2") }}</p>
+
+      <h3 id="paroquia" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.paroquia_organizacao_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://ourladyofpentecost.org.au/wp-content/uploads/2020/10/01_OLGC_Parish_2019-3-600x400-c-default.jpg" :alt="$t('hierarquia.imagem_paroquia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_paroquia") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.paroquia_organizacao_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.paroquia_organizacao_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.paroquia_organizacao_p3") }}</p>
+
+      <h3 id="comunidade" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.comunidade_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://comshalom.org/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-05-at-15.53.01-840x636.jpeg" :alt="$t('hierarquia.imagem_comunidade')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_comunidade") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.comunidade_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.comunidade_p2") }}</p>
+
+      <figure class="hidden md:block md:w-44 md:float-right md:ml-7 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://diocesedebarretos.com.br/wp-content/uploads/2025/08/Site-Capa-fotos-materias-1-1.png.webp" :alt="$t('hierarquia.imagem_quase_paroquia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_quase_paroquia") }}</figcaption>
+      </figure>
+
+      <h3 id="quase-paroquia" class="clear-both md:clear-left text-2xl font-bold text-[#041122] font-serif mt-12 md:mt-4 mb-5 scroll-mt-24">{{ $t("hierarquia.quase_paroquia_titulo") }}</h3>
+      <figure class="w-32 float-right ml-4 mb-2 md:hidden bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://diocesedebarretos.com.br/wp-content/uploads/2025/08/Site-Capa-fotos-materias-1-1.png.webp" :alt="$t('hierarquia.imagem_quase_paroquia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_quase_paroquia") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.quase_paroquia_p1") }}</p>
+
+      <h3 id="missao" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 md:mt-4 mb-5 scroll-mt-24">{{ $t("hierarquia.missao_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.cnbb.org.br/wp-content/uploads/2020/02/Visita-missionaria-sul2.jpg" :alt="$t('hierarquia.imagem_missao')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_missao") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.missao_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.missao_p2") }}</p>
+    </section>
+
+    <section id="lugares-sagrados" class="clear-both max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
+      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
+        {{ $t("hierarquia.lugares_sagrados_titulo") }}
+      </h2>
+
+      <div class="flow-root">
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://pbs.twimg.com/media/G_zupo9aUAEzFz8?format=jpg&amp;name=large" :alt="$t('hierarquia.imagem_missa_ar_livre')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_missa_ar_livre") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.lugares_sagrados_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.lugares_sagrados_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.lugares_sagrados_p3") }}</p>
+
+      <i18n-t keypath="hierarquia.lugares_sagrados_obs" tag="p" class="text-sm text-gray-500 italic leading-relaxed text-justify mt-4">
+        <template #missa><NuxtLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</NuxtLink></template>
+        <template #liturgica><NuxtLink to="/missa#estrutura-da-santa-missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgica") }}</NuxtLink></template>
+        <template #sacrificio_eucaristico><NuxtLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacrificio_eucaristico") }}</NuxtLink></template>
+      </i18n-t>
+      </div>
+
+      <h3 id="igreja-edificio" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.igreja_edificio_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXHltRyXI6mR2ETj5-rs3V4itzoaqcRj5cTvZ-uNIJmHsmoW33xMdPml8&amp;s=10" :alt="$t('hierarquia.imagem_igreja_edificio')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_igreja_edificio") }}</figcaption>
+      </figure>
+      <i18n-t keypath="hierarquia.igreja_edificio_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
+        <template #missa><NuxtLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</NuxtLink></template>
+      </i18n-t>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.igreja_edificio_p2") }}</p>
+
+      <h3 id="igreja-paroquial" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.igreja_paroquial_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.prarch.com/wp-content/uploads/2023/01/St.-Clare-Assisi-Monroe-Exterior-Church.jpg" :alt="$t('hierarquia.imagem_igreja_paroquial')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_igreja_paroquial") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.igreja_paroquial_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.igreja_paroquial_p2") }}</p>
+
+      <h3 id="catedral" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.catedral_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://images.unsplash.com/photo-1666623710701-b420de55416d?fm=jpg&amp;q=60&amp;w=3000&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.1.0&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2F0ZWRyYWwlMjBkZSUyMGNvbCVDMyVCNG5pYXxlbnwwfHwwfHx8MA%3D%3D" :alt="$t('hierarquia.imagem_catedral')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_catedral") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.catedral_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.catedral_p2") }}</p>
+
+      <h3 id="basilica" class="clear-both md:clear-none text-2xl font-bold text-[#041122] font-serif mt-12 md:mt-4 mb-5 scroll-mt-24">{{ $t("hierarquia.basilica_titulo") }}</h3>
+      <figure class="w-32 float-left mr-4 mb-2 md:hidden bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.infoescola.com/wp-content/uploads/2012/01/basilica-de-sao-pedro.jpg" :alt="$t('hierarquia.imagem_basilica')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_basilica") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.basilica_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.basilica_p2") }}</p>
+      <figure class="hidden md:block md:w-44 md:float-left md:mr-7 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.infoescola.com/wp-content/uploads/2012/01/basilica-de-sao-pedro.jpg" :alt="$t('hierarquia.imagem_basilica')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_basilica") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-3">{{ $t("hierarquia.basilica_lista_intro") }}</p>
+      <ul class="list-disc pl-7 space-y-1 text-gray-600 leading-relaxed">
+        <li>{{ $t("hierarquia.basilica_lista_1") }}</li>
+        <li>{{ $t("hierarquia.basilica_lista_2") }}</li>
+        <li>{{ $t("hierarquia.basilica_lista_3") }}</li>
+        <li>{{ $t("hierarquia.basilica_lista_4") }}</li>
+      </ul>
+
+      <h3 id="santuario" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.santuario_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://arquidiocesebh.org.br/wp-content/uploads/2019/07/schoenstatt2019-1-850x567.jpg" :alt="$t('hierarquia.imagem_santuario')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_santuario") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.santuario_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.santuario_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.santuario_p3") }}</p>
+
+      <h3 id="capela" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.capela_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMCNoUuYJX-OsDu5GskmoKRoqm4fewKGZeHSiZFCMq84PVhx6aA6oTsMgG&amp;s=10" :alt="$t('hierarquia.imagem_capela')" class="w-full aspect-square rounded-md object-cover object-center cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_capela") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.capela_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.capela_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.capela_p3") }}</p>
+
+      <h3 id="oratorio" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.oratorio_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3KTrQM-lTnEESHn9mWLi2vtb8noBZZJ2h3Dov_DD7hTxH5Ni3LbaoRz3Y&amp;s=10" :alt="$t('hierarquia.imagem_oratorio')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_oratorio") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.oratorio_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.oratorio_p2") }}</p>
+
+      <h3 id="mosteiro" class="clear-both md:clear-left text-2xl font-bold text-[#041122] font-serif mt-12 md:mt-4 mb-5 scroll-mt-24">{{ $t("hierarquia.mosteiro_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.dooid.it/wp-content/uploads/2020/11/Sacro-Speco-Subiaco-monastero-dooid.jpg" :alt="$t('hierarquia.imagem_mosteiro')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_mosteiro") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.mosteiro_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.mosteiro_p2") }}</p>
+
+      <h3 id="convento" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.convento_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.gardatrentino.it/website_images/POI/Poi_Cultura/image-thumb__10683__ds-maxwidth1920/POI_cultura_Comano_CoventoCampo_S.Besti_TNMK.webp" :alt="$t('hierarquia.imagem_convento')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_convento") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.convento_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.convento_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.convento_p3") }}</p>
+
+      <h3 id="abadia" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.abadia_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.infoescola.com/wp-content/uploads/2012/05/abadia-de-westminster_723925570.jpg" :alt="$t('hierarquia.imagem_abadia')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_abadia") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.abadia_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.abadia_p2") }}</p>
+
+      <h3 id="seminario" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.seminario_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://www.ncronline.org/files/20200918T1130-CHARLOTTE-COLLEGE-SEMINARY-1005459.JPG" :alt="$t('hierarquia.imagem_seminario')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_seminario") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.seminario_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.seminario_p2") }}</p>
+
+      <h3 id="cemiterio" class="clear-both text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">{{ $t("hierarquia.cemiterio_titulo") }}</h3>
+      <figure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
+        <img src="https://dioceseofraleigh.org/sites/default/files/styles/bp_featured_image/public/2022-11/all-souls-mass-ng-2022-860e.jpg?h=56d53079&amp;itok=X65EcogY" :alt="$t('hierarquia.imagem_cemiterio')" class="w-full h-auto rounded-md object-contain cursor-zoom-in" @click.stop="openImageFromEvent" />
+        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("hierarquia.imagem_cemiterio") }}</figcaption>
+      </figure>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.cemiterio_p1") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.cemiterio_p2") }}</p>
+      <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.cemiterio_p3") }}</p>
     </section>
 
     <Teleport to="body">
@@ -510,6 +760,20 @@ const lightboxHistoryActive = ref(false);
 const lightboxImageUrl = ref("");
 const lightboxCaption = ref("");
 let galleryFigures = [];
+let savedLightboxScrollPosition = { x: 0, y: 0 };
+let previousLightboxScrollRestoration = "auto";
+
+const restoreLightboxReadingPosition = () => {
+  const { x, y } = savedLightboxScrollPosition;
+  window.scrollTo(x, y);
+  window.requestAnimationFrame(() => {
+    window.scrollTo(x, y);
+    window.setTimeout(() => {
+      window.scrollTo(x, y);
+      window.history.scrollRestoration = previousLightboxScrollRestoration;
+    }, 0);
+  });
+};
 
 const closeLightboxWithEscape = (event) => {
   if (event.key === "Escape") closeLightbox();
@@ -522,6 +786,9 @@ const openLightbox = (imageUrl, caption) => {
   lightboxCaption.value = caption;
   lightboxOpen.value = true;
   if (import.meta.client) {
+    savedLightboxScrollPosition = { x: window.scrollX, y: window.scrollY };
+    previousLightboxScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
     window.history.pushState({ ...window.history.state, imageLightbox: true }, "");
     lightboxHistoryActive.value = true;
   }
@@ -563,12 +830,14 @@ const closeLightbox = () => {
   }
 
   lightboxOpen.value = false;
+  if (import.meta.client) window.history.scrollRestoration = previousLightboxScrollRestoration;
 };
 
 const handleHistoryBack = () => {
   if (!lightboxOpen.value) return;
   lightboxHistoryActive.value = false;
   lightboxOpen.value = false;
+  restoreLightboxReadingPosition();
 };
 
 watch(lightboxOpen, (isOpen) => {
@@ -598,5 +867,6 @@ onBeforeUnmount(() => {
   window.removeEventListener("keydown", closeLightboxWithEscape);
   window.removeEventListener("popstate", handleHistoryBack);
   document.body.style.overflow = "";
+  window.history.scrollRestoration = previousLightboxScrollRestoration;
 });
 </script>

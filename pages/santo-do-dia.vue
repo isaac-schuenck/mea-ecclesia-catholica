@@ -137,11 +137,15 @@
             <figure
               v-if="saint.imagem"
               class="saint-figure mx-auto mb-5 md:float-left md:mr-7 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md"
+              :class="saint.exibicao === 'historia_completa' ? 'saint-summary-figure' : ''"
             >
               <img
                 :src="saint.imagem"
                 :alt="saint.imagem_alt || saint.nome"
-                class="block w-full h-auto rounded-md"
+                class="block w-full rounded-md"
+                :class="saint.exibicao === 'historia_completa'
+                  ? 'aspect-square object-cover object-top'
+                  : 'h-auto'"
               />
               <figcaption
                 v-if="saint.imagem_legenda"
@@ -151,9 +155,23 @@
               </figcaption>
             </figure>
 
-            <p v-for="(paragraph, index) in saint.bibliografia" :key="index">
-              {{ paragraph }}
-            </p>
+            <SaintParagraph
+              v-for="(paragraph, index) in saint.exibicao === 'historia_completa'
+                ? saint.resumo
+                : saint.bibliografia"
+              :key="index"
+              :paragraph="paragraph"
+              :links="saint.links"
+            />
+
+            <button
+              v-if="saint.exibicao === 'historia_completa'"
+              type="button"
+              class="mt-3 ml-auto block font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
+              @click="openSaintBiography(saint)"
+            >
+              {{ saint.botao }}
+            </button>
           </div>
         </article>
       </div>
@@ -167,11 +185,110 @@
         </p>
       </div>
     </section>
+
+    <Teleport to="body">
+      <div
+        v-if="selectedBiography"
+        class="fixed inset-0 z-[190] flex items-center justify-center bg-black/80 p-3 sm:p-6 md:p-10"
+        role="dialog"
+        aria-modal="true"
+        :aria-labelledby="`${selectedBiography.id}-biography-title`"
+        @click.self="closeSaintBiography"
+      >
+        <article
+          class="relative max-h-[94vh] w-full max-w-5xl overflow-y-auto rounded-xl border border-[#D4AF37]/35 bg-[#FFF9ED] px-5 py-7 shadow-2xl sm:px-8 md:px-12 md:py-10"
+        >
+          <button
+            type="button"
+            class="sticky top-0 z-10 ml-auto -mr-1 -mt-2 flex h-10 w-10 items-center justify-center rounded-full border border-white/60 bg-[#041122]/90 text-2xl leading-none text-white shadow-lg transition hover:bg-[#041122] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4AF37]"
+            aria-label="Fechar biografia"
+            @click="closeSaintBiography"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+
+          <header class="-mt-7 mb-8 pr-12 text-center">
+            <h2
+              :id="`${selectedBiography.id}-biography-title`"
+              class="font-serif text-3xl font-bold text-[#041122] md:text-4xl"
+            >
+              {{ selectedBiography.nome }}
+            </h2>
+            <p class="mt-2 text-lg font-semibold text-[#9B7322]">
+              {{ selectedBiography.titulo }}
+            </p>
+          </header>
+
+          <div class="saint-biography flow-root text-justify leading-relaxed text-gray-600">
+            <figure
+              v-if="selectedBiography.imagem"
+              class="saint-figure mx-auto mb-5 bg-white p-2 shadow-md sm:float-left sm:mr-7 sm:mb-4"
+            >
+              <img
+                :src="selectedBiography.imagem"
+                :alt="selectedBiography.imagem_alt || selectedBiography.nome"
+                class="block h-auto w-full rounded-md"
+              />
+              <figcaption
+                v-if="selectedBiography.imagem_legenda"
+                class="px-2 pt-2 text-center text-xs italic text-gray-500"
+              >
+                {{ selectedBiography.imagem_legenda }}
+              </figcaption>
+            </figure>
+
+            <SaintParagraph
+              v-for="(paragraph, index) in selectedBiography.bibliografia"
+              :key="index"
+              :paragraph="paragraph"
+              :links="selectedBiography.links"
+            />
+          </div>
+        </article>
+      </div>
+    </Teleport>
   </main>
 </template>
 
 <script setup>
+import { defineComponent, h, resolveComponent } from "vue";
 import calendario from "~/data/santos/calendario.json";
+
+const SaintParagraph = defineComponent({
+  props: {
+    paragraph: { type: String, required: true },
+    links: { type: Object, default: () => ({}) },
+  },
+  setup(props) {
+    const NuxtLink = resolveComponent("NuxtLink");
+
+    return () => {
+      const parts = props.paragraph.split(/(\{[^}]+\})/g).filter(Boolean);
+      const content = parts.map((part) => {
+        const match = part.match(/^\{([^}]+)\}$/);
+        if (!match) return part;
+
+        const link = props.links?.[match[1]];
+        if (!link) return part;
+
+        const classes =
+          "text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors";
+
+        if (/^https?:\/\//.test(link.to)) {
+          return h(
+            "a",
+            { href: link.to, target: "_blank", rel: "noopener noreferrer", class: classes },
+            link.texto,
+          );
+        }
+
+        return h(NuxtLink, { to: link.to, class: classes }, () => link.texto);
+      });
+
+      return h("p", content);
+    };
+  },
+});
 
 const route = useRoute();
 const router = useRouter();
@@ -204,6 +321,32 @@ const selectedDate = ref(atMidday(new Date()));
 const calendarView = ref(atMidday(new Date()));
 const isCalendarOpen = ref(false);
 const calendarContainer = ref(null);
+const selectedBiography = ref(null);
+let biographyHistoryActive = false;
+
+const openSaintBiography = (saint) => {
+  selectedBiography.value = saint;
+  window.history.pushState(
+    { ...window.history.state, saintBiography: saint.id },
+    "",
+  );
+  biographyHistoryActive = true;
+};
+
+const closeSaintBiography = () => {
+  if (!selectedBiography.value) return;
+  if (biographyHistoryActive) {
+    window.history.back();
+    return;
+  }
+  selectedBiography.value = null;
+};
+
+const handleBiographyPopstate = () => {
+  if (!selectedBiography.value) return;
+  biographyHistoryActive = false;
+  selectedBiography.value = null;
+};
 
 const weekDays = computed(() =>
   Array.from({ length: 7 }, (_, index) => {
@@ -374,20 +517,31 @@ const handleOutsideClick = (event) => {
 };
 
 const handleEscape = (event) => {
-  if (event.key === "Escape") isCalendarOpen.value = false;
+  if (event.key !== "Escape") return;
+  if (selectedBiography.value) {
+    closeSaintBiography();
+    return;
+  }
+  isCalendarOpen.value = false;
 };
 
 watch(() => route.query.data, applyRouteDate);
+watch(selectedBiography, (saint) => {
+  document.body.style.overflow = saint ? "hidden" : "";
+});
 
 onMounted(() => {
   applyRouteDate();
   document.addEventListener("click", handleOutsideClick);
   document.addEventListener("keydown", handleEscape);
+  window.addEventListener("popstate", handleBiographyPopstate);
 });
 
 onBeforeUnmount(() => {
   document.removeEventListener("click", handleOutsideClick);
   document.removeEventListener("keydown", handleEscape);
+  window.removeEventListener("popstate", handleBiographyPopstate);
+  document.body.style.overflow = "";
 });
 </script>
 
@@ -407,6 +561,10 @@ onBeforeUnmount(() => {
 
 .saint-figure {
   width: min(100%, 17rem);
+}
+
+.saint-summary-figure {
+  width: min(100%, 13rem);
 }
 
 .saint-biography::after {

@@ -197,8 +197,9 @@
         <div v-if="categoria.itens.length" class="space-y-4">
           <div
             v-for="item in artigosLista.filter((artigo) => categoria.itens.includes(artigo.id))"
+            :id="item.id"
             :key="item.id"
-            class="border-b border-[#D4AF37]/30 pb-4 last:border-0"
+            class="border-b border-[#D4AF37]/30 pb-4 last:border-0 scroll-mt-24"
           >
           
           <button @click="item.isOpen = !item.isOpen" class="w-full flex items-center py-6 hover:opacity-80 transition-opacity text-left group">
@@ -388,7 +389,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { nextTick, onMounted, ref, watch } from "vue";
+
+const route = useRoute();
 
 const categorias = [
   {
@@ -429,4 +432,17 @@ const artigosLista = ref([
     isOpen: false,
   },
 ]);
+
+const openArticleFromHash = async () => {
+  const articleId = decodeURIComponent(route.hash.slice(1));
+  const article = artigosLista.value.find((item) => item.id === articleId);
+  if (!article) return;
+
+  article.isOpen = true;
+  await nextTick();
+  document.getElementById(articleId)?.scrollIntoView({ block: "start" });
+};
+
+onMounted(openArticleFromHash);
+watch(() => route.hash, openArticleFromHash);
 </script>

@@ -1017,12 +1017,12 @@
 
           <div>
             <h5 class="text-xl font-bold text-[#041122] font-serif mb-3">{{ $t("missa.santo_titulo") }}</h5>
-            <RichText keypath="missa.santo_intro" tag="p" class="text-gray-600 leading-relaxed mb-3" />
-            <div class="border-l-2 border-[#041122]/25 pl-4 my-4 text-gray-600 italic">
-              <p><strong class="not-italic text-[#A52A2A]">{{ $t("missa.assembleia_label") }}:</strong> {{ $t("missa.santo_texto") }}</p>
-            </div>
-            <p class="text-sm text-gray-500 italic leading-relaxed text-justify mb-3">{{ $t("missa.santo_obs") }}</p>
+            <RichText keypath="missa.santo_intro" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2" />
             <p class="text-gray-600 leading-relaxed text-justify">{{ $t("missa.santo_p") }}</p>
+            <div class="border-l-2 border-[#041122]/25 pl-4 my-4 text-gray-600 italic">
+              <p class="whitespace-pre-line"><strong class="not-italic text-[#A52A2A]">{{ $t("missa.assembleia_label") }}:</strong>
+{{ $t("missa.santo_texto") }}</p>
+            </div>
           </div>
 
           <div>
@@ -1435,7 +1435,7 @@ const richTextLinks = {
   credo_apostolos: ["/catecismo", "credo_apostolos"],
   credo_niceno: ["/catecismo", "credo_niceno"],
   concilios_ecumenicos: ["/tradicao-e-magisterio", "concilios_ecumenicos"],
-  santo: ["/oracoes", "santo"],
+  santo: ["/oracoes#santo", "santo"],
   epiclese: ["/ritos", "epiclese"],
   sineta_liturgica: ["/artigos-religiosos", "sineta_liturgica"],
   transubstanciacao: ["/catecismo", "transubstanciacao"],

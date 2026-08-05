@@ -1,16 +1,49 @@
 {
   "id": "sao-paulo",
   "nome": "São Paulo",
-  "titulo": "Apóstolo dos Gentios e mártir",
+  "titulo": "Apóstolo, mártir e evangelizador dos gentios",
   "data": "06-29",
   "imagem": "https://upload.wikimedia.org/wikipedia/commons/7/79/Giovanni_Francesco_Barbieri_-_Saint_Paul.jpg",
   "imagem_alt": "Pintura de São Paulo Apóstolo",
   "imagem_legenda": "São Paulo Apóstolo",
-  "bibliografia": [
-    "São Paulo, originalmente chamado Saulo, nasceu em Tarso e recebeu sólida formação na tradição judaica. Cidadão romano e fariseu zeloso, perseguiu os primeiros cristãos por acreditar que defendia a fidelidade à Lei. A caminho de Damasco, porém, teve um encontro decisivo com Cristo ressuscitado, experiência que transformou completamente sua vida.",
-    "Depois de receber o Batismo, Paulo dedicou-se sem reservas ao anúncio do Evangelho. Realizou extensas viagens missionárias, fundou e fortaleceu comunidades cristãs e enfrentou prisões, perseguições, naufrágios e inúmeras dificuldades. Suas cartas, dirigidas às primeiras comunidades e a alguns de seus colaboradores, tornaram-se parte essencial do Novo Testamento.",
-    "Conhecido como Apóstolo dos Gentios, Paulo ensinou que a salvação é dom da graça de Deus oferecido a todos em Jesus Cristo. Segundo a tradição, foi martirizado em Roma durante a perseguição de Nero, provavelmente por decapitação em razão de sua cidadania romana. A Igreja celebra sua missão e seu martírio em 29 de junho, no mesmo dia de São Pedro, preservando, contudo, a história e a vocação próprias de cada Apóstolo."
+  "exibicao": "historia_completa",
+  "botao": "Conheça toda a história →",
+  "resumo": [
+    "Fariseu e inicialmente perseguidor dos cristãos, Saulo teve sua vida transformada ao encontrar Cristo ressuscitado no caminho de Damasco. Depois de receber o {batismo}, tornou-se Paulo, o grande Apóstolo dos Gentios, dedicando sua vida a anunciar o {evangelho} entre povos e cidades do Império Romano.",
+    "Em suas viagens missionárias, enfrentou prisões, açoites, perseguições e naufrágios, fundou comunidades e escreveu cartas que hoje fazem parte da {biblia}. Conduzido finalmente a {roma}, confirmou sua pregação com o martírio, sendo tradicionalmente decapitado durante a perseguição do imperador Nero."
   ],
+  "bibliografia": [
+    "Nascido em Tarso, na atual Turquia, com o nome judaico de Saulo, São Paulo pertencia ao povo de Israel, recebeu formação farisaica e possuía a cidadania romana desde o nascimento. Homem de grande inteligência, sólida formação religiosa e zelo ardente pelas tradições de seus antepassados, considerava o movimento dos seguidores de Jesus uma ameaça à verdadeira fé de Israel.",
+    "Saulo presenciou e aprovou o apedrejamento de {santo_estevao}, o primeiro mártir cristão. Em seguida, passou a perseguir a {igreja_primitiva}, entrando nas casas e levando homens e mulheres à prisão. Mais tarde, ele próprio reconheceria ter perseguido violentamente a Igreja de Deus, considerando-se indigno do título de apóstolo por causa de seu passado.",
+    "Sua vida mudou radicalmente no caminho de Damasco. Enquanto se dirigia à cidade com autorização para prender os cristãos, uma luz vinda do céu o envolveu, e ele ouviu uma voz que lhe dizia: “Saulo, Saulo, por que me persegues?”. Ao perguntar quem falava, recebeu a resposta: “Eu sou Jesus, a quem tu persegues”.",
+    "Aquelas palavras revelaram-lhe que perseguir os membros da Igreja era perseguir o próprio Cristo. Cego durante três dias, Saulo foi acolhido por {santo_ananias}, que lhe impôs as mãos para que recuperasse a visão e fosse cheio do Espírito Santo. Depois de receber o {batismo}, o antigo perseguidor começou a anunciar que Jesus é o Filho de Deus.",
+    "Atos utiliza inicialmente o nome Saulo e, mais tarde, apresenta-o como “Saulo, também chamado Paulo”. Não se tratou necessariamente de uma mudança de nome causada por sua conversão: como judeu inserido no mundo romano, ele provavelmente já possuía ambos, passando a ser conhecido principalmente pelo nome Paulo durante sua missão entre os gentios.",
+    "Diferentemente dos Doze, que acompanharam Jesus durante sua vida pública, Paulo recebeu sua vocação apostólica por meio do encontro com o Cristo ressuscitado. Enviado especialmente aos povos não judeus, tornou-se conhecido como o Apóstolo dos Gentios, atravessando numerosas cidades da Ásia Menor e da Europa para anunciar o {evangelho} e fundar comunidades cristãs.",
+    "Em sua missão, enfrentou açoites, prisões, perseguições, naufrágios, fome e apedrejamento. No {concilio_jerusalem}, Paulo e {sao_barnabe} testemunharam a ação de Deus entre os gentios e defenderam que os convertidos não deveriam ser obrigados a assumir integralmente as prescrições rituais da Lei de Moisés para receber a salvação em Cristo.",
+    "Suas cartas dirigidas a comunidades e colaboradores tornaram-se parte fundamental da {biblia}. Nelas, Paulo desenvolveu temas centrais da fé cristã, como a graça, a justificação, a unidade do Corpo de Cristo, a vida no Espírito, a Eucaristia, a Ressurreição e a esperança da vida eterna. Por isso, sua pregação e seus escritos exerceram influência decisiva sobre toda a história da teologia cristã.",
+    "Segundo a antiga tradição da Igreja, Paulo chegou a {roma} como prisioneiro depois de apelar ao imperador, direito garantido por sua cidadania romana. Os Atos dos Apóstolos encerram sua narrativa apresentando-o em prisão domiciliar, recebendo todos os que o procuravam e anunciando o Reino de Deus com liberdade. O Novo Testamento não narra sua morte, mas a tradição cristã antiga testemunha de modo constante que ele sofreu o martírio em Roma durante o governo de Nero.",
+    "Já no final do século I, {sao_clemente_romano} recordava as perseguições e o testemunho de Paulo. Autores posteriores preservaram a memória de que o Apóstolo foi decapitado entre os anos 65 e 67 e sepultado junto à Via Ostiense. Sobre esse túmulo foi construído um antigo memorial cristão e, posteriormente, uma basílica, ampliada no período imperial até dar origem à atual Basílica de São Paulo Fora dos Muros.",
+    "Sob o altar papal da basílica conserva-se um grande sarcófago de mármore com a inscrição \"PAULO APOSTOLO MART\" (Paulo, Apóstolo e Mártir).",
+    "Investigações arqueológicas realizadas no local permitiram introduzir uma sonda no interior do sarcófago. Foram encontrados vestígios de tecidos preciosos de púrpura e azul, ornamentados com ouro, grãos de incenso e pequenos fragmentos ósseos. A datação por carbono-14 situou os ossos entre os séculos I e II, período compatível com a vida do Apóstolo.",
+    "Esses elementos não demonstram isoladamente que os restos sejam de São Paulo, mas, reunidos à localização tradicional do túmulo, à inscrição, à antiga veneração cristã e aos testemunhos históricos, formam uma forte convergência de indícios. Bento XVI afirmou que os resultados pareciam confirmar a tradição unânime segundo a qual aquele sarcófago conserva os restos do Apóstolo.",
+    "Segundo a tradição, Paulo foi condenado à decapitação, forma de execução considerada compatível com sua condição de cidadão romano, em contraste com penas particularmente infamantes aplicadas a escravos e não cidadãos. É melhor, porém, não afirmar que um cidadão romano jamais poderia ser crucificado: sua cidadania oferecia proteções jurídicas importantes, mas as práticas penais do Império nem sempre funcionavam como regras absolutamente invariáveis.",
+    "O local tradicional de seu martírio é identificado com Aquae Salviae, onde hoje se encontra a Abadia das Três Fontes, em Roma. Uma tradição devocional posterior relata que, após a decapitação, a cabeça do Apóstolo teria tocado o chão três vezes e feito brotar três fontes. Essa narrativa pertence à memória religiosa associada ao lugar, mas não possui a mesma força histórica dos testemunhos sobre seu martírio e sepultamento.",
+    "Por causa de sua morte, São Paulo é frequentemente representado segurando uma {espada}. O símbolo possui um duplo significado: recorda o instrumento tradicionalmente associado ao seu martírio e também a “espada do Espírito, que é a Palavra de Deus”, anunciada por ele incansavelmente até o fim.",
+    "Assim, aquele que inicialmente procurava silenciar o nome de Cristo tornou-se um de seus maiores anunciadores. O perseguidor foi transformado em Apóstolo, o homem que conduzia cristãos à prisão terminou aprisionado por causa do Evangelho; e aquele que consentiu na morte de Estêvão entregou a própria vida confessando a mesma fé."
+  ],
+  "links": {
+    "santo_estevao": { "texto": "Santo Estêvão", "to": "/santo-do-dia?data=12-26" },
+    "igreja_primitiva": { "texto": "Igreja Primitiva", "to": "/historia" },
+    "santo_ananias": { "texto": "Santo Ananias", "to": "/santo-do-dia?data=01-25" },
+    "batismo": { "texto": "Batismo", "to": "/sacramentos" },
+    "evangelho": { "texto": "Evangelho", "to": "/escritura" },
+    "concilio_jerusalem": { "texto": "Concílio de Jerusalém", "to": "/tradicao-e-magisterio" },
+    "sao_barnabe": { "texto": "São Barnabé", "to": "/santo-do-dia?data=06-11" },
+    "biblia": { "texto": "Bíblia", "to": "/escritura" },
+    "roma": { "texto": "Roma", "to": "/historia" },
+    "sao_clemente_romano": { "texto": "São Clemente Romano", "to": "/santo-do-dia?data=11-23" },
+    "espada": { "texto": "Espada", "to": "/artigos-religiosos" }
+  },
   "fonte": {
     "nome": "Vatican News",
     "url": "https://www.vaticannews.va/pt/santo-do-dia/06/29.html"

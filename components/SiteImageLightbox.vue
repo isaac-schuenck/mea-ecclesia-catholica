@@ -32,11 +32,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
-
-const route = useRoute();
-const enabledPaths = new Set(["/missa", "/ano-liturgico", "/livros", "/artigos-religiosos", "/santo-do-dia"]);
-const isEnabled = computed(() => enabledPaths.has(route.path));
+import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 
 const isOpen = ref(false);
 const historyActive = ref(false);
@@ -79,8 +75,8 @@ const close = () => {
 };
 
 const handleDocumentClick = (event) => {
-  if (!isEnabled.value || isOpen.value) return;
-  const image = event.target.closest?.("main figure img, main [data-lightbox-image]");
+  if (isOpen.value) return;
+  const image = event.target.closest?.("main figure img, [data-lightbox-image]");
   if (!image) return;
 
   event.preventDefault();
@@ -103,12 +99,9 @@ watch(isOpen, (openState) => {
   if (import.meta.client) document.body.style.overflow = openState ? "hidden" : "";
 });
 
-watch(isEnabled, (enabled) => {
-  if (import.meta.client) document.body.classList.toggle("site-lightbox-enabled", enabled);
-}, { immediate: true });
-
 onMounted(() => {
-  document.body.classList.toggle("site-lightbox-enabled", isEnabled.value);
+  // O ampliador segue a marcação das imagens, não a URL traduzida da página.
+  document.body.classList.add("site-lightbox-enabled");
   document.addEventListener("click", handleDocumentClick, true);
   window.addEventListener("keydown", handleKeydown);
   window.addEventListener("popstate", handlePopstate);
@@ -126,7 +119,7 @@ onBeforeUnmount(() => {
 
 <style>
 body.site-lightbox-enabled main figure img,
-body.site-lightbox-enabled main [data-lightbox-image] {
+body.site-lightbox-enabled [data-lightbox-image] {
   cursor: zoom-in;
 }
 </style>

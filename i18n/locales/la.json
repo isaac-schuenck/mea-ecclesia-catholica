@@ -10,6 +10,9 @@
     "busca": "Quid quaeris?",
     "idioma_atual": "Lingua Praesens"
   },
+  "comum": {
+    "sumario_pagina": "Index paginae"
+  },
   "footer": {
     "sobre_projeto": "De Opere",
     "contato": "Communicatio",

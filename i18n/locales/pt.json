@@ -10,6 +10,9 @@
     "busca": "O que você está buscando?",
     "idioma_atual": "Idioma Atual"
   },
+  "comum": {
+    "sumario_pagina": "Sumário da página"
+  },
   "santo_do_dia": {
     "titulo": "Santo do Dia",
     "hoje": "Hoje",

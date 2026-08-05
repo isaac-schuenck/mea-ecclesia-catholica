@@ -10,6 +10,9 @@
     "busca": "What are you looking for?",
     "idioma_atual": "Current Language"
   },
+  "comum": {
+    "sumario_pagina": "Page contents"
+  },
   "footer": {
     "sobre_projeto": "About the Project",
     "contato": "Contact",

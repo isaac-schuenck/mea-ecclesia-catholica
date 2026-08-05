@@ -4,86 +4,20 @@
       id="o-ano-liturgico"
       class="max-w-7xl mx-auto pt-20 pb-20 px-6 scroll-mt-24"
     >
-      <nav
-        aria-label="Sumário da página"
-        class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mb-12 text-sm md:text-base text-center"
-      >
-        <a
-          href="#o-ano-liturgico"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#advento"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.advento_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#tempo-natal"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.natal_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#tempo-comum-primeira-parte"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.tempo_comum_1_sumario") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#quaresma"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.quaresma_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#triduo-pascal"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.triduo_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#tempo-pascal"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.tempo_pascal_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#pentecostes"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.pentecostes_titulo") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#tempo-comum-segunda-parte"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.tempo_comum_2_sumario") }}
-        </a>
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#datas-principais"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-        >
-          {{ $t("ano_liturgico.datas_sumario") }}
-        </a>
-      </nav>
+      <ArticleTableOfContents :items="[
+        { target: 'o-ano-liturgico', translationKey: 'ano_liturgico.titulo' },
+        { target: 'advento', translationKey: 'ano_liturgico.advento_titulo' },
+        { target: 'tempo-natal', translationKey: 'ano_liturgico.natal_titulo' },
+        { target: 'tempo-comum-primeira-parte', translationKey: 'ano_liturgico.tempo_comum_1_sumario' },
+        { target: 'quaresma', translationKey: 'ano_liturgico.quaresma_titulo' },
+        { target: 'triduo-pascal', translationKey: 'ano_liturgico.triduo_titulo' },
+        { target: 'tempo-pascal', translationKey: 'ano_liturgico.tempo_pascal_titulo' },
+        { target: 'pentecostes', translationKey: 'ano_liturgico.pentecostes_titulo' },
+        { target: 'tempo-comum-segunda-parte', translationKey: 'ano_liturgico.tempo_comum_2_sumario' },
+        { target: 'datas-principais', translationKey: 'ano_liturgico.datas_sumario' },
+      ]" />
 
-      <h1
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.titulo") }}
-      </h1>
+      <ArticleSectionTitle as="h1" :text="$t('ano_liturgico.titulo')" />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">
         {{ $t("ano_liturgico.p1") }}
@@ -100,11 +34,7 @@
       id="advento"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <h2
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.advento_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.advento_titulo')" />
 
       <div class="flow-root">
       <figure class="w-32 md:w-64 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -138,12 +68,12 @@
         {{ $t("ano_liturgico.advento_p3") }}
       </p>
       <i18n-t keypath="ano_liturgico.advento_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #roxo><NuxtLink to="/missa#roxo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.roxo") }}</NuxtLink></template>
+        <template #roxo><AppLink to="/missa#roxo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.roxo") }}</AppLink></template>
         <template #quaresma><span>{{ $t("palavras_chave.quaresma") }}</span></template>
       </i18n-t>
       <i18n-t keypath="ano_liturgico.advento_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
 
       <div id="gaudete" class="scroll-mt-24">
@@ -155,11 +85,11 @@
         <blockquote class="border-l-4 border-[#D4AF37] bg-[#D4AF37]/5 px-4 py-3 my-4 text-gray-600 leading-relaxed">
           <p class="italic mb-1">{{ $t("ano_liturgico.advento_gaudete_latim") }}</p>
           <i18n-t keypath="ano_liturgico.advento_gaudete_traducao" tag="p">
-            <template #filipenses><NuxtLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.filipenses") }}</NuxtLink></template>
+            <template #filipenses><AppLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.filipenses") }}</AppLink></template>
           </i18n-t>
         </blockquote>
         <i18n-t keypath="ano_liturgico.advento_p6" tag="p" class="text-gray-600 leading-relaxed text-justify">
-          <template #rosa><NuxtLink to="/missa#rosa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.rosa") }}</NuxtLink></template>
+          <template #rosa><AppLink to="/missa#rosa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.rosa") }}</AppLink></template>
         </i18n-t>
       </div>
       </div>
@@ -169,11 +99,7 @@
       id="tempo-natal"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <h2
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.natal_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.natal_titulo')" />
 
       <div class="flow-root">
       <figure class="w-36 md:w-72 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -191,12 +117,12 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p2") }}</p>
 
       <i18n-t keypath="ano_liturgico.natal_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #branco><NuxtLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</NuxtLink></template>
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
+        <template #branco><AppLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</AppLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.natal_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #presepio><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.presepio") }}</NuxtLink></template>
+        <template #presepio><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.presepio") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p5") }}</p>
@@ -213,31 +139,31 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.natal_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #santo_estevao><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santo_estevao") }}</NuxtLink></template>
-        <template #vermelha><NuxtLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelha") }}</NuxtLink></template>
-        <template #sao_joao><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao") }}</NuxtLink></template>
-        <template #branca><NuxtLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branca") }}</NuxtLink></template>
-        <template #santos_inocentes><NuxtLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santos_inocentes") }}</NuxtLink></template>
-        <template #herodes><NuxtLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.herodes") }}</NuxtLink></template>
-        <template #vermelho><NuxtLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho") }}</NuxtLink></template>
+        <template #santo_estevao><AppLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santo_estevao") }}</AppLink></template>
+        <template #vermelha><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelha") }}</AppLink></template>
+        <template #sao_joao><AppLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao") }}</AppLink></template>
+        <template #branca><AppLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branca") }}</AppLink></template>
+        <template #santos_inocentes><AppLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santos_inocentes") }}</AppLink></template>
+        <template #herodes><AppLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.herodes") }}</AppLink></template>
+        <template #vermelho><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p7") }}</p>
 
       <i18n-t keypath="ano_liturgico.natal_p8" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #santa_maria><NuxtLink to="/dogmas-marianos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santa_maria") }}</NuxtLink></template>
-        <template #maria><NuxtLink to="/dogmas-marianos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.maria") }}</NuxtLink></template>
-        <template #cristo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cristo") }}</NuxtLink></template>
+        <template #santa_maria><AppLink to="/dogmas-marianos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santa_maria") }}</AppLink></template>
+        <template #maria><AppLink to="/dogmas-marianos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.maria") }}</AppLink></template>
+        <template #cristo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cristo") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p9") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p10") }}</p>
-      <p class="text-sm text-gray-500 italic leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_obs") }}</p>
+      <ArticleNote class="mb-2">{{ $t("ano_liturgico.natal_obs") }}</ArticleNote>
 
       <i18n-t keypath="ano_liturgico.natal_p11" tag="p" class="text-gray-600 leading-relaxed text-justify">
-        <template #filho><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.filho") }}</NuxtLink></template>
-        <template #pai><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pai") }}</NuxtLink></template>
-        <template #espirito_santo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</NuxtLink></template>
+        <template #filho><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.filho") }}</AppLink></template>
+        <template #pai><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pai") }}</AppLink></template>
+        <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
       </i18n-t>
       </div>
     </section>
@@ -246,21 +172,17 @@
       id="tempo-comum-primeira-parte"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <h2
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.tempo_comum_1_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.tempo_comum_1_titulo')" />
 
       <div class="flow-root">
       <i18n-t keypath="ano_liturgico.tempo_comum_1_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #quaresma><NuxtLink to="/ano-liturgico#quaresma" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.quaresma") }}</NuxtLink></template>
-        <template #pascoa><NuxtLink to="/ano-liturgico#pascoa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pascoa") }}</NuxtLink></template>
+        <template #quaresma><AppLink to="/ano-liturgico#quaresma" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.quaresma") }}</AppLink></template>
+        <template #pascoa><AppLink to="/ano-liturgico#pascoa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pascoa") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_1_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #pentecostes><NuxtLink to="/ano-liturgico#pentecostes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pentecostes") }}</NuxtLink></template>
-        <template #advento><NuxtLink to="/ano-liturgico#advento" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.advento") }}</NuxtLink></template>
+        <template #pentecostes><AppLink to="/ano-liturgico#pentecostes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pentecostes") }}</AppLink></template>
+        <template #advento><AppLink to="/ano-liturgico#advento" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.advento") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_1_p3") }}</p>
@@ -280,8 +202,8 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_1_p5") }}</p>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_1_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #verde><NuxtLink to="/missa#verde" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.verde") }}</NuxtLink></template>
-        <template #sacramentos><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</NuxtLink></template>
+        <template #verde><AppLink to="/missa#verde" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.verde") }}</AppLink></template>
+        <template #sacramentos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("ano_liturgico.tempo_comum_1_p7") }}</p>
@@ -292,14 +214,10 @@
       id="quaresma"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <h2
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.quaresma_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.quaresma_titulo')" />
 
       <i18n-t keypath="ano_liturgico.quaresma_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #pascoa><NuxtLink to="/ano-liturgico#pascoa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pascoa") }}</NuxtLink></template>
+        <template #pascoa><AppLink to="/ano-liturgico#pascoa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pascoa") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.quaresma_p2") }}</p>
@@ -320,12 +238,12 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.quaresma_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #moises><NuxtLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.moises") }}</NuxtLink></template>
-        <template #elias><NuxtLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.elias") }}</NuxtLink></template>
+        <template #moises><AppLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.moises") }}</AppLink></template>
+        <template #elias><AppLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.elias") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.quaresma_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #jejum><NuxtLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</NuxtLink></template>
+        <template #jejum><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</AppLink></template>
       </i18n-t>
 
       <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -340,24 +258,22 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.quaresma_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #jejum><NuxtLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</NuxtLink></template>
-        <template #abstinencia><NuxtLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.abstinencia") }}</NuxtLink></template>
+        <template #jejum><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</AppLink></template>
+        <template #abstinencia><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.abstinencia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.quaresma_p7" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #roxo><NuxtLink to="/missa#roxo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.roxo") }}</NuxtLink></template>
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #roxo><AppLink to="/missa#roxo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.roxo") }}</AppLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t id="laetare" keypath="ano_liturgico.quaresma_p8" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2 scroll-mt-24">
         <template #domingo_laetare><strong>{{ $t("palavras_chave.domingo_laetare") }}</strong></template>
-        <template #rosa><NuxtLink to="/missa#rosa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.rosa") }}</NuxtLink></template>
+        <template #rosa><AppLink to="/missa#rosa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.rosa") }}</AppLink></template>
       </i18n-t>
 
-      <h3 id="semana-santa" class="text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 scroll-mt-24">
-        {{ $t("ano_liturgico.semana_santa_titulo") }}
-      </h3>
+      <ArticleSubheading id="semana-santa" :text="$t('ano_liturgico.semana_santa_titulo')" />
 
       <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
         <img
@@ -374,7 +290,7 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p2") }}</p>
 
       <i18n-t keypath="ano_liturgico.semana_santa_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #vermelho><NuxtLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</NuxtLink></template>
+        <template #vermelho><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p4") }}</p>
@@ -393,9 +309,9 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p5") }}</p>
 
       <i18n-t keypath="ano_liturgico.semana_santa_p6" tag="p" class="text-gray-600 leading-relaxed text-justify">
-        <template #eucaristia><NuxtLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</NuxtLink></template>
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #eucaristia><AppLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</AppLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
     </section>
 
@@ -403,11 +319,7 @@
       id="triduo-pascal"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <h2
-        class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block"
-      >
-        {{ $t("ano_liturgico.triduo_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.triduo_titulo')" />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.triduo_p1") }}</p>
 
@@ -423,7 +335,7 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.triduo_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #vermelho><NuxtLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</NuxtLink></template>
+        <template #vermelho><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.triduo_p3") }}</p>
@@ -441,19 +353,17 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.triduo_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.triduo_p6" tag="p" class="text-gray-600 leading-relaxed text-justify">
-        <template #branco><NuxtLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</NuxtLink></template>
+        <template #branco><AppLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</AppLink></template>
       </i18n-t>
     </section>
 
     <section id="tempo-pascal" class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24 clear-both">
-      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
-        {{ $t("ano_liturgico.tempo_pascal_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.tempo_pascal_titulo')" />
       <div class="clear-both"></div>
 
       <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -468,30 +378,30 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_pascal_p1") }}</p>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #batismo><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismo") }}</NuxtLink></template>
+        <template #batismo><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismo") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #branco><NuxtLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</NuxtLink></template>
-        <template #gloria><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #branco><AppLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</AppLink></template>
+        <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #cirio_pascal><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cirio_pascal") }}</NuxtLink></template>
-        <template #pia_batismal><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pia_batismal") }}</NuxtLink></template>
-        <template #batismos><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismos") }}</NuxtLink></template>
-        <template #exequias><NuxtLink to="/missa#preto" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exequias") }}</NuxtLink></template>
+        <template #cirio_pascal><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cirio_pascal") }}</AppLink></template>
+        <template #pia_batismal><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pia_batismal") }}</AppLink></template>
+        <template #batismos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismos") }}</AppLink></template>
+        <template #exequias><AppLink to="/missa#preto" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exequias") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sao_joao_paulo_ii><NuxtLink to="/santo-do-dia?data=2026-10-22" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao_paulo_ii") }}</NuxtLink></template>
-        <template #santa_faustina><NuxtLink to="/santo-do-dia?data=2026-10-05" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santa_faustina") }}</NuxtLink></template>
+        <template #sao_joao_paulo_ii><AppLink to="/santo-do-dia?data=2026-10-22" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao_paulo_ii") }}</AppLink></template>
+        <template #santa_faustina><AppLink to="/santo-do-dia?data=2026-10-05" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santa_faustina") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #atos_dos_apostolos><NuxtLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.atos_dos_apostolos") }}</NuxtLink></template>
-        <template #espirito_santo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</NuxtLink></template>
+        <template #atos_dos_apostolos><AppLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.atos_dos_apostolos") }}</AppLink></template>
+        <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
       </i18n-t>
 
       <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -506,24 +416,22 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_pascal_p7") }}</p>
 
       <i18n-t keypath="ano_liturgico.tempo_pascal_p8" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #apostolos><NuxtLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolos") }}</NuxtLink></template>
-        <template #virgem_maria><NuxtLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</NuxtLink></template>
+        <template #apostolos><AppLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolos") }}</AppLink></template>
+        <template #virgem_maria><AppLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</AppLink></template>
       </i18n-t>
 
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("ano_liturgico.tempo_pascal_p9") }}</p>
     </section>
 
     <section id="pentecostes" class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
-      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
-        {{ $t("ano_liturgico.pentecostes_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.pentecostes_titulo')" />
 
       <i18n-t keypath="ano_liturgico.pentecostes_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #pentekoste><em>{{ $t("palavras_chave.pentekoste") }}</em></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #atos_dos_apostolos><NuxtLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.atos_dos_apostolos") }}</NuxtLink></template>
+        <template #atos_dos_apostolos><AppLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.atos_dos_apostolos") }}</AppLink></template>
       </i18n-t>
 
       <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -536,51 +444,49 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #espirito_santo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</NuxtLink></template>
-        <template #apostolos><NuxtLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolos") }}</NuxtLink></template>
-        <template #virgem_maria><NuxtLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</NuxtLink></template>
+        <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
+        <template #apostolos><AppLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolos") }}</AppLink></template>
+        <template #virgem_maria><AppLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #espirito_santo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</NuxtLink></template>
+        <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #vermelho><NuxtLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</NuxtLink></template>
+        <template #vermelho><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #vinde_espirito_santo><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vinde_espirito_santo") }}</NuxtLink></template>
-        <template #aleluia><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</NuxtLink></template>
+        <template #vinde_espirito_santo><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vinde_espirito_santo") }}</AppLink></template>
+        <template #aleluia><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.aleluia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p7" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #cirio_pascal><NuxtLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cirio_pascal") }}</NuxtLink></template>
-        <template #pia_batismal><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pia_batismal") }}</NuxtLink></template>
-        <template #batismos><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismos") }}</NuxtLink></template>
-        <template #exequias><NuxtLink to="/missa#preto" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exequias") }}</NuxtLink></template>
+        <template #cirio_pascal><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cirio_pascal") }}</AppLink></template>
+        <template #pia_batismal><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pia_batismal") }}</AppLink></template>
+        <template #batismos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismos") }}</AppLink></template>
+        <template #exequias><AppLink to="/missa#preto" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exequias") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.pentecostes_p8" tag="p" class="text-gray-600 leading-relaxed text-justify">
-        <template #espirito_santo><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</NuxtLink></template>
+        <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
       </i18n-t>
     </section>
 
     <section id="tempo-comum-segunda-parte" class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
-      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
-        {{ $t("ano_liturgico.tempo_comum_2_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.tempo_comum_2_titulo')" />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_2_p1") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_2_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_2_p3") }}</p>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_2_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramentos><NuxtLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</NuxtLink></template>
+        <template #sacramentos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_2_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #verde><NuxtLink to="/missa#verde" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.verde") }}</NuxtLink></template>
+        <template #verde><AppLink to="/missa#verde" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.verde") }}</AppLink></template>
       </i18n-t>
 
       <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -593,13 +499,13 @@
       </figure>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_2_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #santissima_trindade><NuxtLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santissima_trindade") }}</NuxtLink></template>
-        <template #corpus_christi><NuxtLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.corpus_christi") }}</NuxtLink></template>
-        <template #eucaristia><NuxtLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</NuxtLink></template>
+        <template #santissima_trindade><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santissima_trindade") }}</AppLink></template>
+        <template #corpus_christi><AppLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.corpus_christi") }}</AppLink></template>
+        <template #eucaristia><AppLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</AppLink></template>
       </i18n-t>
 
       <i18n-t keypath="ano_liturgico.tempo_comum_2_p7" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sagrado_coracao><NuxtLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrado_coracao") }}</NuxtLink></template>
+        <template #sagrado_coracao><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrado_coracao") }}</AppLink></template>
       </i18n-t>
 
       <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
@@ -612,15 +518,15 @@
       </figure>
 
       <i18n-t id="finados" keypath="ano_liturgico.tempo_comum_2_p8" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2 scroll-mt-24">
-        <template #virgem_maria><NuxtLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</NuxtLink></template>
-        <template #sao_joao_batista><NuxtLink to="/santo-do-dia?data=2026-06-24" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao_batista") }}</NuxtLink></template>
-        <template #sao_pedro_sao_paulo><NuxtLink to="/santo-do-dia?data=2026-06-29" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_pedro_sao_paulo") }}</NuxtLink></template>
-        <template #assuncao_virgem_maria><NuxtLink to="/santo-do-dia?data=2026-08-15" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.assuncao_virgem_maria") }}</NuxtLink></template>
-        <template #exaltacao_santa_cruz><NuxtLink to="/santo-do-dia?data=2026-09-14" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exaltacao_santa_cruz") }}</NuxtLink></template>
-        <template #todos_os_santos><NuxtLink to="/santo-do-dia?data=2026-11-01" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.todos_os_santos") }}</NuxtLink></template>
+        <template #virgem_maria><AppLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</AppLink></template>
+        <template #sao_joao_batista><AppLink to="/santo-do-dia?data=2026-06-24" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_joao_batista") }}</AppLink></template>
+        <template #sao_pedro_sao_paulo><AppLink to="/santo-do-dia?data=2026-06-29" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_pedro_sao_paulo") }}</AppLink></template>
+        <template #assuncao_virgem_maria><AppLink to="/santo-do-dia?data=2026-08-15" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.assuncao_virgem_maria") }}</AppLink></template>
+        <template #exaltacao_santa_cruz><AppLink to="/santo-do-dia?data=2026-09-14" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.exaltacao_santa_cruz") }}</AppLink></template>
+        <template #todos_os_santos><AppLink to="/santo-do-dia?data=2026-11-01" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.todos_os_santos") }}</AppLink></template>
       </i18n-t>
 
-      <h3 class="text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 clear-both">{{ $t("ano_liturgico.cristo_rei_titulo") }}</h3>
+      <ArticleSubheading class="clear-both" :text="$t('ano_liturgico.cristo_rei_titulo')" />
       <figure class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg"
@@ -633,10 +539,10 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.cristo_rei_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.cristo_rei_p3") }}</p>
       <i18n-t keypath="ano_liturgico.cristo_rei_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #branco><NuxtLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</NuxtLink></template>
+        <template #branco><AppLink to="/missa#branco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.branco") }}</AppLink></template>
       </i18n-t>
 
-      <h3 class="text-2xl font-bold text-[#041122] font-serif mt-12 mb-5 clear-both">{{ $t("ano_liturgico.ciclo_recomeca_titulo") }}</h3>
+      <ArticleSubheading class="clear-both" :text="$t('ano_liturgico.ciclo_recomeca_titulo')" />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.ciclo_recomeca_p1") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.ciclo_recomeca_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.ciclo_recomeca_p3") }}</p>
@@ -644,20 +550,18 @@
     </section>
 
     <section id="datas-principais" class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
-      <h2 class="text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block">
-        {{ $t("ano_liturgico.datas_titulo") }}
-      </h2>
+      <ArticleSectionTitle :text="$t('ano_liturgico.datas_titulo')" />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-8">{{ $t("ano_liturgico.datas_intro") }}</p>
 
-      <h3 id="datas-fixas" class="text-2xl font-bold text-[#041122] font-serif mb-5 scroll-mt-24">{{ $t("ano_liturgico.datas_fixas_titulo") }}</h3>
+      <ArticleSubheading id="datas-fixas" compact :text="$t('ano_liturgico.datas_fixas_titulo')" />
       <ul class="list-disc marker:text-[#D4AF37] pl-6 space-y-2 text-gray-600 leading-relaxed mb-12">
         <li v-for="(item, index) in $tm('ano_liturgico.datas_fixas')" :key="`data-fixa-${index}`">
           {{ $rt(item) }}
         </li>
       </ul>
 
-      <h3 class="text-2xl font-bold text-[#041122] font-serif mb-5">{{ $t("ano_liturgico.datas_moveis_titulo") }}</h3>
+      <ArticleSubheading compact :text="$t('ano_liturgico.datas_moveis_titulo')" />
       <ul class="list-disc marker:text-[#D4AF37] pl-6 space-y-2 text-gray-600 leading-relaxed">
         <li v-for="(item, index) in $tm('ano_liturgico.datas_moveis')" :key="`data-movel-${index}`">
           {{ $rt(item) }}

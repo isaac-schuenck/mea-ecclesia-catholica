@@ -12,13 +12,13 @@
           </svg>
         </button>
 
-        <NuxtLink
+        <AppLink
           to="/"
           class="z-50 flex items-center gap-4 flex-shrink-0 cursor-pointer transition-transform duration-300 hover:scale-105 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
         >
           <img src="/assets/logosfundo.png" alt="Logo MEC" class="h-10 md:h-12 w-auto object-contain" />
           <span class="text-[#D4AF37] font-serif font-bold text-xl md:text-2xl tracking-widest hidden xl:block">MEC</span>
-        </NuxtLink>
+        </AppLink>
 
         <div class="hidden lg:block flex-1 max-w-sm xl:max-w-xl px-4 z-40">
           <div class="relative w-full group">
@@ -64,10 +64,10 @@
             </div>
           </div>
 
-          <NuxtLink to="/livros" class="hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</NuxtLink>
-          <NuxtLink to="/artigos-religiosos" class="hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</NuxtLink>
-          <NuxtLink to="/estrutura" class="hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</NuxtLink>
-          <NuxtLink to="/santo-do-dia" class="hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</NuxtLink>
+          <AppLink to="/livros" class="hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</AppLink>
+          <AppLink to="/artigos-religiosos" class="hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</AppLink>
+          <AppLink to="/estrutura" class="hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</AppLink>
+          <AppLink to="/santo-do-dia" class="hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</AppLink>
 
           <div v-if="!isHome" class="relative py-4 -my-4">
             <button
@@ -90,7 +90,7 @@
                 {{ $t("home.explore_title") }}
               </p>
               <div class="grid grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-1">
-                <NuxtLink
+                <AppLink
                   v-for="topic in topicLinks"
                   :key="topic.link"
                   :to="topic.link"
@@ -98,16 +98,16 @@
                   @click="isTopicsOpen = false"
                 >
                   {{ topic.name }}
-                </NuxtLink>
+                </AppLink>
               </div>
               <div class="mt-4 border-t border-white/10 pt-4">
-                <NuxtLink
+                <AppLink
                   to="/faq"
                   class="block rounded-md px-3 py-2 text-sm font-semibold text-[#D4AF37] hover:bg-white/10 hover:text-white transition-colors"
                   @click="isTopicsOpen = false"
                 >
                   {{ $t("home.faq_btn") }}
-                </NuxtLink>
+                </AppLink>
               </div>
             </div>
           </div>
@@ -181,18 +181,18 @@
         </div>
 
         <div class="flex-1 overflow-y-auto flex flex-col px-6 py-6 space-y-6 text-lg font-serif">
-          <NuxtLink to="/" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.inicio") }}</NuxtLink>
-          <NuxtLink to="/livros" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</NuxtLink>
-          <NuxtLink to="/artigos-religiosos" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</NuxtLink>
-          <NuxtLink to="/estrutura" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</NuxtLink>
-          <NuxtLink to="/santo-do-dia" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</NuxtLink>
+          <AppLink to="/" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.inicio") }}</AppLink>
+          <AppLink to="/livros" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.livros") }}</AppLink>
+          <AppLink to="/artigos-religiosos" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.artigos") }}</AppLink>
+          <AppLink to="/estrutura" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.hierarquia") }}</AppLink>
+          <AppLink to="/santo-do-dia" @click="isMobileMenuOpen = false" class="text-white hover:text-[#D4AF37] transition">{{ $t("menu.santo_dia") }}</AppLink>
 
           <div v-if="!isHome" class="border-t border-white/10 pt-6">
             <p class="mb-4 text-sm font-bold uppercase tracking-widest text-[#D4AF37]">
               {{ $t("home.explore_title") }}
             </p>
             <div class="flex flex-col gap-4 text-base">
-              <NuxtLink
+              <AppLink
                 v-for="topic in topicLinks"
                 :key="`mobile-${topic.link}`"
                 :to="topic.link"
@@ -200,14 +200,14 @@
                 @click="isMobileMenuOpen = false"
               >
                 {{ topic.name }}
-              </NuxtLink>
-              <NuxtLink
+              </AppLink>
+              <AppLink
                 to="/faq"
                 class="border-t border-white/10 pt-4 font-semibold text-[#D4AF37] hover:text-white transition-colors"
                 @click="isMobileMenuOpen = false"
               >
                 {{ $t("home.faq_btn") }}
-              </NuxtLink>
+              </AppLink>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
       <div class="w-full flex flex-col md:flex-row justify-between items-center md:items-end border-b border-white/10 pb-12 mb-8 gap-10 md:gap-0">
         <div class="flex flex-col items-center md:items-start space-y-6 w-full md:w-auto text-center md:text-left">
           <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-            <NuxtLink to="/sobre" class="hover:text-[#D4AF37] transition font-medium tracking-wide">{{ $t("footer.sobre_projeto") }}</NuxtLink>
+            <AppLink to="/sobre" class="hover:text-[#D4AF37] transition font-medium tracking-wide">{{ $t("footer.sobre_projeto") }}</AppLink>
             <a href="mailto:seuemail@exemplo.com" class="hover:text-[#D4AF37] transition font-medium tracking-wide">{{ $t("footer.contato") }}</a>
             <a href="https://instagram.com/seu_usuario" target="_blank" class="hover:text-[#D4AF37] transition font-medium tracking-wide">Instagram</a>
             <a href="https://github.com/isaac-schuenck/mea-ecclesia-catholica" target="_blank" class="hover:text-[#D4AF37] transition font-medium tracking-wide">GitHub</a>
@@ -250,13 +250,14 @@
 import { ref, computed } from "vue";
 const { setLocale, locale, t } = useI18n();
 const route = useRoute();
+const localePath = useLocalePath();
 
 const isMobileMenuOpen = ref(false);
 const isMobileSearchOpen = ref(false);
 const isLangOpen = ref(false); // <-- Resolvido aqui!
 const isTopicsOpen = ref(false);
 
-const isHome = computed(() => route.path === "/");
+const isHome = computed(() => route.path === localePath("index"));
 
 const topicLinks = computed(() => [
   { name: t("home.topics.trindade"), link: "/trindade" },
@@ -302,8 +303,8 @@ const currentLangDisplay = computed(() => {
 });
 
 // Troca a língua e fecha as caixinhas
-const changeLang = (newLocale) => {
-  setLocale(newLocale);
+const changeLang = async (newLocale) => {
+  await setLocale(newLocale);
   isMobileMenuOpen.value = false;
   isLangOpen.value = false;
   isTopicsOpen.value = false;

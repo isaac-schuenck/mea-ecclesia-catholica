@@ -4,42 +4,15 @@
       id="o-que-e-missa"
       class="max-w-7xl mx-auto pt-20 pb-12 px-6 scroll-mt-24"
     >
-      <nav
-        aria-label="Sumário da página"
-        class="flex flex-wrap justify-center items-center gap-x-3 gap-y-2 mb-12 text-sm md:text-base text-center"
-      >
-        <a
-          href="#o-que-e-missa"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-          >{{ $t("missa.titulo") }}</a
-        >
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#ciclo-das-leituras"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-          >{{ $t("missa.ciclo_leituras_titulo") }}</a
-        >
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#cores-liturgicas"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-          >{{ $t("missa.cores_liturgicas_titulo") }}</a
-        >
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#estrutura-da-santa-missa"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-          >{{ $t("missa.estrutura_titulo") }}</a
-        >
-        <span class="text-gray-400" aria-hidden="true">•</span>
-        <a
-          href="#respostas-liturgicas"
-          class="font-semibold text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors"
-          >{{ $t("missa.respostas_liturgicas_titulo") }}</a
-        >
-      </nav>
+      <ArticleTableOfContents :items="[
+        { target: 'o-que-e-missa', translationKey: 'missa.titulo' },
+        { target: 'ciclo-das-leituras', translationKey: 'missa.ciclo_leituras_titulo' },
+        { target: 'cores-liturgicas', translationKey: 'missa.cores_liturgicas_titulo' },
+        { target: 'estrutura-da-santa-missa', translationKey: 'missa.estrutura_titulo' },
+        { target: 'respostas-liturgicas', translationKey: 'missa.respostas_liturgicas_titulo' },
+      ]" />
 
-      <SectionTitle :text="$t('missa.titulo')" />
+      <ArticleSectionTitle as="h1" :text="$t('missa.titulo')" />
 
       <i18n-t
         keypath="missa.p1"
@@ -77,7 +50,7 @@
       id="ciclo-das-leituras"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <SectionTitle :text="$t('missa.ciclo_leituras_titulo')" />
+      <ArticleSectionTitle :text="$t('missa.ciclo_leituras_titulo')" />
 
       <i18n-t
         keypath="missa.ciclo_leituras_p1"
@@ -214,7 +187,7 @@
       id="cores-liturgicas"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <SectionTitle :text="$t('missa.cores_liturgicas_titulo')" />
+      <ArticleSectionTitle :text="$t('missa.cores_liturgicas_titulo')" />
 
       <i18n-t
         keypath="missa.cores_liturgicas_p1"
@@ -416,7 +389,7 @@
       id="estrutura-da-santa-missa"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <SectionTitle :text="$t('missa.estrutura_titulo')" />
+      <ArticleSectionTitle :text="$t('missa.estrutura_titulo')" />
 
       <i18n-t
         keypath="missa.estrutura_p1"
@@ -872,12 +845,12 @@
                 {{ $t("missa.evangelho_sinais_obs_inicio") }}
                 <strong class="font-bold text-gray-500">
                   {{ $t("missa.evangelho_sinais_obs_destaque_inicio") }}
-                  <NuxtLink
+                  <AppLink
                     to="/ritos"
                     class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200"
                   >
                     {{ $t("palavras_chave.sinal_da_cruz") }}
-                  </NuxtLink>
+                  </AppLink>
                   {{ $t("missa.evangelho_sinais_obs_destaque_fim") }}
                 </strong>
                 {{ $t("missa.evangelho_sinais_obs_fim") }}
@@ -1290,7 +1263,7 @@
       id="respostas-liturgicas"
       class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24"
     >
-      <SectionTitle :text="$t('missa.respostas_liturgicas_titulo')" />
+      <ArticleSectionTitle :text="$t('missa.respostas_liturgicas_titulo')" />
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6">
         <template v-for="resposta in respostasLiturgicas" :key="resposta.proclamacao">
@@ -1355,19 +1328,6 @@
 import { Translation } from "vue-i18n";
 import { defineComponent, h, resolveComponent } from "vue";
 
-const SectionTitle = defineComponent({
-  props: { text: { type: String, required: true } },
-  setup: (props) => () =>
-    h(
-      "h3",
-      {
-        class:
-          "text-3xl font-bold text-[#041122] mb-12 font-serif border-b-2 border-[#D4AF37] pb-3 inline-block",
-      },
-      props.text,
-    ),
-});
-
 const TextLink = defineComponent({
   props: {
     to: { type: String, required: true },
@@ -1375,7 +1335,7 @@ const TextLink = defineComponent({
     bold: Boolean,
   },
   setup: (props) => {
-    const NuxtLink = resolveComponent("NuxtLink");
+    const NuxtLink = resolveComponent("AppLink");
     return () =>
       h(
         NuxtLink,
@@ -1459,7 +1419,7 @@ const RichText = defineComponent({
   },
   setup(props, { attrs }) {
     const { t } = useI18n();
-    const NuxtLink = resolveComponent("NuxtLink");
+    const NuxtLink = resolveComponent("AppLink");
     return () => {
       const slots = Object.fromEntries(
         Object.entries(richTextLinks).map(([slot, [to, key]]) => [

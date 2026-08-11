@@ -37,16 +37,13 @@
       <ArticleSectionTitle :text="$t('ano_liturgico.advento_titulo')" />
 
       <div class="flow-root">
-      <figure class="w-32 md:w-64 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://www.padreeustaquio.com.br/wp-content/uploads/2022/12/coroa-do-advento.jpeg"
-          :alt="$t('ano_liturgico.advento_imagem')"
-          class="block w-full h-auto rounded-md"
-        />
-        <figcaption class="px-2 pt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.advento_imagem") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-64 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://www.padreeustaquio.com.br/wp-content/uploads/2022/12/coroa-do-advento.jpeg"
+        :alt="$t('ano_liturgico.advento_imagem')"
+        caption-key="ano_liturgico.advento_imagem"
+        image-class="block h-auto rounded-md"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">
         {{ $t("ano_liturgico.advento_p1") }}
@@ -102,16 +99,13 @@
       <ArticleSectionTitle :text="$t('ano_liturgico.natal_titulo')" />
 
       <div class="flow-root">
-      <figure class="w-36 md:w-72 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Botticelli_-_Adoration_of_the_Magi_%28Zanobi_Altar%29_-_Uffizi.jpg/330px-Botticelli_-_Adoration_of_the_Magi_%28Zanobi_Altar%29_-_Uffizi.jpg"
-          :alt="$t('ano_liturgico.natal_imagem_adoracao_magos')"
-          class="block w-full h-auto rounded-md"
-        />
-        <figcaption class="px-2 pt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.natal_imagem_adoracao_magos") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-36 md:w-72 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Botticelli_-_Adoration_of_the_Magi_%28Zanobi_Altar%29_-_Uffizi.jpg/330px-Botticelli_-_Adoration_of_the_Magi_%28Zanobi_Altar%29_-_Uffizi.jpg"
+        :alt="$t('ano_liturgico.natal_imagem_adoracao_magos')"
+        caption-key="ano_liturgico.natal_imagem_adoracao_magos"
+        image-class="block h-auto rounded-md"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p1") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p2") }}</p>
@@ -127,16 +121,13 @@
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.natal_p5") }}</p>
 
-      <figure class="w-36 md:w-72 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/70/Girolamo_Donnini_Matanza_de_los_Inocentes_Fondazione_Pietro_Manodori.jpg"
-          :alt="$t('ano_liturgico.natal_imagem_santos_inocentes')"
-          class="block w-full h-auto rounded-md"
-        />
-        <figcaption class="px-2 pt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.natal_imagem_santos_inocentes") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-36 md:w-72 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/70/Girolamo_Donnini_Matanza_de_los_Inocentes_Fondazione_Pietro_Manodori.jpg"
+        :alt="$t('ano_liturgico.natal_imagem_santos_inocentes')"
+        caption-key="ano_liturgico.natal_imagem_santos_inocentes"
+        image-class="block h-auto rounded-md"
+      />
 
       <i18n-t keypath="ano_liturgico.natal_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #santo_estevao><AppLink to="/santos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santo_estevao") }}</AppLink></template>
@@ -187,16 +178,13 @@
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_1_p3") }}</p>
 
-      <figure class="w-36 md:w-64 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://img.cancaonova.com/cnimages/canais/uploads/sites/11/2025/06/padre-com-paramentos-verdes-tempo-comum-_-foto-mart-production-de-pexels.png"
-          :alt="$t('ano_liturgico.tempo_comum_1_imagem')"
-          class="block w-full h-auto rounded-md"
-        />
-        <figcaption class="px-2 pt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.tempo_comum_1_imagem") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-36 md:w-64 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://img.cancaonova.com/cnimages/canais/uploads/sites/11/2025/06/padre-com-paramentos-verdes-tempo-comum-_-foto-mart-production-de-pexels.png"
+        :alt="$t('ano_liturgico.tempo_comum_1_imagem')"
+        caption-key="ano_liturgico.tempo_comum_1_imagem"
+        image-class="block h-auto rounded-md"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_1_p4") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_comum_1_p5") }}</p>
@@ -226,16 +214,13 @@
         <template #quadragesima><em>{{ $t("palavras_chave.quadragesima") }}</em></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/17/Christ_in_the_Wilderness_-_Ivan_Kramskoy_-_Google_Cultural_Institute.jpg"
-          :alt="$t('ano_liturgico.quaresma_imagem_deserto')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.quaresma_imagem_deserto") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://upload.wikimedia.org/wikipedia/commons/1/17/Christ_in_the_Wilderness_-_Ivan_Kramskoy_-_Google_Cultural_Institute.jpg"
+        :alt="$t('ano_liturgico.quaresma_imagem_deserto')"
+        caption-key="ano_liturgico.quaresma_imagem_deserto"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <i18n-t keypath="ano_liturgico.quaresma_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #moises><AppLink to="/personagens-historicos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.moises") }}</AppLink></template>
@@ -246,16 +231,13 @@
         <template #jejum><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</AppLink></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2010/02/formacao_qual-o-sentido-da-quarta-feira-de-cinzas-1.jpg"
-          :alt="$t('ano_liturgico.quaresma_imagem_cinzas')"
-          class="w-full aspect-square rounded-md object-cover"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.quaresma_imagem_cinzas") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2010/02/formacao_qual-o-sentido-da-quarta-feira-de-cinzas-1.jpg"
+        :alt="$t('ano_liturgico.quaresma_imagem_cinzas')"
+        caption-key="ano_liturgico.quaresma_imagem_cinzas"
+        image-class="aspect-square rounded-md object-cover"
+      />
 
       <i18n-t keypath="ano_liturgico.quaresma_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #jejum><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.jejum") }}</AppLink></template>
@@ -275,16 +257,13 @@
 
       <ArticleSubheading id="semana-santa" :text="$t('ano_liturgico.semana_santa_titulo')" />
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrVSkPXIbr426nRsdMu0uvBFhGa1KDlKiGvrV8DM86qJ-lcoocRirMgs4&s=10"
-          :alt="$t('ano_liturgico.semana_santa_imagem_ramos')"
-          class="w-full aspect-square rounded-md object-cover"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.semana_santa_imagem_ramos") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrVSkPXIbr426nRsdMu0uvBFhGa1KDlKiGvrV8DM86qJ-lcoocRirMgs4&s=10"
+        :alt="$t('ano_liturgico.semana_santa_imagem_ramos')"
+        caption-key="ano_liturgico.semana_santa_imagem_ramos"
+        image-class="aspect-square rounded-md object-cover"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p1") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p2") }}</p>
@@ -295,16 +274,13 @@
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p4") }}</p>
 
-      <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://istoe.com.br/wp-content/uploads/2021/05/ceia-2-1280x720-1-1200x630.jpg"
-          :alt="$t('ano_liturgico.semana_santa_imagem_ultima_ceia')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.semana_santa_imagem_ultima_ceia") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://istoe.com.br/wp-content/uploads/2021/05/ceia-2-1280x720-1-1200x630.jpg"
+        :alt="$t('ano_liturgico.semana_santa_imagem_ultima_ceia')"
+        caption-key="ano_liturgico.semana_santa_imagem_ultima_ceia"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.semana_santa_p5") }}</p>
 
@@ -323,16 +299,13 @@
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.triduo_p1") }}</p>
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Peter_Paul_Rubens_-_Christ_on_the_Cross_between_the_Two_Thieves_-_WGA20235.jpg"
-          :alt="$t('ano_liturgico.triduo_imagem_crucificacao')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.triduo_imagem_crucificacao") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/95/Peter_Paul_Rubens_-_Christ_on_the_Cross_between_the_Two_Thieves_-_WGA20235.jpg"
+        :alt="$t('ano_liturgico.triduo_imagem_crucificacao')"
+        caption-key="ano_liturgico.triduo_imagem_crucificacao"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <i18n-t keypath="ano_liturgico.triduo_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #vermelho><AppLink to="/missa#vermelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vermelho_maiusculo") }}</AppLink></template>
@@ -341,16 +314,13 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.triduo_p3") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.triduo_p4") }}</p>
 
-      <figure class="w-32 md:w-72 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://i.ytimg.com/vi/ofwhhzIksxo/maxresdefault.jpg"
-          :alt="$t('ano_liturgico.triduo_imagem_tumulo_vazio')"
-          class="w-full aspect-video rounded-md object-cover"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">
-          {{ $t("ano_liturgico.triduo_imagem_tumulo_vazio") }}
-        </figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-72 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://i.ytimg.com/vi/ofwhhzIksxo/maxresdefault.jpg"
+        :alt="$t('ano_liturgico.triduo_imagem_tumulo_vazio')"
+        caption-key="ano_liturgico.triduo_imagem_tumulo_vazio"
+        image-class="aspect-video rounded-md object-cover"
+      />
 
       <i18n-t keypath="ano_liturgico.triduo_p5" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #gloria><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.gloria") }}</AppLink></template>
@@ -366,14 +336,13 @@
       <ArticleSectionTitle :text="$t('ano_liturgico.tempo_pascal_titulo')" />
       <div class="clear-both"></div>
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://comshalom.org/wp-content/uploads/2015/07/22/redacao/Santa-Maria-Madalena.jpg"
-          :alt="$t('ano_liturgico.tempo_pascal_imagem_madalena')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.tempo_pascal_imagem_madalena") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://comshalom.org/wp-content/uploads/2015/07/22/redacao/Santa-Maria-Madalena.jpg"
+        :alt="$t('ano_liturgico.tempo_pascal_imagem_madalena')"
+        caption-key="ano_liturgico.tempo_pascal_imagem_madalena"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_pascal_p1") }}</p>
 
@@ -404,14 +373,13 @@
         <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://cdn.diocesedecrato.org/wp-content/uploads/2022/05/A5C6B997-E00B-4EF3-8AD5-018601E07146.jpeg"
-          :alt="$t('ano_liturgico.tempo_pascal_imagem_ascensao')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.tempo_pascal_imagem_ascensao") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://cdn.diocesedecrato.org/wp-content/uploads/2022/05/A5C6B997-E00B-4EF3-8AD5-018601E07146.jpeg"
+        :alt="$t('ano_liturgico.tempo_pascal_imagem_ascensao')"
+        caption-key="ano_liturgico.tempo_pascal_imagem_ascensao"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.tempo_pascal_p7") }}</p>
 
@@ -434,14 +402,13 @@
         <template #atos_dos_apostolos><AppLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.atos_dos_apostolos") }}</AppLink></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://static.wixstatic.com/media/d70eaf_7a97ba56a9a74dc88c5f67f43a5b0046~mv2.jpg/v1/fill/w_421,h_719,al_c,lg_1,q_80/d70eaf_7a97ba56a9a74dc88c5f67f43a5b0046~mv2.jpg"
-          :alt="$t('ano_liturgico.pentecostes_imagem')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.pentecostes_imagem") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://static.wixstatic.com/media/d70eaf_7a97ba56a9a74dc88c5f67f43a5b0046~mv2.jpg/v1/fill/w_421,h_719,al_c,lg_1,q_80/d70eaf_7a97ba56a9a74dc88c5f67f43a5b0046~mv2.jpg"
+        :alt="$t('ano_liturgico.pentecostes_imagem')"
+        caption-key="ano_liturgico.pentecostes_imagem"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <i18n-t keypath="ano_liturgico.pentecostes_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #espirito_santo><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.espirito_santo") }}</AppLink></template>
@@ -489,14 +456,13 @@
         <template #verde><AppLink to="/missa#verde" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.verde") }}</AppLink></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2019/06/formacao_a-solenidade-de-corpus-christi-sacramento-do-amor-e-da-proximidade.jpg"
-          :alt="$t('ano_liturgico.tempo_comum_2_imagem_corpus_christi')"
-          class="w-full aspect-square rounded-md object-cover"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.tempo_comum_2_imagem_corpus_christi") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://img.cancaonova.com/cnimages/canais/uploads/sites/6/2019/06/formacao_a-solenidade-de-corpus-christi-sacramento-do-amor-e-da-proximidade.jpg"
+        :alt="$t('ano_liturgico.tempo_comum_2_imagem_corpus_christi')"
+        caption-key="ano_liturgico.tempo_comum_2_imagem_corpus_christi"
+        image-class="aspect-square rounded-md object-cover"
+      />
 
       <i18n-t keypath="ano_liturgico.tempo_comum_2_p6" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
         <template #santissima_trindade><AppLink to="/trindade" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.santissima_trindade") }}</AppLink></template>
@@ -508,14 +474,13 @@
         <template #sagrado_coracao><AppLink to="/oracoes" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrado_coracao") }}</AppLink></template>
       </i18n-t>
 
-      <figure class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://comshalom.org/wp-content/uploads/2020/08/assuncao-de-nossa-senhora-2020-ano-a-01.png"
-          :alt="$t('ano_liturgico.tempo_comum_2_imagem_assuncao')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.tempo_comum_2_imagem_assuncao") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-56 float-left mr-4 md:mr-7 mb-2 md:mb-4"
+        src="https://comshalom.org/wp-content/uploads/2020/08/assuncao-de-nossa-senhora-2020-ano-a-01.png"
+        :alt="$t('ano_liturgico.tempo_comum_2_imagem_assuncao')"
+        caption-key="ano_liturgico.tempo_comum_2_imagem_assuncao"
+        image-class="h-auto rounded-md object-contain"
+      />
 
       <i18n-t id="finados" keypath="ano_liturgico.tempo_comum_2_p8" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2 scroll-mt-24">
         <template #virgem_maria><AppLink to="/intercessao-mediacao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.virgem_maria") }}</AppLink></template>
@@ -527,14 +492,13 @@
       </i18n-t>
 
       <ArticleSubheading class="clear-both" :text="$t('ano_liturgico.cristo_rei_titulo')" />
-      <figure class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4 bg-white border border-gray-200 rounded-lg p-2 shadow-md">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg"
-          :alt="$t('ano_liturgico.cristo_rei_imagem')"
-          class="w-full h-auto rounded-md object-contain"
-        />
-        <figcaption class="mt-2 text-center text-xs italic text-gray-500">{{ $t("ano_liturgico.cristo_rei_imagem") }}</figcaption>
-      </figure>
+      <ImageFigure
+        class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4"
+        src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg"
+        :alt="$t('ano_liturgico.cristo_rei_imagem')"
+        caption-key="ano_liturgico.cristo_rei_imagem"
+        image-class="h-auto rounded-md object-contain"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.cristo_rei_p1") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.cristo_rei_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("ano_liturgico.cristo_rei_p3") }}</p>

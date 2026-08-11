@@ -424,39 +424,13 @@
               {{ $t("missa.procissao_entrada_titulo") }}
             </h5>
             <div class="flow-root">
-              <figure
-                class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0"
-              >
-                <img
-                  src="https://paroquiadasaude.com.br/wp-content/uploads/2022/06/procissao.jpg"
-                  :alt="$t('missa.imagem_procissao')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_procissao") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2" src="https://paroquiadasaude.com.br/wp-content/uploads/2022/06/procissao.jpg" :alt="$t('missa.imagem_procissao')" caption-key="missa.imagem_procissao" image-class="aspect-square rounded object-cover" />
               <RichText
                 keypath="missa.procissao_entrada_p1"
                 tag="p"
                 class="text-gray-600 leading-relaxed text-justify mb-2"
               />
-              <figure
-                class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0"
-              >
-                <img
-                  src="https://media.istockphoto.com/id/2241178328/pt/foto/priest-incenses-the-altar-with-incense-during-holy-mass.jpg?s=612x612&w=0&k=20&c=h9086YILm0cIRQ2Tk7f1MDba2pPK8ruNT8VJzOoERAc="
-                  :alt="$t('missa.imagem_incenso')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_incenso") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2" src="https://media.istockphoto.com/id/2241178328/pt/foto/priest-incenses-the-altar-with-incense-during-holy-mass.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=h9086YILm0cIRQ2Tk7f1MDba2pPK8ruNT8VJzOoERAc=" :alt="$t('missa.imagem_incenso')" caption-key="missa.imagem_incenso" image-class="aspect-square rounded object-cover" />
               <RichText
                 keypath="missa.procissao_entrada_p2"
                 tag="p"
@@ -477,20 +451,7 @@
               class="text-xl font-bold text-[#041122] font-serif mb-3"
             />
             <div class="flow-root">
-              <figure
-                class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0"
-              >
-                <img
-                  src="https://images.a12.com/source/files/c/315456/Papa_Francisco_beija_o_altar-628170_1280-931-0-0.jpg"
-                  :alt="$t('missa.imagem_veneracao_altar')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_veneracao_altar") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2" src="https://images.a12.com/source/files/c/315456/Papa_Francisco_beija_o_altar-628170_1280-931-0-0.jpg" :alt="$t('missa.imagem_veneracao_altar')" caption-key="missa.imagem_veneracao_altar" image-class="aspect-square rounded object-cover" />
               <RichText
                 keypath="missa.veneracao_altar_p1"
                 tag="p"
@@ -509,22 +470,7 @@
               {{ $t("missa.sinal_cruz_saudacao_titulo") }}
             </h5>
             <div class="flow-root">
-              <figure
-                class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0"
-              >
-                <div class="w-full aspect-square rounded overflow-hidden">
-                  <img
-                    src="https://i.ytimg.com/vi/Bs6fer3Ur6I/sddefault.jpg"
-                    :alt="$t('missa.imagem_sinal_cruz')"
-                    class="w-full h-full object-cover scale-125"
-                  />
-                </div>
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_sinal_cruz") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2" src="https://i.ytimg.com/vi/Bs6fer3Ur6I/sddefault.jpg" :alt="$t('missa.imagem_sinal_cruz')" caption-key="missa.imagem_sinal_cruz" image-wrapper-class="w-full aspect-square rounded overflow-hidden" image-class="h-full object-cover scale-125" />
               <RichText
                 keypath="missa.sinal_cruz_saudacao_p1"
                 tag="p"
@@ -825,20 +771,7 @@
               <p class="text-gray-600 leading-relaxed text-justify mb-3">
                 {{ $t("missa.evangelho_gesto_p1") }}
               </p>
-              <figure
-                class="w-full max-w-lg mx-auto my-6 bg-white rounded-lg shadow-md border border-gray-200 p-2"
-              >
-                <img
-                  src="/proclamacao_eva.png"
-                  :alt="$t('missa.imagem_proclamacao_evangelho')"
-                  class="block w-full h-auto rounded"
-                />
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_proclamacao_evangelho") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="w-full max-w-lg mx-auto my-6" src="/proclamacao_eva.png" :alt="$t('missa.imagem_proclamacao_evangelho')" caption-key="missa.imagem_proclamacao_evangelho" image-class="block h-auto rounded" />
               <p
                 class="text-sm text-gray-500 italic leading-relaxed text-justify mt-3 mb-3"
               >
@@ -860,20 +793,7 @@
               </p>
             </div>
             <div class="flow-root">
-              <figure
-                class="float-right w-32 sm:w-36 ml-4 md:ml-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2"
-              >
-                <img
-                  src="https://wp.pt.aleteia.org/wp-content/uploads/sites/5/2020/01/web3-gospel-kissing-godong-fr563144b.jpg"
-                  :alt="$t('missa.imagem_beijo_evangeliario')"
-                  class="block w-full aspect-square rounded object-cover"
-                />
-                <figcaption
-                  class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed"
-                >
-                  {{ $t("missa.imagem_beijo_evangeliario") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-right w-32 sm:w-36 ml-4 md:ml-6 mb-2" src="https://wp.pt.aleteia.org/wp-content/uploads/sites/5/2020/01/web3-gospel-kissing-godong-fr563144b.jpg" :alt="$t('missa.imagem_beijo_evangeliario')" caption-key="missa.imagem_beijo_evangeliario" image-class="block aspect-square rounded object-cover" />
               <p class="text-gray-600 leading-relaxed mb-2">
                 {{ $t("missa.evangelho_final_intro") }}
               </p>
@@ -1007,48 +927,21 @@
             </div>
             <p class="text-gray-600 leading-relaxed mb-3">{{ $t("missa.consagracao_intro") }}</p>
             <div class="flow-root mb-5">
-              <figure class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2">
-                <img
-                  src="https://img.cancaonova.com/cnimages/canais/uploads/sites/11/2025/05/papa-leao-xiv-consagracao-hostia-missa-31-maio-05-2025-_-foto-reuters-yara-nardi.png"
-                  :alt="$t('missa.imagem_elevacao_hostia')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                  {{ $t("missa.imagem_elevacao_hostia") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-left w-1/3 max-w-40 mr-4 md:mr-6 mb-2" src="https://img.cancaonova.com/cnimages/canais/uploads/sites/11/2025/05/papa-leao-xiv-consagracao-hostia-missa-31-maio-05-2025-_-foto-reuters-yara-nardi.png" :alt="$t('missa.imagem_elevacao_hostia')" caption-key="missa.imagem_elevacao_hostia" image-class="aspect-square rounded object-cover" />
               <blockquote class="overflow-hidden border-l-4 border-[#D4AF37] bg-[#D4AF37]/5 px-4 py-3 my-4 font-semibold text-[#041122] leading-relaxed">
                 {{ $t("missa.consagracao_corpo") }}
               </blockquote>
               <RichText keypath="missa.consagracao_corpo_gesto" tag="p" class="text-gray-600 leading-relaxed text-justify" />
             </div>
             <div class="flow-root">
-              <figure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2">
-                <img
-                  src="https://images.a12.com/source/files/c/368922/papa_leao_xiv_ergue_calice_durante_consagracao_-826549_800-533-0-0.jpg"
-                  :alt="$t('missa.imagem_elevacao_calice')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                  {{ $t("missa.imagem_elevacao_calice") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2" src="https://images.a12.com/source/files/c/368922/papa_leao_xiv_ergue_calice_durante_consagracao_-826549_800-533-0-0.jpg" :alt="$t('missa.imagem_elevacao_calice')" caption-key="missa.imagem_elevacao_calice" image-class="aspect-square rounded object-cover" />
               <blockquote class="overflow-hidden border-l-4 border-[#D4AF37] bg-[#D4AF37]/5 px-4 py-3 my-4 font-semibold text-[#041122] leading-relaxed">
                 {{ $t("missa.consagracao_sangue") }}
               </blockquote>
               <RichText keypath="missa.consagracao_sangue_gesto" tag="p" class="text-gray-600 leading-relaxed text-justify" />
             </div>
             <div class="flow-root mt-4">
-              <figure class="float-left w-1/3 max-w-36 mr-4 md:mr-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2">
-                <img
-                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNjdVXltq7aC38GQnShyphenhyphenb_Tj5swSyiteNaDakDYiswlJjRMevthswk8PWhXlsArTM3XjZnDb853fVsKzBhRRzOrYi9vVuE9RplYAjzvC9I8PAZ6dUktRsqMZaTF7bx037j64b9BJMFLmRH/s1600/carrilhao-4-sinos-c503-codigo-18487-01.jpg"
-                  :alt="$t('missa.imagem_sineta_liturgica')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                  {{ $t("missa.imagem_sineta_liturgica") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-left w-1/3 max-w-36 mr-4 md:mr-6 mb-2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNjdVXltq7aC38GQnShyphenhyphenb_Tj5swSyiteNaDakDYiswlJjRMevthswk8PWhXlsArTM3XjZnDb853fVsKzBhRRzOrYi9vVuE9RplYAjzvC9I8PAZ6dUktRsqMZaTF7bx037j64b9BJMFLmRH/s1600/carrilhao-4-sinos-c503-codigo-18487-01.jpg" :alt="$t('missa.imagem_sineta_liturgica')" caption-key="missa.imagem_sineta_liturgica" image-class="aspect-square rounded object-cover" />
               <p class="text-sm text-gray-500 italic leading-relaxed text-justify mb-3">{{ $t("missa.consagracao_obs") }}</p>
               <RichText keypath="missa.transubstanciacao_p" tag="p" class="text-gray-600 leading-relaxed text-justify" />
             </div>
@@ -1157,16 +1050,7 @@
           <div>
             <h5 class="text-xl font-bold text-[#041122] font-serif mb-3">{{ $t("missa.comunhao_titulo") }}</h5>
             <div class="flow-root">
-              <figure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2 bg-white rounded-lg shadow-md border border-gray-200 p-2">
-                <img
-                  src="https://portalefeso.com.br/storage/2025/05/comungar-de-joelhos.webp"
-                  :alt="$t('missa.imagem_comunhao_boca')"
-                  class="w-full aspect-square rounded object-cover"
-                />
-                <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                  {{ $t("missa.imagem_comunhao_boca") }}
-                </figcaption>
-              </figure>
+              <ImageFigure class="float-right w-1/3 max-w-40 ml-4 md:ml-6 mb-2" src="https://portalefeso.com.br/storage/2025/05/comungar-de-joelhos.webp" :alt="$t('missa.imagem_comunhao_boca')" caption-key="missa.imagem_comunhao_boca" image-class="aspect-square rounded object-cover" />
               <RichText keypath="missa.comunhao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-3" />
               <p class="text-gray-600 leading-relaxed">{{ $t("missa.comunhao_ministro_intro") }}</p>
               <div class="border-l-2 border-[#041122]/25 pl-4 my-4 space-y-2 text-gray-600 italic">

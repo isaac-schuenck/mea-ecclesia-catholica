@@ -203,15 +203,11 @@
 
 
               <div class="float-right ml-6 mb-2 w-1/3 md:w-1/4 max-w-sm">
-                <figure class="bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0">
-                  
-                  <img src="https://m.media-amazon.com/images/I/81XLIpDnoLL._AC_SX679_.jpg" alt="Crucifixo" class="w-full h-auto rounded-lg shadow-md border border-gray-200 object-cover" />
-                  
-                  <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                    {{ $t('imagens.cristo_crucificado') }}
-                  </figcaption>
-                  
-                </figure>
+                <ImageFigure
+                  src="https://m.media-amazon.com/images/I/81XLIpDnoLL._AC_SX679_.jpg"
+                  alt="Crucifixo"
+                  caption-key="imagens.cristo_crucificado"
+                />
               </div>
 
               <i18n-t keypath="artigos_religiosos.cruxifixo_p1" tag="p" class="leading-relaxed text-justify mb-2"></i18n-t>
@@ -237,15 +233,12 @@
             <div v-if="item.id === 'cruz_petrina'" class="flow-root text-gray-700">
               
               <div class="float-right ml-6 mb-2 w-24 md:w-32">
-                <figure class="bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0">
-                  
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Peter%27s_Cross.svg/250px-Peter%27s_Cross.svg.png" alt="Cruz Petrina" class="w-full h-auto rounded-lg shadow-sm border border-gray-200 bg-white p-3" />
-                  
-                  <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                    {{ $t('imagens.cruz_petrina') }}
-                  </figcaption>
-                  
-                </figure>
+                <ImageFigure
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Peter%27s_Cross.svg/250px-Peter%27s_Cross.svg.png"
+                  alt="Cruz Petrina"
+                  caption-key="imagens.cruz_petrina"
+                  image-class="h-auto bg-white p-3"
+                />
               </div>
 
               <i18n-t keypath="artigos_religiosos.cruz_petrina_p1" tag="p" class="leading-relaxed text-justify mb-2">
@@ -260,15 +253,11 @@
               <i18n-t keypath="artigos_religiosos.cruz_petrina_p3" tag="p" class="leading-relaxed text-justify mb-4 italic border-l-4 border-[#D4AF37] pl-4 text-gray-500"></i18n-t>
 
               <div class="float-left mr-6 mb-2 w-48">
-                <figure class="bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0">
-                  
-                  <img src="/sjpii.jpeg" alt="São João Paulo II" class="w-full h-auto rounded-lg shadow-md border border-gray-200 object-cover" />
-                  
-                  <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                    {{ $t('imagens.catedra_papal') }}
-                  </figcaption>
-                  
-                </figure>
+                <ImageFigure
+                  src="/sjpii.jpeg"
+                  alt="São João Paulo II"
+                  caption-key="imagens.catedra_papal"
+                />
               </div>
 
               <i18n-t keypath="artigos_religiosos.cruz_petrina_p4" tag="p" class="leading-relaxed text-justify mb-2">
@@ -287,19 +276,11 @@
             <div v-if="item.id === 'terco'" class="flow-root text-gray-700">
 
               <div class="float-left mr-6 mb-2 w-32 md:w-48">
-                  <figure class="bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0">
-                  
-                  <img 
-                    src="https://historicenterprises.com/bmz_cache/4/4575ffb7a838189fa7b0b04961b2e692.image.400x450.jpeg" 
-                    alt="Medieval paternoster" 
-                    class="w-full h-auto rounded object-cover" 
-                  />
-                  
-                  <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                    {{ $t('imagens.paternosters') }}
-                  </figcaption>
-                  
-                </figure>
+                <ImageFigure
+                  src="https://historicenterprises.com/bmz_cache/4/4575ffb7a838189fa7b0b04961b2e692.image.400x450.jpeg"
+                  alt="Medieval paternoster"
+                  caption-key="imagens.paternosters"
+                />
               </div>
 
               <i18n-t keypath="artigos_religiosos.terco_p1" tag="p" class="leading-relaxed text-justify mb-2">
@@ -322,17 +303,11 @@
 
 
               <div class="float-right ml-6 mb-2 w-48">
-                <figure class="bg-white rounded-lg shadow-md border border-gray-200 p-2 m-0">
-                  
-                  <img src="https://www.arsvalue.com/Upl/Auctions/2370/4234/572314/223-795840.jpg" 
-                  alt="Madonna del Rosario San Domenico dipinto" 
-                  class="w-full h-auto rounded-lg shadow-md border border-gray-200 object-cover" />
-                  
-                  <figcaption class="text-xs text-gray-500 text-center mt-2 mb-1 px-1 italic leading-relaxed">
-                    {{ $t('imagens.madonna_do_rosário') }}
-                  </figcaption>
-                  
-                </figure>
+                <ImageFigure
+                  src="https://www.arsvalue.com/Upl/Auctions/2370/4234/572314/223-795840.jpg"
+                  alt="Madonna del Rosario San Domenico dipinto"
+                  caption-key="imagens.madonna_do_rosário"
+                />
               </div>
 
               <i18n-t keypath="artigos_religiosos.terco_p4" tag="p" class="leading-relaxed text-justify mb-2">

@@ -6,7 +6,7 @@ export type KeywordLink = {
   external?: boolean;
 };
 
-// Doutrina, história e páginas temáticas ficam reunidas neste grupo.
+// Doutrina, história e páginas temáticas
 const doctrineLinks: Record<string, KeywordLink> = {
   dever: { to: "/catecismo" },
   abstinencia: { to: "/catecismo" },
@@ -206,7 +206,7 @@ const liturgyLinks: Record<string, KeywordLink> = {
   medalha_sao_bento: { to: "/artigos-religiosos#artigos-devocionais" },
 };
 
-// Os santos com data própria permanecem separados para facilitar o calendário.
+// Os santos com data própria permanecem separados para facilitar o calendário
 const saintLinks: Record<string, KeywordLink> = {
   sao_domingos: { to: "/santos" },
   sao_pio: { to: "/santos" },

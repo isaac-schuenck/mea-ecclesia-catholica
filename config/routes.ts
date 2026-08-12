@@ -1,4 +1,4 @@
-// Este é o mapa oficial das páginas. Quando uma página nova nascer, a gente
+// Este é o mapa oficial das páginas. Quando uma página nova nascer
 // coloca os três endereços dela aqui e o resto do site passa a reconhecê-la.
 export const localizedPages = {
   index: {

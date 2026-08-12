@@ -14,33 +14,16 @@
 
       <ArticleSectionTitle as="h1" :text="$t('missa.titulo')" />
 
-      <i18n-t
+      <RichText
         keypath="missa.p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #dever
-          ><TextLink to="/catecismo" :text="$t('palavras_chave.dever')"
-        /></template>
-        <template #catecismo2180_2181>
-          <a
-            href="https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html#2180"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200"
-            >{{ $t("palavras_chave.catecismo2180_2181") }}</a
-          >
-        </template>
-      </i18n-t>
-      <i18n-t
+      />
+      <RichText
         keypath="missa.p2"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #rito
-          ><TextLink to="/ritos" :text="$t('palavras_chave.rito')"
-        /></template>
-      </i18n-t>
+      />
       <p class="text-gray-600 leading-relaxed text-justify">
         {{ $t("missa.p3") }}
       </p>
@@ -52,41 +35,16 @@
     >
       <ArticleSectionTitle :text="$t('missa.ciclo_leituras_titulo')" />
 
-      <i18n-t
+      <RichText
         keypath="missa.ciclo_leituras_p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #sagrada_escritura
-          ><TextLink
-            to="/escritura"
-            :text="$t('palavras_chave.sagrada_escritura')"
-        /></template>
-        <template #calendario_liturgico_maiusculo
-          ><TextLink
-            to="/ano-liturgico"
-            :text="$t('palavras_chave.calendario_liturgico_maiusculo')"
-        /></template>
-        <template #lecionario_romano
-          ><TextLink to="/ritos" :text="$t('palavras_chave.lecionario_romano')"
-        /></template>
-        <template #calendario_liturgico
-          ><TextLink
-            to="/ano-liturgico"
-            :text="$t('palavras_chave.calendario_liturgico')"
-        /></template>
-      </i18n-t>
-      <i18n-t
+      />
+      <RichText
         keypath="missa.ciclo_leituras_p2"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #e_por_que
-          ><strong class="font-bold text-gray-600">{{
-            $t("missa.e_por_que")
-          }}</strong></template
-        >
-      </i18n-t>
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-8">
         {{ $t("missa.ciclo_leituras_p3") }}
       </p>
@@ -94,77 +52,30 @@
       <h4 class="text-2xl font-bold text-[#041122] font-serif mb-4">
         {{ $t("missa.missa_dominical_titulo") }}
       </h4>
-      <i18n-t
+      <RichText
         keypath="missa.missa_dominical_p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-5"
-      >
-        <template #sabado
-          ><TextLink to="/ano-liturgico" :text="$t('palavras_chave.sabado')"
-        /></template>
-      </i18n-t>
+      />
 
       <div
         class="border-l-4 border-[#D4AF37] pl-5 mb-5 space-y-2 text-gray-600"
       >
-        <i18n-t keypath="missa.ano_a" tag="p"
-          ><template #sao_mateus
-            ><TextLink
-              to="/santos"
-              :text="$t('palavras_chave.sao_mateus')" /></template
-        ></i18n-t>
-        <i18n-t keypath="missa.ano_b" tag="p"
-          ><template #sao_marcos
-            ><TextLink
-              to="/santos"
-              :text="$t('palavras_chave.sao_marcos')" /></template
-        ></i18n-t>
-        <i18n-t keypath="missa.ano_c" tag="p"
-          ><template #sao_lucas
-            ><TextLink
-              to="/santos"
-              :text="$t('palavras_chave.sao_lucas')" /></template
-        ></i18n-t>
+        <RichText keypath="missa.ano_a" tag="p" />
+        <RichText keypath="missa.ano_b" tag="p" />
+        <RichText keypath="missa.ano_c" tag="p" />
       </div>
 
-      <i18n-t
+      <RichText
         keypath="missa.evangelho_joao"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #sao_joao
-          ><TextLink to="/santos" :text="$t('palavras_chave.sao_joao')"
-        /></template>
-        <template #quaresma
-          ><TextLink to="/ano-liturgico#quaresma" :text="$t('palavras_chave.quaresma')"
-        /></template>
-        <template #tempo_pascal
-          ><TextLink
-            to="/ano-liturgico#tempo-pascal"
-            :text="$t('palavras_chave.tempo_pascal')"
-        /></template>
-        <template #calendario_liturgico_contexto
-          ><TextLink
-            to="/ano-liturgico"
-            :text="$t('palavras_chave.calendario_liturgico_contexto')"
-        /></template>
-      </i18n-t>
-      <i18n-t
+      />
+      <RichText
         keypath="missa.observacao_ano_liturgico"
         tag="p"
         class="text-sm text-gray-500 italic leading-relaxed mb-8"
-      >
-        <template #ano_liturgico
-          ><TextLink
-            to="/ano-liturgico"
-            :text="$t('palavras_chave.ano_liturgico')"
-        /></template>
-        <template #advento
-          ><TextLink
-            to="/ano-liturgico#advento"
-            :text="$t('palavras_chave.advento')"
-        /></template>
-      </i18n-t>
+      />
 
       <h4 class="text-2xl font-bold text-[#041122] font-serif mb-4">
         {{ $t("missa.missa_semanal_titulo") }}
@@ -189,22 +100,11 @@
     >
       <ArticleSectionTitle :text="$t('missa.cores_liturgicas_titulo')" />
 
-      <i18n-t
+      <RichText
         keypath="missa.cores_liturgicas_p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #vestes_liturgicas
-          ><TextLink
-            to="/ritos"
-            :text="$t('palavras_chave.vestes_liturgicas')"
-        /></template>
-        <template #calendario_liturgico
-          ><TextLink
-            to="/ano-liturgico"
-            :text="$t('palavras_chave.calendario_liturgico')"
-        /></template>
-      </i18n-t>
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-10">
         {{ $t("missa.cores_liturgicas_p2") }}
       </p>
@@ -238,142 +138,17 @@
               {{ $t(cor.nomeKey) }}
             </h4>
 
-            <i18n-t
+            <RichText
               :keypath="cor.usoKey"
               tag="p"
               class="text-lg font-semibold text-[#041122] mb-3"
-            >
-              <template #tempo_comum
-                ><TextLink
-                  to="/ano-liturgico#tempo-comum-primeira-parte"
-                  :text="$t('palavras_chave.tempo_comum')"
-              /></template>
-              <template #advento
-                ><TextLink
-                  to="/ano-liturgico#advento"
-                  :text="$t('palavras_chave.advento')"
-              /></template>
-              <template #quaresma
-                ><TextLink
-                  to="/ano-liturgico#quaresma"
-                  :text="$t('palavras_chave.quaresma')"
-              /></template>
-              <template #natal
-                ><TextLink
-                  to="/ano-liturgico#tempo-natal"
-                  :text="$t('palavras_chave.natal')"
-              /></template>
-              <template #tempo_pascal
-                ><TextLink
-                  to="/ano-liturgico#tempo-pascal"
-                  :text="$t('palavras_chave.tempo_pascal')"
-              /></template>
-              <template #grandes_solenidades
-                ><TextLink
-                  to="/ano-liturgico#datas-principais"
-                  :text="$t('palavras_chave.grandes_solenidades')"
-              /></template>
-              <template #santos
-                ><TextLink to="/santos" :text="$t('palavras_chave.santos')"
-              /></template>
-              <template #martires
-                ><TextLink to="/santos" :text="$t('palavras_chave.martires')"
-              /></template>
-              <template #pentecostes
-                ><TextLink
-                  to="/ano-liturgico#pentecostes"
-                  :text="$t('palavras_chave.pentecostes')"
-              /></template>
-              <template #domingo_ramos
-                ><TextLink
-                  to="/ano-liturgico#semana-santa"
-                  :text="$t('palavras_chave.domingo_ramos')"
-              /></template>
-              <template #sexta_feira_santa
-                ><TextLink
-                  to="/ano-liturgico#triduo-pascal"
-                  :text="$t('palavras_chave.sexta_feira_santa')"
-              /></template>
-              <template #gaudete
-                ><TextLink
-                  to="/ano-liturgico#gaudete"
-                  :text="$t('palavras_chave.gaudete')"
-              /></template>
-              <template #laetare
-                ><TextLink
-                  to="/ano-liturgico#laetare"
-                  :text="$t('palavras_chave.laetare')"
-              /></template>
-              <template #finados
-                ><TextLink
-                  to="/ano-liturgico#finados"
-                  :text="$t('palavras_chave.finados')"
-              /></template>
-              <template #exequias
-                ><TextLink to="/ritos" :text="$t('palavras_chave.exequias')"
-              /></template>
-            </i18n-t>
+            />
 
-            <i18n-t
+            <RichText
               :keypath="cor.textoKey"
               tag="p"
               class="text-gray-600 leading-relaxed text-justify"
-            >
-              <template #advento
-                ><TextLink
-                  to="/ano-liturgico#advento"
-                  :text="$t('palavras_chave.advento')"
-              /></template>
-              <template #ano_liturgico_verde
-                ><TextLink
-                  to="/ano-liturgico"
-                  :text="$t('palavras_chave.ano_liturgico_verde')"
-              /></template>
-              <template #ano_liturgico_rosa
-                ><TextLink
-                  to="/ano-liturgico"
-                  :text="$t('palavras_chave.ano_liturgico_rosa')"
-              /></template>
-              <template #quaresma
-                ><TextLink
-                  to="/ano-liturgico#quaresma"
-                  :text="$t('palavras_chave.quaresma')"
-              /></template>
-              <template #pascoa
-                ><TextLink
-                  to="/ano-liturgico#triduo-pascal"
-                  :text="$t('palavras_chave.pascoa')"
-              /></template>
-              <template #natal
-                ><TextLink
-                  to="/ano-liturgico#tempo-natal"
-                  :text="$t('palavras_chave.natal')"
-              /></template>
-              <template #solenidades
-                ><TextLink
-                  to="/ano-liturgico#datas-principais"
-                  :text="$t('palavras_chave.solenidades')"
-              /></template>
-              <template #virgem_maria
-                ><TextLink
-                  to="/dogmas-marianos"
-                  :text="$t('palavras_chave.virgem_maria')"
-              /></template>
-              <template #santos
-                ><TextLink to="/santos" :text="$t('palavras_chave.santos')"
-              /></template>
-              <template #martirio
-                ><TextLink to="/santos" :text="$t('palavras_chave.martirio')"
-              /></template>
-              <template #espirito_santo
-                ><TextLink
-                  to="/trindade"
-                  :text="$t('palavras_chave.espirito_santo')"
-              /></template>
-              <template #martires
-                ><TextLink to="/santos" :text="$t('palavras_chave.martires')"
-              /></template>
-            </i18n-t>
+            />
             <p
               v-if="cor.obsKey"
               class="mt-3 text-sm text-gray-500 italic leading-relaxed text-justify"
@@ -391,23 +166,11 @@
     >
       <ArticleSectionTitle :text="$t('missa.estrutura_titulo')" />
 
-      <i18n-t
+      <RichText
         keypath="missa.estrutura_p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify"
-      >
-        <template #rito_romano
-          ><TextLink to="/ritos" :text="$t('palavras_chave.rito_romano')"
-        /></template>
-        <template #missal_sao_paulo_vi
-          ><TextLink
-            to="/ritos"
-            :text="$t('palavras_chave.missal_sao_paulo_vi')"
-        /></template>
-        <template #novus_ordo
-          ><TextLink to="/ritos" :text="$t('palavras_chave.novus_ordo')"
-        /></template>
-      </i18n-t>
+      />
 
       <div class="mt-10">
         <h4 class="text-2xl font-bold text-[#041122] font-serif mb-3">
@@ -1122,9 +885,7 @@
               <p><strong class="not-italic text-[#A52A2A]">{{ $t("missa.assembleia_label") }}:</strong> {{ $t("missa.envio_assembleia") }}</p>
             </div>
             <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("missa.envio_p1") }}</p>
-            <i18n-t keypath="missa.envio_p2" tag="p" class="text-gray-600 leading-relaxed text-justify">
-              <template #ite_missa_est><em>“Ite, missa est”</em></template>
-            </i18n-t>
+            <RichText keypath="missa.envio_p2" tag="p" class="text-gray-600 leading-relaxed text-justify" />
           </div>
 
           <div>
@@ -1209,125 +970,6 @@
 </template>
 
 <script setup>
-import { Translation } from "vue-i18n";
-import { defineComponent, h, resolveComponent } from "vue";
-
-const TextLink = defineComponent({
-  props: {
-    to: { type: String, required: true },
-    text: { type: String, required: true },
-    bold: Boolean,
-  },
-  setup: (props) => {
-    const NuxtLink = resolveComponent("AppLink");
-    return () =>
-      h(
-        NuxtLink,
-        {
-          to: props.to,
-          class: [
-            "text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200",
-            props.bold && "font-bold",
-          ],
-        },
-        () => props.text,
-      );
-  },
-});
-
-const richTextLinks = {
-  ministros: ["/ritos", "ministros"],
-  sacerdote: ["/ritos", "sacerdote"],
-  diacono: ["/ritos", "diacono"],
-  presbiterio: ["/ritos", "presbiterio"],
-  incenso: ["/ritos", "incenso"],
-  cruz_processional: ["/ritos", "cruz_processional"],
-  velas_processionais: ["/ritos", "velas_processionais"],
-  evangeliario: ["/escritura", "evangeliario"],
-  ano_liturgico: ["/ano-liturgico", "ano_liturgico"],
-  altar: ["/missa", "altar"],
-  velas_liturgicas: ["/ritos", "velas_liturgicas"],
-  missal: ["/ritos", "missal"],
-  missal_romano: ["/ritos", "missal_romano"],
-  confesso_deus: ["/oracoes", "confesso_deus"],
-  pecados_veniais: ["/catecismo", "pecados_veniais"],
-  sacramento_reconciliacao: ["/sacramentos", "sacramento_reconciliacao"],
-  pecados_mortais: ["/catecismo", "pecados_mortais"],
-  kyrie_eleison: ["/oracoes", "kyrie_eleison"],
-  gloria: ["/oracoes", "gloria"],
-  santissima_trindade: ["/trindade", "santissima_trindade"],
-  pai: ["/trindade", "pai"],
-  filho: ["/trindade", "filho"],
-  advento: ["/ano-liturgico#advento", "advento"],
-  quaresma: ["/ano-liturgico#quaresma", "quaresma"],
-  solenidades: ["/ano-liturgico#datas-principais", "solenidades"],
-  festas: ["/ano-liturgico#datas-principais", "festas"],
-  calendario_liturgico: ["/ano-liturgico", "calendario_liturgico"],
-  sagradas_escrituras: ["/escritura", "sagradas_escrituras"],
-  antigo_testamento: ["/escritura", "antigo_testamento"],
-  tempo_pascal: ["/ano-liturgico#tempo-pascal", "tempo_pascal"],
-  atos_apostolos: ["/escritura", "atos_apostolos"],
-  lecionario_romano: ["/ritos", "lecionario_romano"],
-  salmo: ["/escritura", "salmo"],
-  cartas_apostolicas: ["/escritura", "cartas_apostolicas"],
-  apocalipse: ["/escritura", "apocalipse"],
-  sao_mateus: ["/santos", "sao_mateus"],
-  sao_marcos: ["/santos", "sao_marcos"],
-  sao_lucas: ["/santos", "sao_lucas"],
-  sao_joao: ["/santos", "sao_joao"],
-  profissao_fe: ["/catecismo", "profissao_fe"],
-  credo_apostolos: ["/catecismo", "credo_apostolos"],
-  credo_niceno: ["/catecismo", "credo_niceno"],
-  concilios_ecumenicos: ["/tradicao-e-magisterio", "concilios_ecumenicos"],
-  santo: ["/oracoes#santo", "santo"],
-  epiclese: ["/ritos", "epiclese"],
-  sineta_liturgica: ["/artigos-religiosos", "sineta_liturgica"],
-  transubstanciacao: ["/catecismo", "transubstanciacao"],
-  sacramento_ordem: ["/sacramentos", "sacramento_ordem"],
-  in_persona_christi: ["/ritos", "in_persona_christi"],
-  misterio_fe: ["/milagres-eucaristicos", "misterio_fe"],
-  pai_nosso: ["/oracoes", "pai_nosso"],
-  cordeiro_deus: ["/oracoes", "cordeiro_deus"],
-  eucaristia: ["/sacramentos", "eucaristia"],
-  nossa_senhora_aparecida: ["/santos", "nossa_senhora_aparecida"],
-  maria: ["/santos", "maria"],
-  sao_miguel_arcanjo: ["/santos", "sao_miguel_arcanjo"],
-  oracao: ["/oracoes", "oracao"],
-};
-
-const RichText = defineComponent({
-  inheritAttrs: false,
-  props: {
-    keypath: { type: String, required: true },
-    tag: { type: String, default: "p" },
-  },
-  setup(props, { attrs }) {
-    const { t } = useI18n();
-    const NuxtLink = resolveComponent("AppLink");
-    return () => {
-      const slots = Object.fromEntries(
-        Object.entries(richTextLinks).map(([slot, [to, key]]) => [
-          slot,
-          () =>
-            h(
-              NuxtLink,
-              {
-                to,
-                class:
-                  "text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors duration-200",
-              },
-              () => t(`palavras_chave.${key}`),
-            ),
-        ]),
-      );
-      return h(
-        Translation,
-        { keypath: props.keypath, tag: props.tag, ...attrs },
-        slots,
-      );
-    };
-  },
-});
 
 const respostasLiturgicas = [
   { proclamante: "missa.sacerdote_label", proclamacao: "missa.respostas_sinal_cruz_p", respondente: "missa.assembleia_label", resposta: "missa.respostas_sinal_cruz_r" },

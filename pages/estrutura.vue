@@ -13,79 +13,29 @@
 
       <ArticleSectionTitle as="h1" :text="$t('hierarquia.titulo')" />
 
-      <i18n-t
+      <RichText
         keypath="hierarquia.p1"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #papa>
-          <AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.papa") }}
-          </AppLink>
-        </template>
-        <template #missa>
-          <AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.missa") }}
-          </AppLink>
-        </template>
-        <template #batismo>
-          <AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.batismo") }}
-          </AppLink>
-        </template>
-      </i18n-t>
+      />
 
-      <i18n-t
+      <RichText
         keypath="hierarquia.p2"
         tag="p"
         class="text-gray-600 leading-relaxed text-justify mb-2"
-      >
-        <template #sacramento_ordem>
-          <AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.sacramento_ordem") }}
-          </AppLink>
-        </template>
-        <template #vida_consagrada>
-          <AppLink to="/estrutura#vida-consagrada" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.vida_consagrada") }}
-          </AppLink>
-        </template>
-      </i18n-t>
+      />
 
-      <i18n-t
-        keypath="hierarquia.p3"
-        tag="p"
-        class="text-gray-600 leading-relaxed text-justify"
-      >
-        <template #igreja>
-          <strong>{{ $t("palavras_chave.igreja") }}</strong>
-        </template>
-      </i18n-t>
+      <RichText keypath="hierarquia.p3" tag="p" class="text-gray-600 leading-relaxed text-justify" />
     </section>
 
     <section id="hierarquia" class="max-w-7xl mx-auto pb-20 px-6 scroll-mt-24">
       <ArticleSectionTitle :text="$t('hierarquia.hierarquia_titulo')" />
 
-      <i18n-t keypath="hierarquia.h_intro1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramento_ordem>
-          <AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.sacramento_ordem") }}
-          </AppLink>
-        </template>
-        <template #sucessao_apostolica>
-          <AppLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.sucessao_apostolica") }}
-          </AppLink>
-        </template>
-      </i18n-t>
+      <RichText keypath="hierarquia.h_intro1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
-      <i18n-t keypath="hierarquia.h_intro2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-3">
-        <template #papa>
-          <AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.papa") }}
-          </AppLink>
-        </template>
-      </i18n-t>
+      <RichText keypath="hierarquia.h_intro2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-3"
+      />
 
       <ol class="list-decimal marker:text-[#9B7322] pl-8 space-y-1 text-gray-600 leading-relaxed mb-4">
         <li>{{ $t("hierarquia.grau_episcopado") }}</li>
@@ -93,13 +43,8 @@
         <li>{{ $t("hierarquia.grau_diaconato") }}</li>
       </ol>
 
-      <i18n-t keypath="hierarquia.h_intro3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #papa>
-          <AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">
-            {{ $t("palavras_chave.papa") }}
-          </AppLink>
-        </template>
-      </i18n-t>
+      <RichText keypath="hierarquia.h_intro3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify">
         {{ $t("hierarquia.h_intro4") }}
@@ -109,19 +54,11 @@
 
       <ImageFigure class="w-32 md:w-52 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2rP1cIS-LfZVJkdptEvd8J8PTR3qOF29o1zTg5gMdhmzhMYKKs2bEDAn19U9TyDGk_T5EMzAkIz_GPJKyPq3u-kBpPdpYqu63RTKxiPiOMfjH6uXlGXtplYPokaqhkeM8qgSfp5wAwml6/s640/popepatriarchs.jpg" :alt="$t('hierarquia.imagem_patriarcas')" caption-key="hierarquia.imagem_patriarcas" image-class="h-auto rounded-md object-contain" />
 
-      <i18n-t keypath="hierarquia.episcopado_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-        <template #apostolos><AppLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolos") }}</AppLink></template>
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.episcopado_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
-      <i18n-t keypath="hierarquia.episcopado_orientais" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #igrejas_orientais_catolicas><AppLink to="/igrejas-orientais" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.igrejas_orientais_catolicas") }}</AppLink></template>
-        <template #sacramentos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</AppLink></template>
-        <template #igrejas_orientais><AppLink to="/igrejas-orientais" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.igrejas_orientais") }}</AppLink></template>
-        <template #patriarcas><AppLink to="/igrejas-orientais" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.patriarcas") }}</AppLink></template>
-        <template #arcebispos_maiores><AppLink to="/igrejas-orientais" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.arcebispos_maiores") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.episcopado_orientais" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.episcopado_p2") }}</p>
 
@@ -129,45 +66,32 @@
       <div class="mt-8 md:mt-0">
       <h4 id="papa" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.papa_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4" src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/home_papa-leao-14.png?w=1600&amp;h=1287&amp;p=top" :alt="$t('hierarquia.imagem_papa')" caption-key="hierarquia.imagem_papa" image-class="aspect-square rounded-md object-cover object-top" />
-      <i18n-t keypath="hierarquia.papa_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-        <template #sao_pedro><AppLink to="/santo-do-dia?data=2026-06-29#sao-pedro" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sao_pedro") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.papa_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.ordem") }}</AppLink></template>
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.papa_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #servus_servorum_dei><em>{{ $t("palavras_chave.servus_servorum_dei") }}</em></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.papa_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+        :links='{"sao_pedro":{"to":"/santo-do-dia?data=2026-06-29#sao-pedro"}}'
+      />
+      <RichText keypath="hierarquia.papa_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.papa_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2" />
       </div>
 
       <div class="mt-8 md:mt-0">
       <h4 id="cardeais" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.cardeais_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-44 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://img.cancaonova.com/cnimages/canais/uploads/sites/11/2020/11/cardeais-colegio-cardinali%CC%81cio-consisto%CC%81rio-2016_Daniel-Ibanez_CNA.jpg" :alt="$t('hierarquia.imagem_cardeais')" caption-key="hierarquia.imagem_cardeais" image-class="aspect-square rounded-md object-cover" />
-      <i18n-t keypath="hierarquia.cardeais_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-        <template #dioceses><AppLink to="/estrutura#bispos-diocesanos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.dioceses") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.cardeais_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.cardeais_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #conclave><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.conclave") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.cardeais_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.cardeais_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.cardeais_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       </div>
 
       <div class="mt-8 md:mt-0">
       <h4 id="bispos-diocesanos" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.bispos_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-40 float-right ml-4 md:ml-7 mb-2 md:mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9WAhEIE3e1xnDH0nxGEMh6qI_6JWu-V4a3K0G_O8Jm9CVfaarvCNoxmE&amp;s=10" :alt="$t('hierarquia.imagem_dom_walmor')" caption-key="hierarquia.imagem_dom_walmor" image-class="aspect-square rounded-md object-cover object-top" />
-      <i18n-t keypath="hierarquia.bispos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #diocese><AppLink to="/estrutura#bispos-diocesanos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.diocese") }}</AppLink></template>
-        <template #paroquias><AppLink to="/estrutura#paroco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.paroquias") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.bispos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-3">
-        <template #diocese><AppLink to="/estrutura#bispos-diocesanos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.diocese") }}</AppLink></template>
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.bispos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.bispos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-3"
+      />
       <ul class="list-disc marker:text-[#D4AF37] pl-8 space-y-1 text-gray-600 leading-relaxed mb-4">
         <li>{{ $t("hierarquia.bispo_missao_ensinar") }}</li>
         <li>{{ $t("hierarquia.bispo_missao_santificar") }}</li>
@@ -177,21 +101,18 @@
 
       <div class="mt-8 md:mt-0">
       <h4 id="arcebispos" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.arcebispos_titulo") }}</h4>
-      <i18n-t keypath="hierarquia.arcebispos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #arquidiocese><AppLink to="/estrutura#arcebispos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.arquidiocese") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.arcebispos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #arquidioceses><AppLink to="/estrutura#arcebispos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.arquidioceses") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.arcebispos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.arcebispos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.arcebispos_p3") }}</p>
       </div>
 
       <div class="mt-8 md:mt-0">
       <h4 id="bispos-auxiliares" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.auxiliares_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://arquidiocesebh.org.br/wp-content/uploads/2021/03/dom-julio-682x1024.jpeg" :alt="$t('hierarquia.imagem_dom_julio')" caption-key="hierarquia.imagem_dom_julio" image-class="aspect-square rounded-md object-cover object-top" />
-      <i18n-t keypath="hierarquia.auxiliares_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #papa><AppLink to="/papado" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.papa") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.auxiliares_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.auxiliares_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.auxiliares_p3") }}</p>
       </div>
@@ -203,14 +124,10 @@
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.presbiterado_p1") }}</p>
 
-      <i18n-t keypath="hierarquia.presbiterado_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #missa><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</AppLink></template>
-        <template #confissao><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.confissao") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.presbiterado_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
-      <i18n-t keypath="hierarquia.presbiterado_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #in_persona_christi_capitis><em>{{ $t("palavras_chave.in_persona_christi_capitis") }}</em></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.presbiterado_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2" />
 
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.presbiterado_p4") }}</p>
 
@@ -218,32 +135,25 @@
       <div class="mt-8 md:mt-0">
       <h4 id="padre-diocesano-religioso" class="clear-both text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.padre_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-32 float-left mr-4 md:mr-7 mb-2 md:mb-3" src="https://redevida.com.br/wp-content/uploads/2025/03/Frei-Gilson.png" :alt="$t('hierarquia.imagem_frei_gilson')" caption-key="hierarquia.imagem_frei_gilson" image-class="aspect-square rounded-md object-cover object-top" />
-      <i18n-t keypath="hierarquia.padre_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #homens_celibatarios><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.homens_celibatarios") }}</AppLink></template>
-      </i18n-t>
-      <i18n-t keypath="hierarquia.padre_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.padre_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+      <RichText keypath="hierarquia.padre_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       </div>
 
       <div class="mt-8 md:mt-0">
       <h4 id="paroco" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.paroco_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10" src="https://s2-g1.glbimg.com/uMbgrhDHVqPeWqeJEIko5QglWDI=/0x0:960x720/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/t/N/OzxORgReGufzrsXXVqcQ/missa-itu.jpeg" :alt="$t('hierarquia.imagem_paroco')" caption-key="hierarquia.imagem_paroco" image-class="aspect-square rounded-md object-cover object-center" />
-      <i18n-t keypath="hierarquia.paroco_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #paroquia><AppLink to="/estrutura#paroco" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.paroquia") }}</AppLink></template>
-        <template #sacramentos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.paroco_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.paroco_p2") }}</p>
       </div>
 
       <div class="mt-8 md:mt-0">
       <h4 id="vigario-paroquial" class="clear-both md:clear-none text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.vigario_titulo") }}</h4>
       <ImageFigure class="w-32 md:w-32 float-left mr-4 md:mr-7 mb-2 md:mb-3" src="https://arquiconquista.org.br/wp-content/uploads/2026/02/2-2-768x1024.jpeg" :alt="$t('hierarquia.imagem_vigario')" caption-key="hierarquia.imagem_vigario" image-class="aspect-square rounded-md object-cover object-top" />
-      <i18n-t keypath="hierarquia.vigario_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #missas><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missas") }}</AppLink></template>
-        <template #confissoes><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.confissoes") }}</AppLink></template>
-        <template #visitas_enfermos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.visitas_enfermos") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.vigario_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.vigario_p2") }}</p>
       </div>
 
@@ -257,25 +167,13 @@
 
       <ArticleSubheading id="diaconato" class="clear-both md:clear-right" :text="$t('hierarquia.diaconato_titulo')" />
 
-      <i18n-t keypath="hierarquia.diaconato_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-        <template #diakonos><em>{{ $t("palavras_chave.diakonos") }}</em></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.diaconato_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2" />
 
-      <i18n-t keypath="hierarquia.diaconato_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #proclamar_evangelho><AppLink to="/missa#evangelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.proclamar_evangelho") }}</AppLink></template>
-        <template #batismo><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismo") }}</AppLink></template>
-        <template #comunhao><AppLink to="/missa#comunhao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.comunhao") }}</AppLink></template>
-        <template #matrimonio><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.matrimonio") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.diaconato_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
-      <i18n-t keypath="hierarquia.diaconato_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #missa><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</AppLink></template>
-        <template #consagrar_eucaristia><AppLink to="/missa#consagracao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.consagrar_eucaristia") }}</AppLink></template>
-        <template #pecados><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.pecados") }}</AppLink></template>
-        <template #confissao><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.confissao") }}</AppLink></template>
-        <template #uncao_enfermos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.uncao_enfermos") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.diaconato_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
 
       <div class="md:border-l-4 md:border-[#D4AF37]/40 md:pl-8 md:mt-8 md:space-y-8">
         <div class="mt-8 md:mt-0">
@@ -289,19 +187,15 @@
           <h4 id="diaconos-permanentes" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.permanentes_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10" src="https://diaconofrancis.wordpress.com/wp-content/uploads/2024/05/esta-1.jpg" :alt="$t('hierarquia.imagem_diacono_permanente')" caption-key="hierarquia.imagem_diacono_permanente" image-class="aspect-square rounded-md object-cover object-center" />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.permanentes_p1") }}</p>
-          <i18n-t keypath="hierarquia.permanentes_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #celibato><AppLink to="/catecismo" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.celibato") }}</AppLink></template>
-            <template #matrimonio><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.matrimonio") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.permanentes_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
         </div>
       </div>
 
       <ArticleSubheading id="vida-consagrada" class="clear-both md:clear-right" :text="$t('hierarquia.consagrada_titulo')" />
 
-      <i18n-t keypath="hierarquia.consagrada_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #vida_consagrada><AppLink to="/estrutura#vida-consagrada" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.vida_consagrada") }}</AppLink></template>
-        <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.consagrada_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.consagrada_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.consagrada_p3") }}</p>
 
@@ -310,9 +204,8 @@
           <h4 id="monges-monjas" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.monges_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-60 float-left mr-4 md:mr-7 mb-2 md:mb-4" :src="mongesImageUrl" :alt="$t('hierarquia.imagem_monges_beneditinos')" caption-key="hierarquia.imagem_monges_beneditinos" image-class="h-auto rounded-md object-contain" />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.monges_p1") }}</p>
-          <i18n-t keypath="hierarquia.monges_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.monges_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
         </div>
 
         <div class="mt-8 md:mt-0">
@@ -325,83 +218,59 @@
 
       <ArticleSubheading id="ministerios-leigos" class="clear-both md:clear-right" :text="$t('hierarquia.leigos_ministerios_titulo')" />
 
-      <i18n-t keypath="hierarquia.leigos_ministerios_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #liturgia><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgia") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.leigos_ministerios_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.leigos_ministerios_p2") }}</p>
 
       <div class="md:border-l-4 md:border-[#D4AF37]/40 md:pl-8 md:mt-8 md:space-y-8">
         <div class="mt-8 md:mt-0">
           <h4 id="leitores" class="text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.leitores_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmlNh-Cs8tgPiMlkoyDF_WIMsXT-qht3mfapiMSfNRj5BbUsOhU6HUNkQ&amp;s=10" :alt="$t('hierarquia.imagem_leitores')" caption-key="hierarquia.imagem_leitores" image-class="aspect-square rounded-md object-cover object-center" />
-          <i18n-t keypath="hierarquia.leitores_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #leituras><AppLink to="/missa#ciclo-das-leituras" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.leituras") }}</AppLink></template>
-            <template #sagrada_escritura><AppLink to="/escritura" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrada_escritura") }}</AppLink></template>
-            <template #liturgia><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgia") }}</AppLink></template>
-            <template #evangelho><AppLink to="/missa#evangelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.evangelho") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.leitores_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.leitores_p2") }}</p>
         </div>
 
         <div class="mt-8 md:mt-0">
           <h4 id="acolitos" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.acolitos_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10" src="https://www.paieterno.com.br/wp-content/uploads/2014/10/DESTAQUE_FIQUE_POR_DENTRO_14_10_2014.png" :alt="$t('hierarquia.imagem_acolitos')" caption-key="hierarquia.imagem_acolitos" image-class="aspect-square rounded-md object-cover object-center" />
-          <i18n-t keypath="hierarquia.acolitos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #altar><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.altar") }}</AppLink></template>
-            <template #comunhao><AppLink to="/missa#comunhao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.comunhao") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.acolitos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.acolitos_p2") }}</p>
         </div>
 
         <div class="mt-8 md:mt-0">
           <h4 id="coroinhas" class="clear-both md:clear-right text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.coroinhas_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://dj.org.br/wp-content/uploads/2021/05/acolitos.jpg" :alt="$t('hierarquia.imagem_coroinhas')" caption-key="hierarquia.imagem_coroinhas" image-class="aspect-square rounded-md object-cover object-center" />
-          <i18n-t keypath="hierarquia.coroinhas_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #celebracoes><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.celebracoes") }}</AppLink></template>
-            <template #cruz_processional><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.cruz_processional") }}</AppLink></template>
-            <template #velas><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.velas") }}</AppLink></template>
-            <template #turibulo><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.turibulo") }}</AppLink></template>
-            <template #missal><AppLink to="/ritos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missal") }}</AppLink></template>
-            <template #objetos><AppLink to="/artigos-religiosos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.objetos") }}</AppLink></template>
-            <template #liturgia><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgia") }}</AppLink></template>
-          </i18n-t>
-          <i18n-t keypath="hierarquia.coroinhas_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #celebracao><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.celebracao") }}</AppLink></template>
-            <template #liturgias><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgias") }}</AppLink></template>
-          </i18n-t>
-          <i18n-t keypath="hierarquia.coroinhas_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.ordem") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.coroinhas_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+        :links='{"cruz_processional":{"to":"/artigos-religiosos"}}'
+      />
+          <RichText keypath="hierarquia.coroinhas_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+          <RichText keypath="hierarquia.coroinhas_p3" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
         </div>
 
         <div class="mt-8 md:mt-0">
           <h4 id="ministros-comunhao" class="clear-both md:clear-left text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.ministros_comunhao_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-32 float-right ml-4 md:ml-7 mb-2 md:mb-3 md:-mt-10" src="https://images.a12.com/source/files/c/304016/ministros_da_sagrada_comunhao_-_3_feira_Santa_2023-705181_4227-3170-0-0.jpg" :alt="$t('hierarquia.imagem_ministros_comunhao')" caption-key="hierarquia.imagem_ministros_comunhao" image-class="aspect-square rounded-md object-cover object-center" />
-          <i18n-t keypath="hierarquia.ministros_comunhao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #sagrada_comunhao><AppLink to="/missa#comunhao" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sagrada_comunhao") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.ministros_comunhao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.ministros_comunhao_p2") }}</p>
         </div>
 
         <div class="mt-8 md:mt-0">
           <h4 id="fieis-leigos" class="clear-both md:clear-right text-xl font-bold text-[#041122] font-serif mb-4 scroll-mt-24">{{ $t("hierarquia.fieis_leigos_titulo") }}</h4>
           <ImageFigure class="w-32 md:w-36 float-left mr-4 md:mr-7 mb-2 md:mb-4" src="https://www.centroloyola.org.br/images/outras-palavras/espiritualidade/2095075.jpg" :alt="$t('hierarquia.imagem_fieis_leigos')" caption-key="hierarquia.imagem_fieis_leigos" image-class="aspect-square rounded-md object-cover object-center" />
-          <i18n-t keypath="hierarquia.fieis_leigos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #batizados><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batizados") }}</AppLink></template>
-            <template #sacramento_ordem><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramento_ordem") }}</AppLink></template>
-          </i18n-t>
-          <i18n-t keypath="hierarquia.fieis_leigos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #evangelho><AppLink to="/missa#evangelho" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.evangelho") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.fieis_leigos_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+          <RichText keypath="hierarquia.fieis_leigos_p2" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
           <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.fieis_leigos_p3") }}</p>
-          <i18n-t keypath="hierarquia.fieis_leigos_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-            <template #batismo><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batismo") }}</AppLink></template>
-          </i18n-t>
-          <i18n-t keypath="hierarquia.fieis_leigos_p5" tag="p" class="text-gray-600 leading-relaxed text-justify">
-            <template #sacramentos><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacramentos") }}</AppLink></template>
-            <template #apostolica><AppLink to="/sucessao-apostolica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.apostolica") }}</AppLink></template>
-            <template #batizado><AppLink to="/sacramentos" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.batizado") }}</AppLink></template>
-          </i18n-t>
+          <RichText keypath="hierarquia.fieis_leigos_p4" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
+          <RichText keypath="hierarquia.fieis_leigos_p5" tag="p" class="text-gray-600 leading-relaxed text-justify"
+      />
         </div>
       </div>
     </section>
@@ -418,9 +287,9 @@
 
       <ArticleSubheading id="diocese" class="clear-both" :text="$t('hierarquia.diocese_organizacao_titulo')" />
       <ImageFigure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10" src="https://www.arquidioceseolindarecife.org/wp-content/uploads/2025/01/drai-1080x675.jpg" :alt="$t('hierarquia.imagem_diocese')" caption-key="hierarquia.imagem_diocese" image-class="h-auto rounded-md object-contain" />
-      <i18n-t keypath="hierarquia.diocese_organizacao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #eucaristia><AppLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.eucaristia") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.diocese_organizacao_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+        :links='{"eucaristia":{"to":"/missa#liturgia-eucaristica"}}'
+      />
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.diocese_organizacao_p2") }}</p>
 
       <ArticleSubheading id="arquidiocese" class="clear-both" :text="$t('hierarquia.arquidiocese_organizacao_titulo')" />
@@ -470,18 +339,14 @@
       <p class="text-gray-600 leading-relaxed text-justify mb-2">{{ $t("hierarquia.lugares_sagrados_p2") }}</p>
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.lugares_sagrados_p3") }}</p>
 
-      <i18n-t keypath="hierarquia.lugares_sagrados_obs" tag="p" class="text-sm text-gray-500 italic leading-relaxed text-justify mt-4">
-        <template #missa><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</AppLink></template>
-        <template #liturgica><AppLink to="/missa#estrutura-da-santa-missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.liturgica") }}</AppLink></template>
-        <template #sacrificio_eucaristico><AppLink to="/missa#liturgia-eucaristica" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.sacrificio_eucaristico") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.lugares_sagrados_obs" tag="p" class="text-sm text-gray-500 italic leading-relaxed text-justify mt-4"
+      />
       </div>
 
       <ArticleSubheading id="igreja-edificio" class="clear-both" :text="$t('hierarquia.igreja_edificio_titulo')" />
       <ImageFigure class="w-32 md:w-44 float-right ml-4 md:ml-7 mb-2 md:mb-4 md:-mt-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXHltRyXI6mR2ETj5-rs3V4itzoaqcRj5cTvZ-uNIJmHsmoW33xMdPml8&amp;s=10" :alt="$t('hierarquia.imagem_igreja_edificio')" caption-key="hierarquia.imagem_igreja_edificio" image-class="h-auto rounded-md object-contain" />
-      <i18n-t keypath="hierarquia.igreja_edificio_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2">
-        <template #missa><AppLink to="/missa" class="text-[#9B7322] hover:text-[#D4AF37] hover:underline transition-colors">{{ $t("palavras_chave.missa") }}</AppLink></template>
-      </i18n-t>
+      <RichText keypath="hierarquia.igreja_edificio_p1" tag="p" class="text-gray-600 leading-relaxed text-justify mb-2"
+      />
       <p class="text-gray-600 leading-relaxed text-justify">{{ $t("hierarquia.igreja_edificio_p2") }}</p>
 
       <ArticleSubheading id="igreja-paroquial" class="clear-both" :text="$t('hierarquia.igreja_paroquial_titulo')" />
